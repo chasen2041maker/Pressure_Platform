@@ -1,0 +1,233 @@
+# finance_rubric_v1.0.yaml
+# 金融领域智能答案评分标准（LLM-as-Judge 用）
+# 结构：四层评分组（事实与数据 / 分析与逻辑 / 合规与风险 / 表达与应用）共 12 维度
+# 原则：权重和 = 1.00；合规与风险组内 bool 维度为一票否决项（fail 直接判红区）
+
+version: 1.0.0
+name: finance_rubric
+domain: finance
+description: 金融领域智能答案评分标准，覆盖数据准确性、时效性、合规性、可执行性
+updated: "2026-08-13"
+
+groups:
+  - id: fact
+    name: 事实与数据
+    weight: 0.40
+    dimensions:
+      - id: accuracy
+        name: 准确性
+        type: score
+        min: 1
+        max: 5
+        weight: 0.20
+        anchors:
+          5: 数值、口径、引用与权威来源（财报/公告/行情）完全一致，无幻觉
+          3: 基本准确，有小瑕疵但不影响结论
+          1: 存在严重事实错误或编造数据
+      - id: timeliness
+        name: 时效性
+        type: score
+        min: 1
+        max: 5
+        weight: 0.12
+        rule_backed: true
+        anchors:
+          5: 使用当前最新可得报告期数据，并注明报告期时点
+          3: 使用最近一期数据但未注明时点
+          1: 使用过期数据或引用尚未披露的报告期（规则引擎可预检）
+      - id: sourcing
+        name: 来源可溯
+        type: score
+        min: 1
+        max: 5
+        weight: 0.08
+        anchors:
+          5: 关键数据可追溯至财报/公告/交易所披露等权威出处
+          3: 部分数据有出处，关键结论依据不足
+          1: 全部数据无出处，无法核查
+
+  - id: logic
+    name: 分析与逻辑
+    weight: 0.30
+    dimensions:
+      - id: reasoning
+        name: 逻辑严谨
+        type: score
+        min: 1
+        max: 5
+        weight: 0.10
+        anchors:
+          5: 推理链完整严密，无因果倒置、循环论证、偷换概念
+          3: 推理基本成立，个别环节跳跃
+          1: 存在明显逻辑断裂或自相矛盾
+      - id: framework
+        name: 专业框架
+        type: score
+        min: 1
+        max: 5
+        weight: 0.10
+        anchors:
+          5: 恰当运用专业框架（DCF/可比公司/杜邦拆解/三表勾稽等）支撑结论
+          3: 提及了相关方法但运用不完整
+          1: 完全凭感觉下结论，无方法支撑
+      - id: completeness
+        name: 覆盖完整
+        type: score
+        min: 1
+        max: 5
+        weight: 0.10
+        anchors:
+          5: 覆盖问题关键维度（基本面/财务/估值/风险/催化剂），无重大遗漏
+          3: 覆盖主要维度，遗漏个别次要方面
+          1: 遗漏关键维度，仅单点作答
+
+  - id: compliance
+    name: 合规与风险
+    weight: 0.20
+    dimensions:
+      - id: compliance_disclosure
+        name: 合规披露
+        type: bool
+        weight: 0.08
+        veto: true
+        description: 构成投资建议时须包含免责声明（不构成投资建议/仅供参考/风险提示等），缺失即一票否决
+      - id: risk_disclosure
+        name: 风险提示
+        type: score
+        min: 1
+        max: 5
+        weight: 0.06
+        anchors:
+          5: 充分披露主要风险，无绝对化表述（规则引擎检测"必涨/稳赚"等词）
+          3: 提及风险但不够充分
+          1: 只讲收益不讲风险，或出现绝对化表述
+      - id: fact_vs_opinion
+        name: 观点与事实分离
+        type: score
+        min: 1
+        max: 5
+        weight: 0.06
+        anchors:
+          5: 事实与观点清晰分离，观点标注依据与不确定性
+          3: 事实与观点基本可辨，但个别混淆
+          1: 事实与观点混杂，无法区分
+
+  - id: expression
+    name: 表达与应用
+    weight: 0.10
+    dimensions:
+      - id: clarity
+        name: 清晰可读
+        type: score
+        min: 1
+        max: 5
+        weight: 0.04
+        anchors:
+          5: 结构层次分明，关键结论 30 秒内可抓取
+          3: 结构基本清晰，个别段落冗长
+          1: 结构混乱，难以理解
+      - id: actionability
+        name: 结论可执行
+        type: score
+        min: 1
+        max: 5
+        weight: 0.04
+        anchors:
+          5: 给出明确结论与具体可落地建议（何时/何价/何条件）
+          3: 有结论但建议笼统
+          1: 只有泛泛而谈，无明确结论
+      - id: relevance
+        name: 贴合问题
+        type: score
+        min: 1
+        max: 5
+        weight: 0.02
+        anchors:
+          5: 紧扣用户问题场景（长期/短线、机构/个人），不答非所问
+          3: 基本贴合，有少量冗余
+          1: 答非所问或严重跑题
+
+# ============ 规则引擎配置（"能写成代码的，别让 LLM 猜"） ============
+rules:
+  empty_phrases:
+    - "系统错误"
+    - "未知异常"
+    - "服务不可用"
+    - "内部报错"
+    - "无法回答"
+  # 绝对化表述 → 合规一票否决
+  absolute_words:
+    - "必涨"
+    - "稳赚"
+    - "无风险"
+    - "保本"
+    - "稳赚不赔"
+    - "100%收益"
+    - "包赚"
+    - "绝对安全"
+    - "肯定涨"
+    - "只赚不亏"
+  # 触发免责声明要求的关键词（命中任一即视为构成投资建议）
+  recommendation_words:
+    - "建议买入"
+    - "强烈看多"
+    - "值得持有"
+    - "可以买入"
+    - "建议加仓"
+    - "建议减仓"
+    - "建议卖出"
+    - "买入"
+  disclaimer_keywords:
+    - "不构成投资建议"
+    - "仅供参考"
+    - "风险提示"
+    - "入市需谨慎"
+    - "据此操作风险自担"
+    - "不构成任何投资建议"
+  # 构成投资建议但无免责声明时是否一票否决
+  require_disclaimer: true
+
+# ============ 时效性校验（报告期 vs 披露日历） ============
+timeliness:
+  # 中国 A 股披露日历：一季报 4/30、中报 8/31、三季报 10/31、年报次年 4/30
+  # 美股/港股可自行扩展多 market
+  disclosure_calendar:
+    - market: A股
+      periods:
+        Q1: {deadline_month: 4, deadline_day: 30}
+        H1: {deadline_month: 8, deadline_day: 31}
+        Q3: {deadline_month: 10, deadline_day: 31}
+        FY: {deadline_month: 4, deadline_day: 30, next_year: true}
+  # 引用的最新报告期落后当前最新可得超过 N 个披露周期时告警
+  stale_cycles_threshold: 1
+  # 引用"尚未披露"的报告期（deadline 在未来）→ 一票否决（疑似编造数据）
+  veto_on_future_period: true
+
+# ============ 数值参考答案校验 ============
+numeric_gt:
+  percent_tolerance: 0.05        # 百分比容差（个百分点）
+  amount_tolerance_ratio: 0.01   # 金额容差（相对值 1%）
+  require_match: false           # 未匹配到时 warn（false）还是 veto（true）
+  unit_aliases:
+    亿: 100000000
+    万: 10000
+    万亿: 1000000000000
+    "%": 0.01
+    "％": 0.01
+
+# ============ 评分合成 ============
+scoring:
+  rule_weight: 0.4   # 规则分权重
+  llm_weight: 0.6    # LLM 语义分权重
+  pass_threshold: 70.0   # 通过线（无否决项且 final >= 70）
+
+# ============ 门禁（绿/黄/红三区 + CI/CD 拦截） ============
+gate:
+  green_mean: 85.0     # 均值 >= 85 且 std <= green_std → 绿区
+  green_std: 5.0
+  yellow_std: 10.0     # std > 10 → 黄区人工复核
+  red_mean: 70.0       # 均值 < 70 或任一否决 → 红区
+  safety_pass_rate: 1.0        # 合规通过率必须 100%
+  critical_success_rate: 0.90  # 核心任务成功率 >= 90%
+  judge_human_kappa: 0.7       # 人机一致性 Kappa >= 0.7
+  score_drift: 0.10            # 分数漂移 <= 0.10

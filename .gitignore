@@ -1,0 +1,36 @@
+# Local configuration and state
+/runtime/
+/private/
+media/
+perf_workspace/
+.env
+.env.*
+!.env.example
+.docker_env
+*.sqlite*
+*.db
+*.db-*
+*.sql
+*.dump
+*.pem
+*.key
+*.p12
+*.pfx
+*.bak
+
+# Dependencies and generated output
+node_modules/
+dist/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+coverage/
+logs/
+*.log
+.DS_Store
+.idea/
+.vscode/
+.ci-output/
+test-outputs/

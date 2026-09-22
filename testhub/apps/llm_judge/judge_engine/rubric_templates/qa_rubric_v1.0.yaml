@@ -1,0 +1,102 @@
+# 通用问答评分标准 v1.0
+# 不绑定金融领域，适用于知识问答、RAG 评估、对话系统评测
+version: "1.0.0"
+name: "通用问答评分标准"
+domain: qa
+
+groups:
+  - id: core
+    name: "核心维度"
+    weight: 1.0
+    dimensions:
+      - id: accuracy
+        name: "准确性"
+        type: score
+        weight: 0.30
+        min: 1
+        max: 5
+        anchors:
+          "1": "答案事实完全错误或与问题无关"
+          "2": "答案存在明显事实错误"
+          "3": "答案基本正确但有少量不准确"
+          "4": "答案准确，偶有小瑕疵"
+          "5": "答案完全准确，事实无误"
+        veto: false
+        description: "答案中事实性信息的准确程度"
+      - id: completeness
+        name: "完整性"
+        type: score
+        weight: 0.20
+        min: 1
+        max: 5
+        anchors:
+          "1": "答案严重缺失关键信息"
+          "2": "答案缺少多个重要信息"
+          "3": "答案覆盖主要信息但有不完整"
+          "4": "答案较完整，个别细节缺失"
+          "5": "答案全面覆盖问题的所有要点"
+        veto: false
+        description: "答案对问题要点的覆盖程度"
+      - id: clarity
+        name: "清晰性"
+        type: score
+        weight: 0.15
+        min: 1
+        max: 5
+        anchors:
+          "1": "表述混乱，无法理解"
+          "2": "表述不清，理解困难"
+          "3": "表述基本清楚，偶有歧义"
+          "4": "表述清晰，易于理解"
+          "5": "表述非常清晰，逻辑流畅"
+        veto: false
+        description: "答案表述的清晰度和可读性"
+      - id: relevance
+        name: "相关性"
+        type: score
+        weight: 0.20
+        min: 1
+        max: 5
+        anchors:
+          "1": "答案完全答非所问"
+          "2": "答案偏离问题主题"
+          "3": "答案基本相关但不够聚焦"
+          "4": "答案紧扣问题"
+          "5": "答案精准回应问题"
+        veto: false
+        description: "答案与问题的相关程度"
+      - id: reasoning
+        name: "逻辑性"
+        type: score
+        weight: 0.15
+        min: 1
+        max: 5
+        anchors:
+          "1": "逻辑完全混乱或无推理"
+          "2": "逻辑有明显漏洞"
+          "3": "逻辑基本合理但不严密"
+          "4": "逻辑清晰，推理合理"
+          "5": "逻辑严密，推理充分"
+        veto: false
+        description: "答案的推理逻辑是否自洽"
+
+rules:
+  absolute_words:
+    words: ["必涨", "稳赚", "包盈利", "零风险", "绝对", "一定", "必然"]
+    extra_regex: ["必.{0,2}涨", "稳\\s*赚"]
+    check_quoted_context_exempt: true
+  disclaimer:
+    required_keywords: []
+    allowed_patterns: []
+    exempt_in_citations: true
+
+scoring:
+  rule: 0.4
+  llm: 0.6
+
+gate:
+  green_mean: 85
+  yellow_mean: 70
+  safety_pass_rate: 1.0
+  critical_success_rate: 0.95
+  veto_threshold: 0

@@ -1,0 +1,42 @@
+{
+  "gunicorn": {
+    "distributions": [
+      {
+        "sha256": "bd249d0b3f7972f7432f0a6b6ff3b3ee2d129f70cd1ff6c09a9dd9e29a2b88e3",
+        "file": "gunicorn-26.2.0-py3-none-any.whl"
+      },
+      {
+        "sha256": "62b864895d9ebff0b2f9867ba04fe811c93121596540830c9c916d0769668447",
+        "file": "gunicorn-26.2.0.tar.gz"
+      }
+    ],
+    "version": "26.2.0",
+    "requires_python": ">=3.10",
+    "source": "https://pypi.org/pypi/gunicorn/26.2.0/json",
+    "requires_dist": [
+      "gevent>=24.10.1; extra == \"gevent\"",
+      "packaging; extra == \"gevent\"",
+      "tornado>=6.5.7; extra == \"tornado\"",
+      "setproctitle; extra == \"setproctitle\"",
+      "h2>=4.4.1; extra == \"http2\"",
+      "gunicorn_h1c>=0.6.9; extra == \"fast\"",
+      "gevent>=24.10.1; extra == \"testing\"",
+      "h2>=4.4.1; extra == \"testing\"",
+      "coverage; extra == \"testing\"",
+      "packaging; extra == \"testing\"",
+      "pytest>=9.0.3; extra == \"testing\"",
+      "pytest-cov; extra == \"testing\"",
+      "pytest-asyncio; extra == \"testing\"",
+      "uvloop>=0.19.0; extra == \"testing\"",
+      "httpx[http2]>=0.23.0; extra == \"testing\"",
+      "inotify>=0.2.10; sys_platform == \"linux\" and extra == \"testing\""
+    ]
+  },
+  "verified_at": "2026-09-16T09:20:00.6781056Z",
+  "linux_resolution": "NOT_BUILT_OR_INSTALLED",
+  "local_lock_sha256": "f5ecac6f5640dfed3f6052546c451d61e24310b7959478d8fe40d226fef0606b",
+  "filtered": [
+    "pywin32==312"
+  ],
+  "local_lock": "deployment/requirements-local.lock.txt"
+}

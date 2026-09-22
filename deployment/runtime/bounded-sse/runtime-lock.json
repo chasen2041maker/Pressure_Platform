@@ -1,0 +1,6 @@
+{
+  "k6_revision": "0ae3c2989e5b7d24e5d18080aa72aa968ad5015f",
+  "go_version": "go1.26.5",
+  "module": "k6/x/testhub-sse",
+  "api_version": "testhub-sse/1"
+}

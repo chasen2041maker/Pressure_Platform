@@ -1,0 +1,34 @@
+ARG DOCKER_CLI_IMAGE
+ARG PYTHON_IMAGE
+FROM ${DOCKER_CLI_IMAGE} AS docker_cli
+FROM ${PYTHON_IMAGE} AS simpleui_builder
+ENV PYTHONDONTWRITEBYTECODE=1 PIP_DISABLE_PIP_VERSION_CHECK=1
+WORKDIR /build
+COPY deployment/linux-docker/requirements-simpleui-build.lock.txt deployment/linux-docker/simpleui-build-sources.json deployment/linux-docker/simpleui_build.py /build/
+RUN python -m venv /build/venv \
+    && /build/venv/bin/python -m pip install --no-cache-dir --require-hashes --only-binary=:all: -r requirements-simpleui-build.lock.txt \
+    && /build/venv/bin/python -m pip check \
+    && /build/venv/bin/python simpleui_build.py fetch /source
+RUN --network=none /build/venv/bin/python -m pip wheel --no-index --no-deps --no-build-isolation \
+    --wheel-dir /wheels /source/django-simpleui-2025.6.24.tar.gz \
+    && /build/venv/bin/python simpleui_build.py check /wheels
+FROM ${PYTHON_IMAGE}
+ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 DOCKER_CONFIG=/tmp/docker-client
+WORKDIR /app
+COPY deployment/linux-docker/requirements-linux.lock.txt /opt/pressure-deploy/requirements-linux.lock.txt
+COPY --from=simpleui_builder /wheels/ /opt/pressure-deploy/wheels/
+RUN python -m pip install --no-cache-dir --no-index --no-deps --only-binary=:all: /opt/pressure-deploy/wheels/django_simpleui-2025.6.24-py3-none-any.whl \
+    && python -m pip install --no-cache-dir --no-deps --only-binary=:all: -r /opt/pressure-deploy/requirements-linux.lock.txt \
+    && python -m pip check
+COPY --from=docker_cli /usr/local/bin/docker /usr/local/bin/docker
+COPY testhub/ /app/
+COPY deployment/linux-docker/container.py deployment/linux-docker/recovery_supervisor.py deployment/linux-docker/runtime_tools.py deployment/linux-docker/gunicorn.conf.py /opt/pressure-deploy/
+COPY deployment/linux-docker/runtime_probe.py /opt/pressure-deploy/
+RUN test -f /app/manage.py && test -f /app/backend/pressure_intranet_settings.py \
+    && mkdir -p /app/logs /app/media/judge_rubrics /app/media/judge_kb \
+    && docker --version && gunicorn --version
+USER 0:0
+EXPOSE 8000
+ENTRYPOINT ["python", "/opt/pressure-deploy/container.py"]
+CMD ["serve"]

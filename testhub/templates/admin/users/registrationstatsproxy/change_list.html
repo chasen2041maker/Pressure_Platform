@@ -1,0 +1,244 @@
+{% extends "admin/change_list.html" %}
+
+{% block content_title %}
+  <h1>注册统计</h1>
+{% endblock %}
+
+{% block result_list %}
+  <style>
+    .registration-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .registration-card,
+    .registration-panel {
+      background: #fff;
+      border: 1px solid #ebeef5;
+      border-radius: 8px;
+      padding: 16px 18px;
+      box-sizing: border-box;
+    }
+    .registration-card__label {
+      color: #909399;
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+    .registration-card__value {
+      color: #303133;
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+    .registration-panels {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .registration-panel--wide {
+      grid-column: 1 / -1;
+    }
+    .registration-panel h2 {
+      font-size: 16px;
+      margin: 0 0 12px;
+      color: #303133;
+    }
+    .registration-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    .registration-table th,
+    .registration-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #f0f2f5;
+      text-align: left;
+      vertical-align: top;
+    }
+    .registration-table th {
+      background: #fafafa;
+      color: #606266;
+      font-weight: 600;
+    }
+    @media (max-width: 1200px) {
+      .registration-panels {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <div class="registration-cards">
+    <div class="registration-card">
+      <div class="registration-card__label">今日注册数</div>
+      <div class="registration-card__value">{{ registration_summary.today_registrations }}</div>
+    </div>
+    <div class="registration-card">
+      <div class="registration-card__label">近 7 天注册数</div>
+      <div class="registration-card__value">{{ registration_summary.seven_day_registrations }}</div>
+    </div>
+    <div class="registration-card">
+      <div class="registration-card__label">累计注册数</div>
+      <div class="registration-card__value">{{ registration_summary.total_registrations }}</div>
+    </div>
+    <div class="registration-card">
+      <div class="registration-card__label">手机号填写率</div>
+      <div class="registration-card__value">{{ registration_summary.phone_fill_rate }}%</div>
+    </div>
+    <div class="registration-card">
+      <div class="registration-card__label">邮箱填写率</div>
+      <div class="registration-card__value">{{ registration_summary.email_fill_rate }}%</div>
+    </div>
+    <div class="registration-card">
+      <div class="registration-card__label">部门填写率</div>
+      <div class="registration-card__value">{{ registration_summary.department_fill_rate }}%</div>
+    </div>
+    <div class="registration-card">
+      <div class="registration-card__label">职位填写率</div>
+      <div class="registration-card__value">{{ registration_summary.position_fill_rate }}%</div>
+    </div>
+  </div>
+
+  <div class="registration-panels">
+    <div class="registration-panel registration-panel--wide">
+      <h2>注册字段完整度</h2>
+      <table class="registration-table">
+        <thead>
+          <tr>
+            <th>字段</th>
+            <th>已填写人数</th>
+            <th>填写率</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in registration_field_stats %}
+            <tr>
+              <td>{{ item.label }}</td>
+              <td>{{ item.filled_count }}</td>
+              <td>{{ item.fill_rate }}%</td>
+            </tr>
+          {% empty %}
+            <tr>
+              <td colspan="3">暂无数据</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="registration-panel">
+      <h2>部门分布 Top 10</h2>
+      <table class="registration-table">
+        <thead>
+          <tr>
+            <th>部门</th>
+            <th>人数</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in registration_department_ranking %}
+            <tr>
+              <td>{{ item.department }}</td>
+              <td>{{ item.total }}</td>
+            </tr>
+          {% empty %}
+            <tr>
+              <td colspan="2">暂无数据</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="registration-panel">
+      <h2>职位分布 Top 10</h2>
+      <table class="registration-table">
+        <thead>
+          <tr>
+            <th>职位</th>
+            <th>人数</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in registration_position_ranking %}
+            <tr>
+              <td>{{ item.position }}</td>
+              <td>{{ item.total }}</td>
+            </tr>
+          {% empty %}
+            <tr>
+              <td colspan="2">暂无数据</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="registration-panel">
+      <h2>近 7 天注册趋势</h2>
+      <table class="registration-table">
+        <thead>
+          <tr>
+            <th>日期</th>
+            <th>注册数</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in registration_daily_trend %}
+            <tr>
+              <td>{{ item.day|date:"Y-m-d" }}</td>
+              <td>{{ item.total }}</td>
+            </tr>
+          {% empty %}
+            <tr>
+              <td colspan="2">暂无数据</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="registration-panel registration-panel--wide">
+      <h2>最近注册用户</h2>
+      <table class="registration-table">
+        <thead>
+          <tr>
+            <th>用户名</th>
+            <th>手机号</th>
+            <th>邮箱</th>
+            <th>姓名</th>
+            <th>部门</th>
+            <th>职位</th>
+            <th>注册时间</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in recent_registrations %}
+            <tr>
+              <td>{{ item.username }}</td>
+              <td>{{ item.phone|default:"-" }}</td>
+              <td>{{ item.email|default:"-" }}</td>
+              <td>
+                {% if item.first_name or item.last_name %}
+                  {{ item.last_name|default:"" }}{{ item.first_name|default:"" }}
+                {% else %}
+                  -
+                {% endif %}
+              </td>
+              <td>{{ item.department|default:"-" }}</td>
+              <td>{{ item.position|default:"-" }}</td>
+              <td>{{ item.created_at|date:"Y-m-d H:i:s" }}</td>
+            </tr>
+          {% empty %}
+            <tr>
+              <td colspan="7">暂无数据</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  {{ block.super }}
+{% endblock %}

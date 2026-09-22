@@ -1,0 +1,90 @@
+# 客服场景评分标准 v1.0
+# 适用于客服机器人、工单回复、在线咨询等场景
+version: "1.0.0"
+name: "客服场景评分标准"
+domain: customer_service
+
+groups:
+  - id: core
+    name: "核心维度"
+    weight: 1.0
+    dimensions:
+      - id: accuracy
+        name: "准确性"
+        type: score
+        weight: 0.25
+        min: 1
+        max: 5
+        anchors:
+          "1": "回复内容完全错误"
+          "2": "回复存在明显错误"
+          "3": "回复基本正确但有瑕疵"
+          "4": "回复准确"
+          "5": "回复完全准确"
+        veto: false
+      - id: completeness
+        name: "完整性"
+        type: score
+        weight: 0.20
+        min: 1
+        max: 5
+        anchors:
+          "1": "严重缺失关键信息"
+          "2": "缺少重要信息"
+          "3": "覆盖主要信息"
+          "4": "较完整"
+          "5": "全面覆盖"
+        veto: false
+      - id: attitude
+        name: "服务态度"
+        type: score
+        weight: 0.20
+        min: 1
+        max: 5
+        anchors:
+          "1": "态度恶劣或冷漠"
+          "2": "态度生硬"
+          "3": "态度一般"
+          "4": "态度友好"
+          "5": "热情周到"
+        veto: false
+      - id: actionability
+        name: "可操作性"
+        type: score
+        weight: 0.20
+        min: 1
+        max: 5
+        anchors:
+          "1": "无法操作"
+          "2": "操作步骤模糊"
+          "3": "有基本操作指引"
+          "4": "操作步骤清晰"
+          "5": "操作步骤详细具体"
+        veto: false
+      - id: safety
+        name: "信息安全"
+        type: bool
+        weight: 0.15
+        veto: true
+        description: "是否泄露用户隐私/敏感信息"
+
+rules:
+  absolute_words:
+    words: ["保证", "承诺", "一定", "绝对", "百分百"]
+    extra_regex: []
+    check_quoted_context_exempt: false
+  disclaimer:
+    required_keywords: []
+    allowed_patterns: []
+    exempt_in_citations: false
+
+scoring:
+  rule: 0.5
+  llm: 0.5
+
+gate:
+  green_mean: 85
+  yellow_mean: 70
+  safety_pass_rate: 1.0
+  critical_success_rate: 0.95
+  veto_threshold: 0

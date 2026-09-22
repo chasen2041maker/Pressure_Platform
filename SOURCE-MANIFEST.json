@@ -1,0 +1,4441 @@
+{
+  "schema": 1,
+  "project": "Pressure_Platform",
+  "snapshot_date": "2026-09-22",
+  "file_count": 885,
+  "files": [
+    {
+      "path": ".dockerignore",
+      "bytes": 334,
+      "sha256": "6f89b71dd52528784eff0597e610fe3d1b775cdb0f0e8d7adb6715aade1f3bae"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 87,
+      "sha256": "c3db45a92973ffbda47618c9dbfa8acd15343bcf85b591c81dfa72c840f6f0a3"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 360,
+      "sha256": "ca1e523519ac35f38769fc465fd511de69a28fcbfd90d635fc1f27f7bc68b8b2"
+    },
+    {
+      "path": ".gitmodules",
+      "bytes": 83,
+      "sha256": "ea32fe9ae2fb5a39739c940f71894dd0fe4c70f0702d0ca7fd95f92299f129d8"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 35823,
+      "sha256": "230184f60bae2feaf244f10a8bac053c8ff33a183bcc365b4d8b876d2b7f4809"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4618,
+      "sha256": "0d44b32efcf5dcddb9868565e87e689745b4efa2d2fcbcc3d4f6bf9552fca6ca"
+    },
+    {
+      "path": "UPSTREAM.md",
+      "bytes": 1636,
+      "sha256": "95b1fb1c4da8f9dc2ad9b9090a3419a87731ea31bf6991a858b73f980327c3f6"
+    },
+    {
+      "path": "VALIDATION.md",
+      "bytes": 2812,
+      "sha256": "d91ca01ba6b7764f9c95f30fe9590c0bef070572e38d7820655ee6a9a3af59d3"
+    },
+    {
+      "path": "deployment/bounded-execution.md",
+      "bytes": 4467,
+      "sha256": "7505c8a19c0673075b2b6750503250d4a42b416a204a6149cd7afe26ef2778a0"
+    },
+    {
+      "path": "deployment/interface-pool.md",
+      "bytes": 9586,
+      "sha256": "37ee8f9ba0dc358f8236f5df893c1b78a79f4e683b5ee6d295d6e0e291c23f00"
+    },
+    {
+      "path": "deployment/linux-docker/.env.example",
+      "bytes": 549,
+      "sha256": "6a6176394a0b2c14d22abda1e30d8aeaf0ed6ca10f1c4f063d09dbb6988a84aa"
+    },
+    {
+      "path": "deployment/linux-docker/Dockerfile.backend",
+      "bytes": 2151,
+      "sha256": "11ba6a22b627c9525520b84fa2f5f5c05f34dad49b9aa64442b5bd2bf1d85d15"
+    },
+    {
+      "path": "deployment/linux-docker/Dockerfile.web",
+      "bytes": 918,
+      "sha256": "341a28692bf1c487dd692b3a90a6911a8994a1c67242c18e32e3f70cf57f7946"
+    },
+    {
+      "path": "deployment/linux-docker/README.md",
+      "bytes": 8288,
+      "sha256": "bc027fc32a3fde1b06f2e2bb9317aa92d26bde8b56b7b117e1b7e58a59228bb0"
+    },
+    {
+      "path": "deployment/linux-docker/compose.yaml",
+      "bytes": 3112,
+      "sha256": "06245d11eb0c189acf87f109716063d75ce8a922888b3805968b457b808ef807"
+    },
+    {
+      "path": "deployment/linux-docker/container.py",
+      "bytes": 5144,
+      "sha256": "36b5c8ade506aefd064cb444545ac3331dc73d1a9576c86a4e57669cae1c7a90"
+    },
+    {
+      "path": "deployment/linux-docker/dependency-sources.json",
+      "bytes": 1568,
+      "sha256": "49a48f177c52248f23772ce9125e9cdccb16294e383c53f309bc118927a2f37a"
+    },
+    {
+      "path": "deployment/linux-docker/gunicorn.conf.py",
+      "bytes": 752,
+      "sha256": "d3ed05d775d841d145a25254425f371c92eb3735eadb06e61cd57d4be837dc46"
+    },
+    {
+      "path": "deployment/linux-docker/host.py",
+      "bytes": 2712,
+      "sha256": "8923291b78798e394ba6b6748869f7daad79d00a7a73e8d93e08a2e8dea63c12"
+    },
+    {
+      "path": "deployment/linux-docker/nginx.conf",
+      "bytes": 1423,
+      "sha256": "aa3a73e4f4a765989279019fade3b0cce65f3eea23a966b084ea5323a9921e88"
+    },
+    {
+      "path": "deployment/linux-docker/recovery_supervisor.py",
+      "bytes": 1465,
+      "sha256": "6a5feaed7372ce27e36610dacfddee6ebdbcecf788fb40ad6d9e8f8f56b2c8ac"
+    },
+    {
+      "path": "deployment/linux-docker/requirements-linux.lock.txt",
+      "bytes": 1139,
+      "sha256": "c4fa79357d2db631cb3888f56df1f2abe9ed7ea89475c9fdb577966b2db775d3"
+    },
+    {
+      "path": "deployment/linux-docker/requirements-simpleui-build.lock.txt",
+      "bytes": 381,
+      "sha256": "1d56d0a62d76065bdeaada207f49a792ddfd02f6f89079de8e12a3f4d235d473"
+    },
+    {
+      "path": "deployment/linux-docker/runtime_probe.py",
+      "bytes": 2627,
+      "sha256": "6c55c7f4bf2ae0187426e4e46e8312fc0e5b6473160ea6bfbade97f9c76c11c1"
+    },
+    {
+      "path": "deployment/linux-docker/runtime_tools.py",
+      "bytes": 6851,
+      "sha256": "9258d4e49a1529b9790c5cf407daf1ca7a19d0e867da919081974c6eb1730a81"
+    },
+    {
+      "path": "deployment/linux-docker/simpleui-build-sources.json",
+      "bytes": 5311,
+      "sha256": "08c41a4b2c30048c768f2ab98e1187062d63acb79b53022f2c6df3aef1f8538d"
+    },
+    {
+      "path": "deployment/linux-docker/simpleui_build.py",
+      "bytes": 3840,
+      "sha256": "870f48f695d6a9d0c450b502ce0b0e56fb834965f7c4d4bcd3ea7a98d15c6627"
+    },
+    {
+      "path": "deployment/linux-docker/test_deployment_contract.py",
+      "bytes": 7648,
+      "sha256": "29130649f576af0d27fa600748cfbdf9f2c538bd98ea2eec62f16a72deab4654"
+    },
+    {
+      "path": "deployment/linux-docker/test_recovery_supervisor.py",
+      "bytes": 1637,
+      "sha256": "6d5b7e3d15eb332a25fbf4c836c4a884db95707eda7dd3753ccd8ab3f3f3dd6b"
+    },
+    {
+      "path": "deployment/linux-docker/test_runtime_probe.py",
+      "bytes": 3379,
+      "sha256": "653930abeb9b1ae9bacd09efdd57d26602117334d5aba4b638cce9e53d3f58fc"
+    },
+    {
+      "path": "deployment/linux-docker/test_runtime_tools.py",
+      "bytes": 7670,
+      "sha256": "893b88b4aeaf54ed5bcba5dda4f823c1e1e849ea6094c1ceb8c80e7538332b79"
+    },
+    {
+      "path": "deployment/linux-docker/test_simpleui_build.py",
+      "bytes": 5462,
+      "sha256": "e594c67e1e87b868f90ea110a8e46f276f31e25eb68fe191e884c509e544eee7"
+    },
+    {
+      "path": "deployment/reminder-recovery.md",
+      "bytes": 9519,
+      "sha256": "bd522a3cb2742ff887dbdf42d8d737ace98d93edcaa0bbf6d6f5e7b56cbb09cb"
+    },
+    {
+      "path": "deployment/requirements-local.lock.txt",
+      "bytes": 1075,
+      "sha256": "f5ecac6f5640dfed3f6052546c451d61e24310b7959478d8fe40d226fef0606b"
+    },
+    {
+      "path": "deployment/requirements-local.txt",
+      "bytes": 385,
+      "sha256": "665ad071711e8ff59029f9be0a54498acee8c8f249844ef44e2913126918fc62"
+    },
+    {
+      "path": "deployment/runtime/bounded-sse/README.md",
+      "bytes": 5508,
+      "sha256": "6225aff56eb7a116db621147bb876a026bbcffddcdc92ff5bc13c7f75bd63c66"
+    },
+    {
+      "path": "deployment/runtime/bounded-sse/build.py",
+      "bytes": 3452,
+      "sha256": "368445654b0d9ab540cc39dadfebbbdb8e6c73d4aea022e0ea8c679e90ccebf6"
+    },
+    {
+      "path": "deployment/runtime/bounded-sse/cmd/k6-bounded-sse/main.go",
+      "bytes": 116,
+      "sha256": "3e2585c07c36296dbe096d6b15d1656c38917404030932df1cd935ee61a15651"
+    },
+    {
+      "path": "deployment/runtime/bounded-sse/go.mod",
+      "bytes": 5201,
+      "sha256": "c7112349327e3a5cba6296e7849093770f2ede8a3762cc531b1f4e8ba7b0c01d"
+    },
+    {
+      "path": "deployment/runtime/bounded-sse/go.sum",
+      "bytes": 36184,
+      "sha256": "5e03d19211e0addfcd7874c762436bd903daa6d0811541f54acd96c9247c3efb"
+    },
+    {
+      "path": "deployment/runtime/bounded-sse/module.go",
+      "bytes": 2817,
+      "sha256": "1d4590e613e82af7b9238b422e9712ae573942f4b36589ace597caa79d4b17d4"
+    },
+    {
+      "path": "deployment/runtime/bounded-sse/module_test.go",
+      "bytes": 2893,
+      "sha256": "4dfe8cd274b51dab6882739edb8f28a7f09301f6786e2a0acc00981d41b65d90"
+    },
+    {
+      "path": "deployment/runtime/bounded-sse/runtime-lock.json",
+      "bytes": 158,
+      "sha256": "18c5fa883cc8c62b2251894adb8b96f79995f297294c08b13741bf4c9c208cc0"
+    },
+    {
+      "path": "deployment/runtime/bounded-sse/stream.go",
+      "bytes": 9721,
+      "sha256": "352cf4e8e034f0b61959bacc8f95cf85c40bdb095c97a2debb9c1323b177b65f"
+    },
+    {
+      "path": "deployment/runtime/bounded-sse/stream_test.go",
+      "bytes": 9296,
+      "sha256": "9cc083c1c13b35d8cde1f9f47278ec349e2a31e1f6705d8ed67fc69ac01b8d71"
+    },
+    {
+      "path": "deployment/runtime/bounded-sse/verify_runtime.py",
+      "bytes": 8537,
+      "sha256": "b8e4adfe11390d4b1dec2db6fe31bd56f1be271de9cf4de2c029709cbef2c3cf"
+    },
+    {
+      "path": "deployment/sse-scenarios.md",
+      "bytes": 7311,
+      "sha256": "4cc2dd96a736c53b31e8f6f9fd5a1ba8888e2abf80e87195b7a0b66981c3ee4b"
+    },
+    {
+      "path": "deployment/swagger-url-import.md",
+      "bytes": 2396,
+      "sha256": "c44f9262b134e48f9fa1ee1b835d7424141050c14862cd2ed68297827f07570d"
+    },
+    {
+      "path": "deployment/test-runner/k6_contains.test.mjs",
+      "bytes": 3041,
+      "sha256": "bf99e504fca8a6ac6c21d8c2592d2c2ee55668e40a49a3b86f26f5805945a793"
+    },
+    {
+      "path": "deployment/test-runner/k6_execution_policy.test.mjs",
+      "bytes": 1850,
+      "sha256": "89282e46f133425349dc91056795b8f1feb3190794b97307e0b9b6a113428481"
+    },
+    {
+      "path": "deployment/test-runner/k6_timed_drain.test.mjs",
+      "bytes": 13833,
+      "sha256": "43a85465e37e26c9e4560f8811e38d56c01735ce8fdae9a5e821cb58f6025e1f"
+    },
+    {
+      "path": "deployment/test-runner/k6_websocket.test.mjs",
+      "bytes": 21362,
+      "sha256": "67edd7042ed488a97c63a4894366508800a08a8b39e3a5bd45b34dc1e24aaa61"
+    },
+    {
+      "path": "deployment/test-runner/run_catalog_tests.py",
+      "bytes": 4092,
+      "sha256": "cfb7f8dd9ae48ee3f5f31dc9bad95022792cb9122644d37739860ca862805d1f"
+    },
+    {
+      "path": "deployment/upload-scenarios.md",
+      "bytes": 3291,
+      "sha256": "d4ecbf1e14defe39b5036fce0538c36c88d7db99dfe5a87df48f812f6349169f"
+    },
+    {
+      "path": "deployment/verify_report_http_exports.py",
+      "bytes": 10958,
+      "sha256": "b546f60ce370fd64bf55ee54c2948ace028e8830b99f5f20c2e4a8036c3b80c4"
+    },
+    {
+      "path": "deployment/websocket-scenarios.md",
+      "bytes": 10525,
+      "sha256": "a43bb37741d8671ef8e7f5879410209f8f38da3c18c0c8fac1ace56cc58b64b5"
+    },
+    {
+      "path": "testhub/.gitignore",
+      "bytes": 2495,
+      "sha256": "860807dde52eec3fd7e8694da0d3d654a95c73f3501964be03fda3e17c2bb86b"
+    },
+    {
+      "path": "testhub/AGENTS.md",
+      "bytes": 8169,
+      "sha256": "0bfaa05e0a0262c8a94812cfce930e97490b6d5f8f2ad5170c88f1b9f3d2d01c"
+    },
+    {
+      "path": "testhub/CLAUDE.md",
+      "bytes": 7693,
+      "sha256": "57ce91de56d6e1b1789865d57fba75b3ab14eff935927b1d1fdec317121c7834"
+    },
+    {
+      "path": "testhub/LICENSE",
+      "bytes": 35823,
+      "sha256": "230184f60bae2feaf244f10a8bac053c8ff33a183bcc365b4d8b876d2b7f4809"
+    },
+    {
+      "path": "testhub/README.md",
+      "bytes": 10998,
+      "sha256": "902313aa6592f4f04e803bcd3fdc23f7d82531bed1d810ccf506eb41ba5fbdce"
+    },
+    {
+      "path": "testhub/apps/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/analytics/__init__.py",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "testhub/apps/analytics/admin.py",
+      "bytes": 13060,
+      "sha256": "c3fa574cd06e8f360bb8aee056e99d095957c1064815305d40d39386cdee2dd3"
+    },
+    {
+      "path": "testhub/apps/analytics/apps.py",
+      "bytes": 196,
+      "sha256": "2eaad34dbcb074d6d463f0655e10182813d979c79743e67861dd8e5fcbeaee93"
+    },
+    {
+      "path": "testhub/apps/analytics/migrations/__init__.py",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "testhub/apps/analytics/models.py",
+      "bytes": 2573,
+      "sha256": "ce0b975af8615e8e99a60a6ff229c529c3ac674a837bf15ac610c311dc4f8913"
+    },
+    {
+      "path": "testhub/apps/analytics/serializers.py",
+      "bytes": 1120,
+      "sha256": "007ff2fc9850bdb5d8d994f6a46f5858a34dc7f239fa044612084694ebb9007c"
+    },
+    {
+      "path": "testhub/apps/analytics/templates/admin/analytics/analyticsevent/change_list.html",
+      "bytes": 6626,
+      "sha256": "38741151311abfeba8229868b148898e11d93c964cad0b27ee12650aaee0b2fc"
+    },
+    {
+      "path": "testhub/apps/analytics/urls.py",
+      "bytes": 182,
+      "sha256": "f891834b30054f2b4b776d15838d01335b07705740fd51c85bf6b80dfe370a25"
+    },
+    {
+      "path": "testhub/apps/analytics/views.py",
+      "bytes": 2509,
+      "sha256": "fc86f91f69938dd7cd94c1e53b159aa81a225bfee8ca6e346feb37cafd152933"
+    },
+    {
+      "path": "testhub/apps/api_testing/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/api_testing/admin.py",
+      "bytes": 4004,
+      "sha256": "0210ff4dc5d866d393320a2b903464bc96b1c6be8a236645ce588ffae6e3a198"
+    },
+    {
+      "path": "testhub/apps/api_testing/apps.py",
+      "bytes": 197,
+      "sha256": "8cc96e60aed395d7b9d1da4eae39482c8c7856f71a05cde64b5f5fed4ee3f8fc"
+    },
+    {
+      "path": "testhub/apps/api_testing/custom_email_backend.py",
+      "bytes": 1354,
+      "sha256": "f6f794a3aab04992e77ff7d4aa99cf92740ca8b7d99b5f870f4132bd93b2e494"
+    },
+    {
+      "path": "testhub/apps/api_testing/migrations/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/api_testing/models.py",
+      "bytes": 29186,
+      "sha256": "b767064d2142a5b1bf1700dbd836ed4251555ec5e44e94494439bf7fe458dab7"
+    },
+    {
+      "path": "testhub/apps/api_testing/operation_logger.py",
+      "bytes": 1416,
+      "sha256": "d1c5753707a8f56b71e28e5356942c73b3c72223c1d558dd7f96d55239dccc5f"
+    },
+    {
+      "path": "testhub/apps/api_testing/serializers.py",
+      "bytes": 35197,
+      "sha256": "84007031886ffc6dc3bfc4ae4ecccb33c47985a7cf0e18a01282b5d6438ccc18"
+    },
+    {
+      "path": "testhub/apps/api_testing/urls.py",
+      "bytes": 1801,
+      "sha256": "111d3ab63f0acdf407e763b40a9e6ad38c2d5a23c295b6b6ffd068cbd85e9fe0"
+    },
+    {
+      "path": "testhub/apps/api_testing/utils.py",
+      "bytes": 17709,
+      "sha256": "1c912837bf6b7495cf6a05f941ffb70545604b32f24c1fc89b561465834c14db"
+    },
+    {
+      "path": "testhub/apps/api_testing/variable_resolver.py",
+      "bytes": 261,
+      "sha256": "5c7fe109eaf9c91962c14dcfa45855c6d83845bf712ade9c9c921ef69c184083"
+    },
+    {
+      "path": "testhub/apps/api_testing/views.py",
+      "bytes": 115957,
+      "sha256": "3e7aeb9f906373181d840234e38677b05079dab627fa7422540aa160a5269612"
+    },
+    {
+      "path": "testhub/apps/app_automation/Template/common/plus_sign.png",
+      "bytes": 2158,
+      "sha256": "e470b74b39f80f15e82b2a84ce53bf62c94300f8adead93e67a36484cd08fb9f"
+    },
+    {
+      "path": "testhub/apps/app_automation/Template/common/spin_button.png",
+      "bytes": 47904,
+      "sha256": "44a81194f625bda9408d60613798185bee36c13ba92a9927d336fcbed9562f58"
+    },
+    {
+      "path": "testhub/apps/app_automation/__init__.py",
+      "bytes": 69,
+      "sha256": "e05eb3ef47cfc7ec5620b707556e70efdb9c236e92cf3a6b48f0103256505840"
+    },
+    {
+      "path": "testhub/apps/app_automation/admin.py",
+      "bytes": 2435,
+      "sha256": "343db0af0bbada47ea2791080346586657012db9966bbc4c76ed9c6c51c3c5a6"
+    },
+    {
+      "path": "testhub/apps/app_automation/apps.py",
+      "bytes": 416,
+      "sha256": "87cc603839533e82ea2dbbe2707eedc7d8a5b536cf35491eb8cc0383a4ab0e7d"
+    },
+    {
+      "path": "testhub/apps/app_automation/constants.py",
+      "bytes": 818,
+      "sha256": "114abc9b281f1447548754fc427bfe74ee1d337485480569682283d40d492d52"
+    },
+    {
+      "path": "testhub/apps/app_automation/consumers.py",
+      "bytes": 1302,
+      "sha256": "6afefdeccd90f8862a81b56b3cbe0b2aaf2b18a8bc45ec6533a4a6296199624c"
+    },
+    {
+      "path": "testhub/apps/app_automation/executors/__init__.py",
+      "bytes": 25,
+      "sha256": "9552f854fcf77389160a08cfb4be2eb902cd9a0c0af76ab57df02cbf9125d369"
+    },
+    {
+      "path": "testhub/apps/app_automation/executors/test_executor.py",
+      "bytes": 14811,
+      "sha256": "c278a2b949a111c5470d10d744d3b89b0693dfab47177a26490a98689bd7a5be"
+    },
+    {
+      "path": "testhub/apps/app_automation/managers/__init__.py",
+      "bytes": 99,
+      "sha256": "62b3a8e3a16d1dc4398adff43d83808913f312551e0a29e37f763f31676332f4"
+    },
+    {
+      "path": "testhub/apps/app_automation/managers/device_manager.py",
+      "bytes": 8783,
+      "sha256": "8f276b4fe42edcadb11599c580a1e9190fb77fbd1f140115896eaabc2c40a150"
+    },
+    {
+      "path": "testhub/apps/app_automation/migrations/__init__.py",
+      "bytes": 25,
+      "sha256": "9552f854fcf77389160a08cfb4be2eb902cd9a0c0af76ab57df02cbf9125d369"
+    },
+    {
+      "path": "testhub/apps/app_automation/models.py",
+      "bytes": 31211,
+      "sha256": "6e9ac01eaf03bcc9e30e66f70d4a2bfa6a9acdeebcf09f87719d6d67c371e0bf"
+    },
+    {
+      "path": "testhub/apps/app_automation/routing.py",
+      "bytes": 206,
+      "sha256": "e8f011b2c84877c72b66462457e018ebdd5779ccb39d81239fc6acc182803100"
+    },
+    {
+      "path": "testhub/apps/app_automation/runners/__init__.py",
+      "bytes": 25,
+      "sha256": "9552f854fcf77389160a08cfb4be2eb902cd9a0c0af76ab57df02cbf9125d369"
+    },
+    {
+      "path": "testhub/apps/app_automation/runners/ui_flow_runner.py",
+      "bytes": 62979,
+      "sha256": "4dc3bb90d7cfb95c46362b9b34e5a6424f54e963ff195a7c649f06a037c612d6"
+    },
+    {
+      "path": "testhub/apps/app_automation/serializers.py",
+      "bytes": 17402,
+      "sha256": "c2fec942561dcbc5889c490a7214ba2666877f7d685a20665fe197a9d50062ad"
+    },
+    {
+      "path": "testhub/apps/app_automation/tasks.py",
+      "bytes": 24293,
+      "sha256": "a0898cfb24cc8f8a0598416e69c2697d62d88c57cb40659af2e840c003824b68"
+    },
+    {
+      "path": "testhub/apps/app_automation/tests/__init__.py",
+      "bytes": 25,
+      "sha256": "9552f854fcf77389160a08cfb4be2eb902cd9a0c0af76ab57df02cbf9125d369"
+    },
+    {
+      "path": "testhub/apps/app_automation/tests/conftest.py",
+      "bytes": 1244,
+      "sha256": "f368d853a5af322042bfe4b8033069459fcbb41b4a1978d81f8e29f20336745d"
+    },
+    {
+      "path": "testhub/apps/app_automation/tests/test_app_flow.py",
+      "bytes": 5331,
+      "sha256": "0cdf63c77f11deabbecb83b09938f9059f1145905fb74c08528cf2e69e00f23d"
+    },
+    {
+      "path": "testhub/apps/app_automation/urls.py",
+      "bytes": 2051,
+      "sha256": "753616d2d51bfdaa7ceb502c0df941e24d125ae8979dd3d88727d139f2746a67"
+    },
+    {
+      "path": "testhub/apps/app_automation/utils/__init__.py",
+      "bytes": 159,
+      "sha256": "bce0f31f90bfb8c4834990bb4a826f51eca388f37b389a854c323bacaf232ef6"
+    },
+    {
+      "path": "testhub/apps/app_automation/utils/airtest_base.py",
+      "bytes": 12864,
+      "sha256": "4e0be12031bed81c769f1d25d0b98831858e4974376c2d918f3a1bd5bb38cbf5"
+    },
+    {
+      "path": "testhub/apps/app_automation/utils/image_helpers.py",
+      "bytes": 476,
+      "sha256": "9e31ee43bf2a577e2cd785b98d7ac3057a4bfa415f396e0d2046c8ee43404199"
+    },
+    {
+      "path": "testhub/apps/app_automation/utils/ocr_helper.py",
+      "bytes": 11049,
+      "sha256": "e8e13f671a63ebd693a25358401c107e1010a3fef03c9003a0ffe43d4a5ddb66"
+    },
+    {
+      "path": "testhub/apps/app_automation/views/__init__.py",
+      "bytes": 1366,
+      "sha256": "b056c9ae65dfe18d59f91f6431d843f7f0a2dbd290d25df2b44e56e4313e866d"
+    },
+    {
+      "path": "testhub/apps/app_automation/views/component_views.py",
+      "bytes": 11963,
+      "sha256": "5e074d1c171f4a58e45e27c63defd43ce8c659f0b7d052f30e28e564957bdeca"
+    },
+    {
+      "path": "testhub/apps/app_automation/views/config_views.py",
+      "bytes": 2642,
+      "sha256": "7e5af9e18fc95d594fda3598dd1c3a87d2a2660defd4eacd5237ce4f6596639e"
+    },
+    {
+      "path": "testhub/apps/app_automation/views/dashboard_views.py",
+      "bytes": 3181,
+      "sha256": "27f099aaf8e2bb09f515710d11d33d05b91b6166551d374022e70ddcdac1cbbe"
+    },
+    {
+      "path": "testhub/apps/app_automation/views/device_views.py",
+      "bytes": 10959,
+      "sha256": "b453cdbffda5e916039e978e8aef3288cb86b52427743f98381c6989fa47fedd"
+    },
+    {
+      "path": "testhub/apps/app_automation/views/element_views.py",
+      "bytes": 19857,
+      "sha256": "5ffd3d176985b08d24584cd819e4061915c51be284716975dcb271945555c064"
+    },
+    {
+      "path": "testhub/apps/app_automation/views/execution_views.py",
+      "bytes": 6538,
+      "sha256": "0e337f1589500519d457fa907dc3a5180754dd2588e1a5f52d65321e6f2b9ba9"
+    },
+    {
+      "path": "testhub/apps/app_automation/views/project_views.py",
+      "bytes": 1586,
+      "sha256": "f1149963377451dab20589eafef88fa60193125614b40984f8682c18740c8c36"
+    },
+    {
+      "path": "testhub/apps/app_automation/views/scheduled_task_views.py",
+      "bytes": 7448,
+      "sha256": "2fdc1f14a1d56bd9ba1d13961c385d0dc9837f3d325e2dd2a9a704909502b4d2"
+    },
+    {
+      "path": "testhub/apps/app_automation/views/suite_views.py",
+      "bytes": 9574,
+      "sha256": "21ab71317cb6af84b88b5b1f7271171d9aabc9a0efffc105ff57d7c8f14fefd3"
+    },
+    {
+      "path": "testhub/apps/app_automation/views/test_case_views.py",
+      "bytes": 3999,
+      "sha256": "e084d70c5fde441f493e37907f155949231926620a350e08a6ffb5e7d2b76d1f"
+    },
+    {
+      "path": "testhub/apps/assistant/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/assistant/admin.py",
+      "bytes": 917,
+      "sha256": "292c3697e8275415c92ed5efcbc85db4f17eda0ce3c19b0ff736cd10f2165f99"
+    },
+    {
+      "path": "testhub/apps/assistant/apps.py",
+      "bytes": 196,
+      "sha256": "c79f8e06b3f67eff8b74c029066007374c7cfe85e28e4eb8e7d8dd06ae39143b"
+    },
+    {
+      "path": "testhub/apps/assistant/migrations/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/assistant/models.py",
+      "bytes": 3945,
+      "sha256": "1096c6cd8c16fbe6ec69a7db4dfa8f206aa0d3c2d7b3c60bd55657edfc303583"
+    },
+    {
+      "path": "testhub/apps/assistant/serializers.py",
+      "bytes": 1605,
+      "sha256": "325465bd4619693c9bfee540aa60c0961351cbb3b08e62905d1f513e7d212f72"
+    },
+    {
+      "path": "testhub/apps/assistant/tests.py",
+      "bytes": 63,
+      "sha256": "dae0da7efdcdb3a7fb572d5e914b60631099122d4a4727ac6434c016161c5fe1"
+    },
+    {
+      "path": "testhub/apps/assistant/urls.py",
+      "bytes": 569,
+      "sha256": "2c9da3d278a712b71412280760198f71847de33e90cc26eaaf43d69d106a54ad"
+    },
+    {
+      "path": "testhub/apps/assistant/views.py",
+      "bytes": 6110,
+      "sha256": "2d70766f113f792906d538cd3c89d1a211427d70af660da7f593a80b79a99ad6"
+    },
+    {
+      "path": "testhub/apps/assistant/views_config.py",
+      "bytes": 4335,
+      "sha256": "7b114e305c5aafea0baa66a53add07ab1536fc5217fdfd5b484ed850372ac0fd"
+    },
+    {
+      "path": "testhub/apps/core/README.md",
+      "bytes": 8320,
+      "sha256": "22fb1544c526bae5edd2e826e89865e7d31f1950b9914c79dcbf6989df7c52cd"
+    },
+    {
+      "path": "testhub/apps/core/__init__.py",
+      "bytes": 52,
+      "sha256": "6666bba17fb6a81f9b43cc8a68c4549227ecea0f3fdf0327f3b5518f12944ecb"
+    },
+    {
+      "path": "testhub/apps/core/apps.py",
+      "bytes": 186,
+      "sha256": "bccf5cc6d10649e9f19c45e0b979c8f9dc8095475bcbb4f7f86a6c4d761ec989"
+    },
+    {
+      "path": "testhub/apps/core/docs_views.py",
+      "bytes": 4265,
+      "sha256": "ddc0000430d0f5f1ddc9311f200e0e50f028a5dcbf06d380a483752584da459d"
+    },
+    {
+      "path": "testhub/apps/core/management/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/core/management/commands/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/core/management/commands/download_webdrivers.py",
+      "bytes": 3979,
+      "sha256": "fab897d7bf4d0a6b4695eec5d24c378ff0198ee00e7a6c5719787875c3d09bf7"
+    },
+    {
+      "path": "testhub/apps/core/management/commands/init_locator_strategies.py",
+      "bytes": 4099,
+      "sha256": "54acd967ee76288938379ebc8e363cb56ac44f6e128129d44f093a6d8c6479ba"
+    },
+    {
+      "path": "testhub/apps/core/management/commands/load_component_pack.py",
+      "bytes": 5953,
+      "sha256": "e6ea7ad62b79378f48022cfe6f92b45acf9bd752dede8a9833b9ed4c8d8ab2a0"
+    },
+    {
+      "path": "testhub/apps/core/management/commands/run_all_scheduled_tasks.py",
+      "bytes": 39547,
+      "sha256": "8124f81145b04144ae3f6f85f226401267c96470dc399b5737c827efc46039db"
+    },
+    {
+      "path": "testhub/apps/core/management/commands/ui-component-pack.yaml",
+      "bytes": 13942,
+      "sha256": "5c543f7bf2c859e54af7d90b4fba2c2ec90222ddf53604fc3ea947a2ba21cafd"
+    },
+    {
+      "path": "testhub/apps/core/migrations/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/core/models.py",
+      "bytes": 2909,
+      "sha256": "90a1e21675c4107221b41dedfdf8229c81fdfaa34935e76734781c3a1431a8d8"
+    },
+    {
+      "path": "testhub/apps/core/serializers.py",
+      "bytes": 1216,
+      "sha256": "a28574c3744e2050a91e859ee4c356583cfd4a7f87b5d0b4e328c691b0cbb958"
+    },
+    {
+      "path": "testhub/apps/core/tests.py",
+      "bytes": 5352,
+      "sha256": "e8897a97b628259aa234a6c4ab284912a361e7d715616ea434e7ea912517b2f3"
+    },
+    {
+      "path": "testhub/apps/core/urls.py",
+      "bytes": 569,
+      "sha256": "c931bee8fbcb08d8c69c7d744bbead95d11b8ea0f29325f50b16329950d94404"
+    },
+    {
+      "path": "testhub/apps/core/variable_resolver.py",
+      "bytes": 28686,
+      "sha256": "f56a0cb71a2201c0f9fc183bf64d8b4d1a9ec75971c4043a187718d8f9d4d247"
+    },
+    {
+      "path": "testhub/apps/core/views.py",
+      "bytes": 2339,
+      "sha256": "f22638fa70819f3a0588449d2a6812f2e58c4502f4a110a0031b95ceb085306f"
+    },
+    {
+      "path": "testhub/apps/data_factory/__init__.py",
+      "bytes": 201,
+      "sha256": "2bafcb54ba70df1ea8503ce40c9c34c76a25ac6d2e83b21e6bcc15c96db21c80"
+    },
+    {
+      "path": "testhub/apps/data_factory/admin.py",
+      "bytes": 66,
+      "sha256": "a7ac68a753eeb831b6530bf71bf6917e577139f0734d17cc6a8666391564ab25"
+    },
+    {
+      "path": "testhub/apps/data_factory/apps.py",
+      "bytes": 201,
+      "sha256": "c748aa7c5284fbe4d53c3a9da8adb8ae567b0d7fb811c19c306229b1e671f6b3"
+    },
+    {
+      "path": "testhub/apps/data_factory/migrations/__init__.py",
+      "bytes": 201,
+      "sha256": "2bafcb54ba70df1ea8503ce40c9c34c76a25ac6d2e83b21e6bcc15c96db21c80"
+    },
+    {
+      "path": "testhub/apps/data_factory/models.py",
+      "bytes": 2331,
+      "sha256": "1ae581395dbd8d8aca68ba710447c128c853a8604b6a0df8c6faf72513f39541"
+    },
+    {
+      "path": "testhub/apps/data_factory/serializers.py",
+      "bytes": 1885,
+      "sha256": "6f43ed81aab6c9e831e300e163fa17515b867b1dede2efc2cf55ab59a56002a7"
+    },
+    {
+      "path": "testhub/apps/data_factory/tests.py",
+      "bytes": 65,
+      "sha256": "c3d74e62ecd8e131feae676f821ff3b361c69bbef77e081fa841aec4cade8f6a"
+    },
+    {
+      "path": "testhub/apps/data_factory/tool_list.py",
+      "bytes": 11957,
+      "sha256": "8a6e085d3dd3857aafd1570e7cb017d8922b3d77f3f92565b0fe6ffb5709f30a"
+    },
+    {
+      "path": "testhub/apps/data_factory/tools/__init__.py",
+      "bytes": 264,
+      "sha256": "ce55b54e53d44e348b69befdc9e4863992161564f5eaa8b8a6d660341dfaa199"
+    },
+    {
+      "path": "testhub/apps/data_factory/tools/china_bank_card.py",
+      "bytes": 33680,
+      "sha256": "d30b5a98662034d21dae01335a4792ff996aa87c5bbc33434f7fe131c9260a9a"
+    },
+    {
+      "path": "testhub/apps/data_factory/tools/crontab_tools.py",
+      "bytes": 8812,
+      "sha256": "4d8e66dc86663a5f6cc03ef8741cba08023ea6834b144ef2e0b7b418ff557a10"
+    },
+    {
+      "path": "testhub/apps/data_factory/tools/encoding_tools.py",
+      "bytes": 25399,
+      "sha256": "032f16e99e5b0ee2176d36481210eb01ba8319e51d1dbaf5cc48e074de942eaa"
+    },
+    {
+      "path": "testhub/apps/data_factory/tools/encryption_tools.py",
+      "bytes": 10714,
+      "sha256": "ae1721e86a3f584ed1583b339d15e874a4890927fcf1014ef038bf736c51d17d"
+    },
+    {
+      "path": "testhub/apps/data_factory/tools/image_tools.py",
+      "bytes": 10222,
+      "sha256": "77e4c30b2b4218fd9b026c2bc241357eb728acf4628ba08761d80c8e829fb20f"
+    },
+    {
+      "path": "testhub/apps/data_factory/tools/json_tools.py",
+      "bytes": 25669,
+      "sha256": "6c2be96f56eb17a8a4e18bc8415c935fff5fbd8a83f81d11647bf51ccbd7fc15"
+    },
+    {
+      "path": "testhub/apps/data_factory/tools/random_tools.py",
+      "bytes": 14468,
+      "sha256": "4046bd4d29bc1ebabd2a0cff0cad0c19961ef8e04f3ffd70f9d6b7f343eea8c3"
+    },
+    {
+      "path": "testhub/apps/data_factory/tools/string_tools.py",
+      "bytes": 8006,
+      "sha256": "1745daf71d31334098a9750ddd3e296899c95a1472d0042054c7afa8333b0f1d"
+    },
+    {
+      "path": "testhub/apps/data_factory/tools/test_data_tools.py",
+      "bytes": 10843,
+      "sha256": "bd712f080f652a9cd5547a050bc769404d2321645923e009afa2d7aba23b258d"
+    },
+    {
+      "path": "testhub/apps/data_factory/tools/unified_credit_code.py",
+      "bytes": 46087,
+      "sha256": "eb7bfaa2b1db4e27d7394f19f04e28449fe1619d6b58f96030289a0dd68ba36a"
+    },
+    {
+      "path": "testhub/apps/data_factory/urls.py",
+      "bytes": 282,
+      "sha256": "889a240c07846f3637259098be152ac13bd58b31c83007c313c17f4b1f911a15"
+    },
+    {
+      "path": "testhub/apps/data_factory/views.py",
+      "bytes": 53592,
+      "sha256": "ed3a7576e10ceb4504f3aa6e08c1a9272b5c5cfde3df2d1894c33a92051da5e4"
+    },
+    {
+      "path": "testhub/apps/defects/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/defects/admin.py",
+      "bytes": 1529,
+      "sha256": "f3f1d00a5259c22ec6f88cfe5bf1d2e8c0625a612b0151223020780e818193b3"
+    },
+    {
+      "path": "testhub/apps/defects/apps.py",
+      "bytes": 157,
+      "sha256": "23755ffbf06d5d58392206bd857e20584288e29e84f6781380c49d1525086d50"
+    },
+    {
+      "path": "testhub/apps/defects/migrations/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/defects/models.py",
+      "bytes": 7750,
+      "sha256": "4698731db7f8a562f37400ca74b4ff0a94e78d2f73a5c0a7be84677379e46b7c"
+    },
+    {
+      "path": "testhub/apps/defects/serializers.py",
+      "bytes": 8927,
+      "sha256": "591e4521f9190058d678af3af29da086767da605980029bed877ce805978df0f"
+    },
+    {
+      "path": "testhub/apps/defects/tests.py",
+      "bytes": 9951,
+      "sha256": "9957afcdedd65a28ec5e874a1e85afb9e851acf113dcda19f3dff39bc0a23830"
+    },
+    {
+      "path": "testhub/apps/defects/urls.py",
+      "bytes": 276,
+      "sha256": "a185fbb8f45e5df1b9399a8b3cd2f046a16f67b7c4820f5160b074bf21218be4"
+    },
+    {
+      "path": "testhub/apps/defects/views.py",
+      "bytes": 31837,
+      "sha256": "9396c86407dbce046e6bb6c684c387792cc574947b0bb64b7ecd95fcaa460e06"
+    },
+    {
+      "path": "testhub/apps/executions/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/executions/admin.py",
+      "bytes": 1457,
+      "sha256": "d29d0f493167d18a30dbce641050433c69d55ca6636f243039f8018c0adb79c4"
+    },
+    {
+      "path": "testhub/apps/executions/apps.py",
+      "bytes": 204,
+      "sha256": "78fad39ec8bcfee55b4ca008bbdba362b283ea7bbb5e6076864dc0a39c94bd7b"
+    },
+    {
+      "path": "testhub/apps/executions/migrations/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/executions/models.py",
+      "bytes": 6846,
+      "sha256": "5f8795bd92d6d0e760a6e5c70bb488f27c687916d3ed8130a576f98548e24098"
+    },
+    {
+      "path": "testhub/apps/executions/serializers.py",
+      "bytes": 3126,
+      "sha256": "f651102552f4562886b566b0c8ff37346422bc523169938bd442b94fd5d16a7d"
+    },
+    {
+      "path": "testhub/apps/executions/urls.py",
+      "bytes": 468,
+      "sha256": "b10a5bd0e48f6b631e14d5245f3985e16724780890d413f289906845e54719cf"
+    },
+    {
+      "path": "testhub/apps/executions/views.py",
+      "bytes": 9463,
+      "sha256": "1f8d2086ffcaaebd3f6ab90219d0bd9c16418e1713844c543d79d7ecf3e63385"
+    },
+    {
+      "path": "testhub/apps/llm_judge/__init__.py",
+      "bytes": 93,
+      "sha256": "67bb0af5d08e55f921cb7e074a6467aae3c2215fcfbb488a27abd0e2d15a41c6"
+    },
+    {
+      "path": "testhub/apps/llm_judge/admin.py",
+      "bytes": 2192,
+      "sha256": "762e7daf3bbdd646a420a7835d288101701fd1534d4d43c3d58d0b410514ca71"
+    },
+    {
+      "path": "testhub/apps/llm_judge/apps.py",
+      "bytes": 332,
+      "sha256": "4ca886d8124069a1458bbdbf47d4745f9f28b8a7bcbf6136682fccf7e19c84dd"
+    },
+    {
+      "path": "testhub/apps/llm_judge/file_parser.py",
+      "bytes": 15335,
+      "sha256": "34c61cf84da1a99363b3f28455031d103c5ed50e45a9065fbad6b9ca15f17c04"
+    },
+    {
+      "path": "testhub/apps/llm_judge/filters.py",
+      "bytes": 1230,
+      "sha256": "60a4b97aa6e9bab54253819a63f29414c189410067ea4ab23d2b7a3b88dc622e"
+    },
+    {
+      "path": "testhub/apps/llm_judge/judge_engine/__init__.py",
+      "bytes": 568,
+      "sha256": "31330d9cebfa2899beed4d2255098dfec4a8bcd142fae8b3909a78314605eab8"
+    },
+    {
+      "path": "testhub/apps/llm_judge/judge_engine/cache.py",
+      "bytes": 3514,
+      "sha256": "9b4b5f612fcaf688635421a62b4319ad68123325e65c0cc60322a0fb6ca94c49"
+    },
+    {
+      "path": "testhub/apps/llm_judge/judge_engine/config.py",
+      "bytes": 3530,
+      "sha256": "cb12d785dc74ec8673fba422d7a6f6ba23b2b0e2b6b34e58cde486c12fd9fc8e"
+    },
+    {
+      "path": "testhub/apps/llm_judge/judge_engine/gateway.py",
+      "bytes": 1777,
+      "sha256": "b50ac6b8a57764774b35f0800c3eb08905ba622eefc4d7f7bad1c6ab4ce1c8f4"
+    },
+    {
+      "path": "testhub/apps/llm_judge/judge_engine/gt_provider.py",
+      "bytes": 5055,
+      "sha256": "728a949e21c74c629402d4e60e1d71c1a18e7d71af5da8860910e702128e70ac"
+    },
+    {
+      "path": "testhub/apps/llm_judge/judge_engine/judge.py",
+      "bytes": 9359,
+      "sha256": "97bc3c82a34153dab591688bd9f5b57b66be88427d019412fc8e8c51d6463ba3"
+    },
+    {
+      "path": "testhub/apps/llm_judge/judge_engine/kb/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/llm_judge/judge_engine/kb/financial_kb.json",
+      "bytes": 2333,
+      "sha256": "35dbd2f8284df15ceefb6147dba7eb1fb0cb68d9ce2fe92b378c04816393c6a1"
+    },
+    {
+      "path": "testhub/apps/llm_judge/judge_engine/models.py",
+      "bytes": 1928,
+      "sha256": "cb2c30e4c49c5490c24edc700f72357e26e3807848d29d9ce360fce918f7cbef"
+    },
+    {
+      "path": "testhub/apps/llm_judge/judge_engine/rubric.py",
+      "bytes": 3366,
+      "sha256": "269979e049a56197a0f2fe1a34cefc3d94de250f1b984dd13559afaf84b0e8df"
+    },
+    {
+      "path": "testhub/apps/llm_judge/judge_engine/rubric_loader.py",
+      "bytes": 5989,
+      "sha256": "00af9dcf47296f0ee11e2d6afd66b9d14b8ebb7bfed551f5042edfa69c729272"
+    },
+    {
+      "path": "testhub/apps/llm_judge/judge_engine/rubric_templates/customer_service_rubric_v1.0.yaml",
+      "bytes": 2251,
+      "sha256": "a199a6daffc826965875a900b58cdc2d7839346f0ec7c0bbdcf97201d0f8a863"
+    },
+    {
+      "path": "testhub/apps/llm_judge/judge_engine/rubric_templates/finance_rubric_v1.0.yaml",
+      "bytes": 7900,
+      "sha256": "d0911e9088ff73cd0ce05c2eb1c7694b98a54af0efafeb8a94e702322093d586"
+    },
+    {
+      "path": "testhub/apps/llm_judge/judge_engine/rubric_templates/qa_rubric_v1.0.yaml",
+      "bytes": 3077,
+      "sha256": "a68601b87532bc97d776dd3cb5c3d4486a84413c0e7632ecf0d731a9b49efcc8"
+    },
+    {
+      "path": "testhub/apps/llm_judge/judge_engine/rules.py",
+      "bytes": 10765,
+      "sha256": "2f22ca5d6b49f0e943022e388415393c55ce2fd1e07375d284d65628d5f31d96"
+    },
+    {
+      "path": "testhub/apps/llm_judge/judge_engine/rules_llm.py",
+      "bytes": 6586,
+      "sha256": "f3e1c75d09690646f096521de78037a561d7754cf6ef0f2e6023063924cbcd7f"
+    },
+    {
+      "path": "testhub/apps/llm_judge/judge_engine/scorer.py",
+      "bytes": 2169,
+      "sha256": "4005ade4b2b793329e3ac0ef764b836238dc74b21299291d1460655ef1471b40"
+    },
+    {
+      "path": "testhub/apps/llm_judge/judge_engine/service.py",
+      "bytes": 11459,
+      "sha256": "e0e1a2b659a763b929b499c92e108f8cde6cb71de56d7827a6cf5da14ea1fb2b"
+    },
+    {
+      "path": "testhub/apps/llm_judge/kb_service.py",
+      "bytes": 18246,
+      "sha256": "ebd363fef80610da1b3a19c0a7cb7f69af022ee5f97df3ae806e1c5361b06965"
+    },
+    {
+      "path": "testhub/apps/llm_judge/management/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/llm_judge/management/commands/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/llm_judge/management/commands/init_judge_rubrics.py",
+      "bytes": 11097,
+      "sha256": "130ead82cc29052bc71808acf7541938b4eb5b114c4e0e1ea0b8d49783fd330e"
+    },
+    {
+      "path": "testhub/apps/llm_judge/migrations/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/llm_judge/models.py",
+      "bytes": 18278,
+      "sha256": "cca32159ced299a12400f221229659c2b60f8e03f1e75b401440c423078142de"
+    },
+    {
+      "path": "testhub/apps/llm_judge/serializers.py",
+      "bytes": 9828,
+      "sha256": "3e8998fd0a11851483c767f0f74a764de002043cd09abc6ea3c0680bb59f22ab"
+    },
+    {
+      "path": "testhub/apps/llm_judge/service.py",
+      "bytes": 177,
+      "sha256": "972f5868e5759206cc6d4a5359fc1c43fc93d959c665ece3b960904f8c715680"
+    },
+    {
+      "path": "testhub/apps/llm_judge/tasks.py",
+      "bytes": 8497,
+      "sha256": "57226ba224a3ef23efd8a34e60ea98fe9f7a4ed423ddb9ff0eb885a6622b1109"
+    },
+    {
+      "path": "testhub/apps/llm_judge/urls.py",
+      "bytes": 1949,
+      "sha256": "3e438ca3fa47750568057d21056ac994f8130e5ff74470a7e9c6c05e20941f31"
+    },
+    {
+      "path": "testhub/apps/llm_judge/views.py",
+      "bytes": 32837,
+      "sha256": "467596e40f51e252539c5b0a0122dea97f0d29c9f4fd3a501da60b41fbe71f2a"
+    },
+    {
+      "path": "testhub/apps/mcp/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/mcp/actions.py",
+      "bytes": 10279,
+      "sha256": "44f2779f1d861096e58bc30cbfbd68b4b392eaefb0577ad47ce2c77616319f16"
+    },
+    {
+      "path": "testhub/apps/mcp/admin.py",
+      "bytes": 832,
+      "sha256": "30c2ed649526485ab3c347fd21414d3ef588e841d723615541b098ac9b0d271b"
+    },
+    {
+      "path": "testhub/apps/mcp/apps.py",
+      "bytes": 182,
+      "sha256": "bfd9dd035c514e51b6f37350262f27c107377414f5f89c1de8f17261f36c86be"
+    },
+    {
+      "path": "testhub/apps/mcp/auth.py",
+      "bytes": 5473,
+      "sha256": "aae2918679f6f26cd0e55754777266ed4edeffce290b74d26bca4394182205db"
+    },
+    {
+      "path": "testhub/apps/mcp/confirm.py",
+      "bytes": 9690,
+      "sha256": "64e8530471f281009321fc72efd71bcb93cdfb1b6a1707a69dea84f345c6db11"
+    },
+    {
+      "path": "testhub/apps/mcp/migrations/0001_initial.py",
+      "bytes": 4338,
+      "sha256": "a6d46e7e3abaae560aae6078e78c24830fb313405e4d64951eafb393d72b6822"
+    },
+    {
+      "path": "testhub/apps/mcp/migrations/0002_mcpcalllog_args_brief_mcpcalllog_client_name_and_more.py",
+      "bytes": 1036,
+      "sha256": "87374aee798ac658d8aff07e714333e9d0fd20ab7a039ba715f7a22daf5e78f3"
+    },
+    {
+      "path": "testhub/apps/mcp/migrations/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/mcp/models.py",
+      "bytes": 5562,
+      "sha256": "1eec927f6cd22c85cef393050ab9cc881c4997dd6eade22333f53818e823e1a3"
+    },
+    {
+      "path": "testhub/apps/mcp/registry.py",
+      "bytes": 14638,
+      "sha256": "c5be9fa9d1059ee7ccdd301c9fe721fc55d33d57e3e0fe6f32f6301be1c2073e"
+    },
+    {
+      "path": "testhub/apps/mcp/serializers.py",
+      "bytes": 858,
+      "sha256": "2d92865a3c07eafaaa2b7afa3e3c0e7a54efbe9dd8b0de73353153a94ae4c3d1"
+    },
+    {
+      "path": "testhub/apps/mcp/server.py",
+      "bytes": 9456,
+      "sha256": "ee0ac97b2ead7d622bdb6bdb6e04736d0f7647560c4201be3e9146efa288834a"
+    },
+    {
+      "path": "testhub/apps/mcp/tests/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/mcp/tests/test_auth.py",
+      "bytes": 3994,
+      "sha256": "694483b7d13ea4f750128d86758a25add5ea662e4fe88d9f60db93ec82d33173"
+    },
+    {
+      "path": "testhub/apps/mcp/tests/test_confirm.py",
+      "bytes": 8559,
+      "sha256": "14ea0d74a98cee4d9c1b9f839542275108356cf327b08fb79be10814215dc61e"
+    },
+    {
+      "path": "testhub/apps/mcp/tests/test_registry.py",
+      "bytes": 1974,
+      "sha256": "6f0910307cbd3a8b7140990857f093be1b9639c8d1f838b75ed629bb714b14d8"
+    },
+    {
+      "path": "testhub/apps/mcp/tests/test_tools.py",
+      "bytes": 10808,
+      "sha256": "43e57df188e480a00f802fc75e331b128f1636e99129a38eb0d5ac2c15643bff"
+    },
+    {
+      "path": "testhub/apps/mcp/tests/test_views.py",
+      "bytes": 12517,
+      "sha256": "c9aedab3492284144f7c7fe16f678d9a8e3775a6e1f1c2077e64760e6f68c4a6"
+    },
+    {
+      "path": "testhub/apps/mcp/tests/utils.py",
+      "bytes": 945,
+      "sha256": "7817964f23d84c81a8a44e0fca0172212523b1203061eab14c2fe786201250ca"
+    },
+    {
+      "path": "testhub/apps/mcp/tools.py",
+      "bytes": 24512,
+      "sha256": "7d8157424a2eb326e5eb057b82507958d781e3769c398039df8b531344807b19"
+    },
+    {
+      "path": "testhub/apps/mcp/urls.py",
+      "bytes": 1277,
+      "sha256": "8c03b41edc0a7ce1175327595bd4ce281ebf5ded8726c7e8f4c78fdf4df09005"
+    },
+    {
+      "path": "testhub/apps/mcp/views.py",
+      "bytes": 13043,
+      "sha256": "47d416f54c38ab1f93ebbb5252757c18bcb996d227bc9e1513478f9a02165ee2"
+    },
+    {
+      "path": "testhub/apps/monitor/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/monitor/admin.py",
+      "bytes": 332,
+      "sha256": "13079212c8c76857eeb3e5e9888b25c98ec2b9e8209f865984c362d3cae09011"
+    },
+    {
+      "path": "testhub/apps/monitor/apps.py",
+      "bytes": 192,
+      "sha256": "ab198eb99f14de4e201ebc9a0aa767a6044138f57e75afda231b8aef0c4e24f4"
+    },
+    {
+      "path": "testhub/apps/monitor/management/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/monitor/management/commands/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/monitor/management/commands/import_monitor_targets.py",
+      "bytes": 5458,
+      "sha256": "6066448d924bd08b3414cb7423037457c7ae83bf75f38910152b999100a202c1"
+    },
+    {
+      "path": "testhub/apps/monitor/migrations/0001_initial.py",
+      "bytes": 7697,
+      "sha256": "0ad140b84ef4e0028d6aac3f5efa5c7401bb8415921cd92c5f6d7fd86069d2f1"
+    },
+    {
+      "path": "testhub/apps/monitor/migrations/0002_monitortarget_alert_threshold.py",
+      "bytes": 455,
+      "sha256": "c2fd7834b06be61bed60c2da6cd1cc4cc11e1e3a3d592d251df6310934a98b12"
+    },
+    {
+      "path": "testhub/apps/monitor/migrations/0003_alter_alertevent_table_comment_and_more.py",
+      "bytes": 11656,
+      "sha256": "54c0c5e0bfbc45ec0ea8aada843c2056f33fb48578723881ec90ca0b21349cdf"
+    },
+    {
+      "path": "testhub/apps/monitor/migrations/0004_alertevent_last_notified_at_alertevent_notify_count_and_more.py",
+      "bytes": 1285,
+      "sha256": "dc6adb8cd1372cec9c4aee7a13b3d840d25894a1b33dd8f7da2908bc514d081d"
+    },
+    {
+      "path": "testhub/apps/monitor/migrations/0005_alter_monitortarget_alert_repeat_interval_and_more.py",
+      "bytes": 958,
+      "sha256": "3e6041bc549329d12705dc7243d5629f82c356d065d278772a1419bd843655d6"
+    },
+    {
+      "path": "testhub/apps/monitor/migrations/0006_split_notify_channels_primary_secondary.py",
+      "bytes": 2139,
+      "sha256": "42ab7082eba3ea9147002821c4789cb384086c0e0fe0652db181d8b2f102e58f"
+    },
+    {
+      "path": "testhub/apps/monitor/migrations/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/monitor/models.py",
+      "bytes": 23450,
+      "sha256": "4887fb77675d43d8ed0d2bd2d0ff6e338b13e5607aadcc0f34cd197d50f07743"
+    },
+    {
+      "path": "testhub/apps/monitor/serializers.py",
+      "bytes": 4764,
+      "sha256": "ab5e6ee5aef17942a7671f7ace0117947f0c38da8e697de41b19ec928c24cf01"
+    },
+    {
+      "path": "testhub/apps/monitor/tests/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/monitor/tests/test_alert_friendly.py",
+      "bytes": 4782,
+      "sha256": "37a623d4dee8763e24c4e185a04bb21f0d8d97e667fd9243269dbb3dcdf374b8"
+    },
+    {
+      "path": "testhub/apps/monitor/tests/test_alert_resend.py",
+      "bytes": 3501,
+      "sha256": "bfcf35f1557de3596df38f10625c6c2d6b144a6f9049f566bd95f907439e6a2b"
+    },
+    {
+      "path": "testhub/apps/monitor/tests/test_configurable_interval.py",
+      "bytes": 1587,
+      "sha256": "d9243d3ea2de367edeea7ee5ad91bb6ebea721fe008619f31ea1c7d6e006baa2"
+    },
+    {
+      "path": "testhub/apps/monitor/tests/test_crypto.py",
+      "bytes": 2670,
+      "sha256": "84e33cd052cf3bd017e668ff2d9606712ac3e3371960a8cbb77b3d9bd475ab5d"
+    },
+    {
+      "path": "testhub/apps/monitor/tests/test_dispatch_fallback.py",
+      "bytes": 3930,
+      "sha256": "c8c72292604ca1eb6f3a1c9323ebee36b4e5eeee3f4e1179a54681b64e18d3f3"
+    },
+    {
+      "path": "testhub/apps/monitor/tests/test_probes.py",
+      "bytes": 19798,
+      "sha256": "1e7ca3368211b1bff47dc05f2d3f9fcf58972a1c99b634aa62d8485913611712"
+    },
+    {
+      "path": "testhub/apps/monitor/tests/test_serializers.py",
+      "bytes": 1691,
+      "sha256": "f3ef8b9902b8e556cfd49d8ac1156dd67527afc882629e9f169ded75ae2c5fb9"
+    },
+    {
+      "path": "testhub/apps/monitor/urls.py",
+      "bytes": 766,
+      "sha256": "816ab30c8d29a1d63de7166ca569c3cf937c262cc5a5f5a0351297449040ef9a"
+    },
+    {
+      "path": "testhub/apps/monitor/utils/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/monitor/utils/crypto.py",
+      "bytes": 3033,
+      "sha256": "3948fb11a94e0406938ecbd88866630beb2dc2044aadf4fdfda1ecc6240f0bfe"
+    },
+    {
+      "path": "testhub/apps/monitor/utils/notifiers.py",
+      "bytes": 6308,
+      "sha256": "e8066d8659485f7488a2e5f35c5b3779ba7906402bcba9bf549cea0ea7eb1c89"
+    },
+    {
+      "path": "testhub/apps/monitor/utils/probes.py",
+      "bytes": 34630,
+      "sha256": "af1610597e800974a5448b06cbf15d727c595f94c94ebff18fb7879ba4e3c4ef"
+    },
+    {
+      "path": "testhub/apps/monitor/utils/scheduler_heartbeat.py",
+      "bytes": 2601,
+      "sha256": "dc6f5b2cf4ef5cceeb2ceeb33fe4fbc03c3c5d5ac70c08b6fd82b119a881dd80"
+    },
+    {
+      "path": "testhub/apps/monitor/views.py",
+      "bytes": 12393,
+      "sha256": "f1c30683435b41ffffb0782772116ba2a9abd20383d45479cb09c0c29c4ecbbc"
+    },
+    {
+      "path": "testhub/apps/perf_testing/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/perf_testing/admin.py",
+      "bytes": 2777,
+      "sha256": "eaf2804dd1e3dc2a8f50d495c5ffcf221d88d1e82c5bf53e3fcf2a956253c7b4"
+    },
+    {
+      "path": "testhub/apps/perf_testing/apps.py",
+      "bytes": 1668,
+      "sha256": "74dab779171cad3b0c03400ce4a02650f2587f515ba501faa9eaed8bd7f19bbe"
+    },
+    {
+      "path": "testhub/apps/perf_testing/auth.py",
+      "bytes": 2046,
+      "sha256": "481f91abe42e8b4cebd12a36fff4b4e4bed09f3fb8283e888232ab4f922919bb"
+    },
+    {
+      "path": "testhub/apps/perf_testing/consumers.py",
+      "bytes": 4927,
+      "sha256": "31577234397599300afa0d4f35402e70d634f3289399a3387345828f45468c67"
+    },
+    {
+      "path": "testhub/apps/perf_testing/engines/__init__.py",
+      "bytes": 4779,
+      "sha256": "3ccec654359cd7660bf5585fc76abe768c171cfe9715a354b01f1f166b8e6132"
+    },
+    {
+      "path": "testhub/apps/perf_testing/engines/base.py",
+      "bytes": 5305,
+      "sha256": "41e80dacfd35a2c265a4171fdb99dd19b0edc16a2cd21bae57035c4d5a611f84"
+    },
+    {
+      "path": "testhub/apps/perf_testing/engines/builtin.py",
+      "bytes": 35498,
+      "sha256": "ad748887ec064405c154137ad48e43be58cfc455d00e8e862d80ca55b0e171a6"
+    },
+    {
+      "path": "testhub/apps/perf_testing/engines/jmeter_engine.py",
+      "bytes": 15504,
+      "sha256": "587d8ed68b7f5fdd6a45f71b87079620eca536a6276ada1fd91bf6ae0fd1fbbb"
+    },
+    {
+      "path": "testhub/apps/perf_testing/engines/jmx_builder.py",
+      "bytes": 12206,
+      "sha256": "96bd77aee91f3b8a84f99e0b375dd5eb5c61a44f730893a9fdf20f3c2e6fc312"
+    },
+    {
+      "path": "testhub/apps/perf_testing/engines/k6_container_entrypoint.sh",
+      "bytes": 1124,
+      "sha256": "64c0ce6f576bce6c20e747db5514df8b74651ea1fea73b19d06af3abc6e1bffb"
+    },
+    {
+      "path": "testhub/apps/perf_testing/engines/k6_docker.py",
+      "bytes": 14460,
+      "sha256": "b9837041376f78ea5ebc6fc3946fafcbffcbcfb076264a296cd956acefc858ab"
+    },
+    {
+      "path": "testhub/apps/perf_testing/engines/k6_engine.py",
+      "bytes": 63289,
+      "sha256": "a17b06b521c27803c891e4d5a28e78288adee078cdccb7f7978bd11e49b39a10"
+    },
+    {
+      "path": "testhub/apps/perf_testing/engines/k6_execution_policy.js",
+      "bytes": 2310,
+      "sha256": "78864a1fecaaab03eb39d65f1204d2cf645df670f23c9aaf59d1109d6a44601f"
+    },
+    {
+      "path": "testhub/apps/perf_testing/engines/k6_process.py",
+      "bytes": 5616,
+      "sha256": "d1f40bd14770971260a78985f4ad5f6e2c3ae9cb4056d38eb533f0056b941a18"
+    },
+    {
+      "path": "testhub/apps/perf_testing/engines/k6_reminder_recovery.js",
+      "bytes": 5656,
+      "sha256": "34a90cfe5d22bcc06e666547a2edb22dc2c15be6a0f2b25e56d3462f006405e9"
+    },
+    {
+      "path": "testhub/apps/perf_testing/engines/k6_script.js",
+      "bytes": 35832,
+      "sha256": "4a70dfb6096077f2c3b3ed10175fc7e1f0c9b7ee99d7bb3323d2102178fa0194"
+    },
+    {
+      "path": "testhub/apps/perf_testing/engines/k6_sse.js",
+      "bytes": 9765,
+      "sha256": "25fbd883a6a09da349b4b45e5d492f4deb5cea773505f5698537a663416fdb8c"
+    },
+    {
+      "path": "testhub/apps/perf_testing/engines/k6_websocket.js",
+      "bytes": 12432,
+      "sha256": "44eb9a3bd8a733a1da9317209c88e3273005778fbbbbff3b6930d19c87deed52"
+    },
+    {
+      "path": "testhub/apps/perf_testing/engines/locust_engine.py",
+      "bytes": 21352,
+      "sha256": "8e896a2bd615788a04ff30be6817edc4472d2c6829214f300aa22ed4b04897c3"
+    },
+    {
+      "path": "testhub/apps/perf_testing/engines/workspace.py",
+      "bytes": 5665,
+      "sha256": "479b0ac0ccccce6f88645f6de29836bd22b51be49d3f76be0dd2b579fa566b43"
+    },
+    {
+      "path": "testhub/apps/perf_testing/management/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/perf_testing/management/commands/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/perf_testing/management/commands/check_perf_engines.py",
+      "bytes": 3768,
+      "sha256": "d50fc5f548abde1a21a3cdd1d9e92357f6665216707b4fb16193517d69f3e58c"
+    },
+    {
+      "path": "testhub/apps/perf_testing/management/commands/cleanup_perf_data.py",
+      "bytes": 1729,
+      "sha256": "dc58c5b73b92f1b645a6b6ef1595cd40451616020497e44e07920c53abb78a8c"
+    },
+    {
+      "path": "testhub/apps/perf_testing/management/commands/recover_portfolio_reminders.py",
+      "bytes": 3005,
+      "sha256": "a10b4ffc3a8244fa60c5a925bbfe765badca928ba5d71747d28f23579f2f2283"
+    },
+    {
+      "path": "testhub/apps/perf_testing/management/commands/run_perf_execution.py",
+      "bytes": 2025,
+      "sha256": "f03520d3c185eab69f83c080077ec4bfb80497627d5dbd98b25a8945679dbe5f"
+    },
+    {
+      "path": "testhub/apps/perf_testing/migrations/0001_initial.py",
+      "bytes": 25980,
+      "sha256": "e444c0b76c23af6c19e21f600c9a08003de4c4d5a419c4f88944d69508b99165"
+    },
+    {
+      "path": "testhub/apps/perf_testing/migrations/0002_perfexecution_scheduled_task.py",
+      "bytes": 652,
+      "sha256": "fc1d0c219dfffaa494c622a29574a74dba6e32a1df0b3cf921bbebb079fa5a1a"
+    },
+    {
+      "path": "testhub/apps/perf_testing/migrations/0003_perfexecution_share_expires_at_and_more.py",
+      "bytes": 825,
+      "sha256": "4f73e83ef54158a768cbbb5613f293c35ed029d4b80b294486c5e9498af88cc1"
+    },
+    {
+      "path": "testhub/apps/perf_testing/migrations/0004_perfexecution_script_ref_alter_perfscenario_engine.py",
+      "bytes": 916,
+      "sha256": "49b51edf0f37d3c9bf7c554615e0c105f924efafef01d5af2edc6a90c8734675"
+    },
+    {
+      "path": "testhub/apps/perf_testing/migrations/0005_perfdatafile_file_type_and_more.py",
+      "bytes": 1522,
+      "sha256": "d6f6fcaa4d27faa38fb46e1a1f8d89121cc427482671740abdf7f7320c8358ff"
+    },
+    {
+      "path": "testhub/apps/perf_testing/migrations/0006_perfenvironment.py",
+      "bytes": 2931,
+      "sha256": "0a511fe4016541ec34b830e2c655b6074b85e08b69dce1408c2a0cd3064769a3"
+    },
+    {
+      "path": "testhub/apps/perf_testing/migrations/0007_perfscenariostep_files_alter_perfdatafile_file_type.py",
+      "bytes": 960,
+      "sha256": "af13de2d66f482db465897f73c77e8106a5051129ae487aa27084dd58e8a4702"
+    },
+    {
+      "path": "testhub/apps/perf_testing/migrations/0008_add_perf_targets.py",
+      "bytes": 572,
+      "sha256": "c0edadcc557fec4a0c4a14f56d68ab188d14b007914a135b35329325e7d7c9a3"
+    },
+    {
+      "path": "testhub/apps/perf_testing/migrations/0009_add_verdict_fields.py",
+      "bytes": 899,
+      "sha256": "373e51a16cff4081afc5ba139ffe04d8b63d96ec4c0fde072fcd9971830c0c68"
+    },
+    {
+      "path": "testhub/apps/perf_testing/migrations/0010_perfcomparisonreport.py",
+      "bytes": 2270,
+      "sha256": "9972eaf8f2ca4834787d3afa3c9c569c5d3569e5b0fa7f683d5422ae9dc1b797"
+    },
+    {
+      "path": "testhub/apps/perf_testing/migrations/0011_perfscenario_k6_engine.py",
+      "bytes": 555,
+      "sha256": "e109ee98af53250ea3b3bb70eabfe2178ce9e4869c8669346f07f3f441f7fc6c"
+    },
+    {
+      "path": "testhub/apps/perf_testing/migrations/0012_persistent_environments.py",
+      "bytes": 3023,
+      "sha256": "abddf27f2ba0603f959de562c2a08d53c774ae1aeffbc36ab1de0b5c77a61165"
+    },
+    {
+      "path": "testhub/apps/perf_testing/migrations/0013_account_pools.py",
+      "bytes": 3201,
+      "sha256": "31bca8f94456e781566bc494f223511e525c55d814336273c6b55f4a2354bf4a"
+    },
+    {
+      "path": "testhub/apps/perf_testing/migrations/0014_api_catalog.py",
+      "bytes": 2067,
+      "sha256": "7d1c262a5b5947140dafbea7ea98e6e391ac901558738f151a39d3f1b011d307"
+    },
+    {
+      "path": "testhub/apps/perf_testing/migrations/0015_metric_sample_payload.py",
+      "bytes": 342,
+      "sha256": "ea133c1d78cfc0f0b8aac71b49c9800686e2930cdb5258f697eab02839152711"
+    },
+    {
+      "path": "testhub/apps/perf_testing/migrations/0016_project_catalog_source.py",
+      "bytes": 341,
+      "sha256": "da56befbf5cb392e07baca18f9792cf0eeb7977011b59679beb0cc2ed94cb52b"
+    },
+    {
+      "path": "testhub/apps/perf_testing/migrations/0017_prepared_request_pool.py",
+      "bytes": 4080,
+      "sha256": "6e3c57af9cd8cab86b8b077500886174184c13933a606103632b71677537e8ad"
+    },
+    {
+      "path": "testhub/apps/perf_testing/migrations/0018_perfscenariostep_websocket.py",
+      "bytes": 549,
+      "sha256": "1021668ba6a4ba709a5295dede240721d944602f9bd38a3ffc307872131f08fe"
+    },
+    {
+      "path": "testhub/apps/perf_testing/migrations/0019_perfscenariostep_execution_policy.py",
+      "bytes": 336,
+      "sha256": "e79210981d9a0089dcfdafa24a34e5cc5696f7ccb81eceecf456013313cb1328"
+    },
+    {
+      "path": "testhub/apps/perf_testing/migrations/0020_perfscenariostep_binary_body.py",
+      "bytes": 548,
+      "sha256": "647b43307b9d44b5202a4b999ce770a7063259624033f8e9e856c301b472f087"
+    },
+    {
+      "path": "testhub/apps/perf_testing/migrations/0021_perfscenariostep_sse.py",
+      "bytes": 530,
+      "sha256": "c983d19c3b367638ce568d5048fe520491b967c387668b1fe78f448bb2ed4ab2"
+    },
+    {
+      "path": "testhub/apps/perf_testing/migrations/0022_perfexecution_resource_recovery.py",
+      "bytes": 445,
+      "sha256": "625734047767fed60bbffe4a20a03277936cbf3e79fcf84e5005fe6fa37a3b47"
+    },
+    {
+      "path": "testhub/apps/perf_testing/migrations/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/perf_testing/models.py",
+      "bytes": 48320,
+      "sha256": "c51bd3596619e8fa16bbcda839011628d0d23ecfc68b5164f7a0d9db703ac821"
+    },
+    {
+      "path": "testhub/apps/perf_testing/operation_logger.py",
+      "bytes": 1950,
+      "sha256": "672655eb9331eff87ab422b577a6916e9be436a3a471cc815d5aad55526db2bd"
+    },
+    {
+      "path": "testhub/apps/perf_testing/routing.py",
+      "bytes": 218,
+      "sha256": "0cc1e9c4de2eec3de58504a2f8110b17eb4fbc70590fdb4f973e5f16a95fb372"
+    },
+    {
+      "path": "testhub/apps/perf_testing/serializers.py",
+      "bytes": 57144,
+      "sha256": "21b579402a329a1a891b1edb4492eb822936bc436dfbc6475d7c2ff933a0b0bb"
+    },
+    {
+      "path": "testhub/apps/perf_testing/services/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/perf_testing/services/account_pools.py",
+      "bytes": 12219,
+      "sha256": "d8fc7b50d9263c814517cc6c95dece39789bda03f9071e5c9081b9706195a5fe"
+    },
+    {
+      "path": "testhub/apps/perf_testing/services/ai_analysis.py",
+      "bytes": 5158,
+      "sha256": "5bfa7db4654d4b968a85f6864482be4bf4ce3d92c3043a167043f44d15735aa6"
+    },
+    {
+      "path": "testhub/apps/perf_testing/services/api_catalog.py",
+      "bytes": 71569,
+      "sha256": "a796ee401fa8f9dcc2d458bbc3df9516bce0fc386102655bc7e0474d8665fc3a"
+    },
+    {
+      "path": "testhub/apps/perf_testing/services/auth_profiles.py",
+      "bytes": 22412,
+      "sha256": "e9d2a60864065d1331602fff1da93897302478104ecd4649164f5ecd4c1253cb"
+    },
+    {
+      "path": "testhub/apps/perf_testing/services/catalog_source.py",
+      "bytes": 10565,
+      "sha256": "c0013e2874c4ba4bfd572aa1e85c4fa767adf855866aeef9ec368e62f4e76c26"
+    },
+    {
+      "path": "testhub/apps/perf_testing/services/child_process.py",
+      "bytes": 631,
+      "sha256": "09096fa83bcb538d5ebefd9581effd6106d5ccfec6e194db34d6f0795dbe20f7"
+    },
+    {
+      "path": "testhub/apps/perf_testing/services/cleanup.py",
+      "bytes": 7132,
+      "sha256": "920775c09ba27ba663f216da1e97bdb4aa9573b8e5922bad646162e122064358"
+    },
+    {
+      "path": "testhub/apps/perf_testing/services/compare_report.py",
+      "bytes": 8049,
+      "sha256": "c73c170af534cdb225cd9a9880b120069c803ffc7aa6bcda0fa11bf835155ce2"
+    },
+    {
+      "path": "testhub/apps/perf_testing/services/environments.py",
+      "bytes": 12209,
+      "sha256": "bfa0ca1e162cf5f90a77b954261ff0af8c70f4534abcde56fbb549d41ab6790d"
+    },
+    {
+      "path": "testhub/apps/perf_testing/services/execution_policy.py",
+      "bytes": 13506,
+      "sha256": "77d230c9274aa40dd6aae3fd3e90f4bb7b41986eb39fb875113007c3694df35c"
+    },
+    {
+      "path": "testhub/apps/perf_testing/services/executor.py",
+      "bytes": 86781,
+      "sha256": "2ab173da7f219bb8796d96b6e004264b341b937ea7ccb76f41c217eea47ec773"
+    },
+    {
+      "path": "testhub/apps/perf_testing/services/jmx_inspect.py",
+      "bytes": 10113,
+      "sha256": "ccd5cb264a89adccc9a13a667f30f96f44eb3ac5e56cdabc9d96157a47ac058c"
+    },
+    {
+      "path": "testhub/apps/perf_testing/services/k6_capabilities.py",
+      "bytes": 17077,
+      "sha256": "20cecde7427de079ffdb33b0b896afde23c509b0562ee2695f507a0461c681cd"
+    },
+    {
+      "path": "testhub/apps/perf_testing/services/k6_execution.py",
+      "bytes": 8086,
+      "sha256": "de827747082218473e0c5349ec946f2c2ce250b8e72d6d22391b904ed9321d1f"
+    },
+    {
+      "path": "testhub/apps/perf_testing/services/k6_native_vu.py",
+      "bytes": 13349,
+      "sha256": "16fe437f10c559ae1cba03835b2daf99df75436c63b2e724e05be718642a6ab8"
+    },
+    {
+      "path": "testhub/apps/perf_testing/services/k6_samples.py",
+      "bytes": 11588,
+      "sha256": "b4b1dcc259bd67fa2e096142df6cfb7f8a08116508959b78fe79b20b91b0ebf6"
+    },
+    {
+      "path": "testhub/apps/perf_testing/services/k6_sse_metrics.py",
+      "bytes": 7604,
+      "sha256": "ccf4233ef9925a2e09e1f7f1ef34216660f24cc0865e6c9531738d4fb1a00823"
+    },
+    {
+      "path": "testhub/apps/perf_testing/services/k6_thresholds.py",
+      "bytes": 12473,
+      "sha256": "edca020cbf9170971d843819c669c398844b66762e3095d98d1a4dcb73de8d5a"
+    },
+    {
+      "path": "testhub/apps/perf_testing/services/k6_throughput.py",
+      "bytes": 2974,
+      "sha256": "b7d7878e693ff5ccb58dca4dc90ead5cb136384428b5462a5a1a7e5f81ba1c1d"
+    },
+    {
+      "path": "testhub/apps/perf_testing/services/k6_websocket_metrics.py",
+      "bytes": 4237,
+      "sha256": "3fad1e08741e36d1c32726691df3d7b3e7cdc559c5316423b1b706ed938bdd5b"
+    },
+    {
+      "path": "testhub/apps/perf_testing/services/metrics.py",
+      "bytes": 11743,
+      "sha256": "66264e9a98b051721b4752c361be502f50b91242b02692b1c9df1c9754954255"
+    },
+    {
+      "path": "testhub/apps/perf_testing/services/notifier.py",
+      "bytes": 2790,
+      "sha256": "c9652561072d373dd4963971ed6928e3e7861bb9e54e810d0711f27bf7bea3bc"
+    },
+    {
+      "path": "testhub/apps/perf_testing/services/pool_verification.py",
+      "bytes": 34389,
+      "sha256": "54e6c93c6d4302b795a7b3550a50fcc4c673e3f5957381dd9a3f3e03ae634ac3"
+    },
+    {
+      "path": "testhub/apps/perf_testing/services/prepared_dependencies.py",
+      "bytes": 12470,
+      "sha256": "b9087df824dbebaa21a0c9cb81281b01169dbacf51bdcea30865e5cb8a06d317"
+    },
+    {
+      "path": "testhub/apps/perf_testing/services/prepared_recovery.py",
+      "bytes": 7761,
+      "sha256": "5c812c419773457e278a5a22b0efe6cee7d06bacec7c77809d1cd4a13bf79174"
+    },
+    {
+      "path": "testhub/apps/perf_testing/services/prepared_requests.py",
+      "bytes": 49187,
+      "sha256": "db3d919a550ec86b614f8bdce683c4a60c329e932ed51223b62f75c3d8c7a783"
+    },
+    {
+      "path": "testhub/apps/perf_testing/services/reminder_recovery.py",
+      "bytes": 48465,
+      "sha256": "24123b0cc71717e3014ced4bb8582c2801f2f0453501daefecff1cd0de56c5e4"
+    },
+    {
+      "path": "testhub/apps/perf_testing/services/reporter.py",
+      "bytes": 39467,
+      "sha256": "b198deb0121922b4d2591959f24143a10df6ca04c7365b3a8906c063ee79d0b7"
+    },
+    {
+      "path": "testhub/apps/perf_testing/services/scenario_defaults.py",
+      "bytes": 2603,
+      "sha256": "f08d2501aed3605c8de8e36c24901fbb814fee43837fb056184e517d9a5c2cbe"
+    },
+    {
+      "path": "testhub/apps/perf_testing/services/sla.py",
+      "bytes": 4802,
+      "sha256": "e1b827304ed84ba1d5718eb33c7d6d329e7f4c9dc6b9d2a986cc114ed6ec900f"
+    },
+    {
+      "path": "testhub/apps/perf_testing/services/sse_steps.py",
+      "bytes": 12397,
+      "sha256": "9c47447fce21a7317756e9bb50e3adedaff03d198fd345ad608297bdc7d5fb3e"
+    },
+    {
+      "path": "testhub/apps/perf_testing/services/targets_eval.py",
+      "bytes": 3600,
+      "sha256": "97ba8b1b9102382b742f87866382e2e31a4bbeb2cf2789760c71de460dbd5b69"
+    },
+    {
+      "path": "testhub/apps/perf_testing/services/upload_files.py",
+      "bytes": 9044,
+      "sha256": "58d0574b3596c3371281b46d075dc96b62091a5e20863d9a405d3d5617e512ff"
+    },
+    {
+      "path": "testhub/apps/perf_testing/services/url_rewrite.py",
+      "bytes": 3750,
+      "sha256": "7f075e6c7a7c46a7b1112c60990222e1e981f1de1a6f233603e5d5b4f81bab8b"
+    },
+    {
+      "path": "testhub/apps/perf_testing/services/variables.py",
+      "bytes": 10229,
+      "sha256": "c25fd48f9887da035254d9d770b19413124bc81624ade4b6d85ea3a00b49e1d4"
+    },
+    {
+      "path": "testhub/apps/perf_testing/services/websocket_steps.py",
+      "bytes": 18508,
+      "sha256": "54db32fb1ee86a5f1815f9a27e58b03ca3d49eb50a307953c2617876afb0db76"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tasks.py",
+      "bytes": 4912,
+      "sha256": "4922a9f488bc700f5915dadc00b5c177e08c611498606a4b50f92910b608baee"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/fixtures/support_websocket_server.py",
+      "bytes": 7891,
+      "sha256": "f5c22e3e18ccc2e2cd3d9c7c77770cf04130229d4b058d87093fc6ead8cd3ec5"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/fixtures/synthetic-catalog.openapi.json",
+      "bytes": 264124,
+      "sha256": "f336bf737a6489c0f695b0112c90f9c9dc4cda04a9db6bf24deb913309157ec5"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_account_pools.py",
+      "bytes": 38886,
+      "sha256": "b9800841c3d976f7aa77fbb917b570380d1a0d77bf3482bc3449599973dae6fb"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_api_catalog.py",
+      "bytes": 46230,
+      "sha256": "7294cea48e2fe78f3221f535143666e750f54a1cc9a7b850040e612a5b17d39c"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_builtin_multipart.py",
+      "bytes": 5085,
+      "sha256": "157085165447e1abdad39eaa8a6e1b24f577cd48a97d526335148676980b2f30"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_catalog_source.py",
+      "bytes": 14523,
+      "sha256": "350a91693606eaf0b4efe4c48d550d1337fcad74c60edc39cb40cf358cc43914"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_catalog_union_schema.py",
+      "bytes": 12395,
+      "sha256": "f0c3db875e91b0cf67eaa1753a32446c1517c747cd05ea043737bf635d48568f"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_child_process.py",
+      "bytes": 6018,
+      "sha256": "9feb5b91452201aa290539d274314b4bf1c72aed508ffa37343085e00975e1a8"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_comparison_report.py",
+      "bytes": 7471,
+      "sha256": "039eb8eb2397bfeb27045eebce60c5d627a3217ab44b4bf43725a99f8316371c"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_consumer_auth.py",
+      "bytes": 3454,
+      "sha256": "41556a0958075b5d49dc4997ca5afca4df2bbe111674dcddf6b16f3ea737b588"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_db_flush.py",
+      "bytes": 5544,
+      "sha256": "32ac7e3072d0f47082e68c5f8498dd8f243154f0f66455f89dbb6c0efe58d91b"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_engine_status.py",
+      "bytes": 3144,
+      "sha256": "7aec480b178c2c6f9d00594121e5c57370b73c96e6b9da2067001b5385fadae3"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_execution_policy.py",
+      "bytes": 25619,
+      "sha256": "81bb2d98c70fa649ecd6cd491de52701bbee91876088fd7ae4eb5cdc310685b1"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_execution_policy_api.py",
+      "bytes": 5641,
+      "sha256": "0f1809d6226d605c5d28fa44f158f5211ae56a58b9eaba64cc661c53d5a1a0f7"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_executor_dispatch.py",
+      "bytes": 3349,
+      "sha256": "637eda207ae97a0d2c484fc1cae6027e36338fbae680e58e36e9da6659ccbc60"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_extracted_scope.py",
+      "bytes": 7142,
+      "sha256": "5656cadeaf87208d05b2791407af7dea4004cc79b1be68823a0cdd8d9880d830"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_full_flow.py",
+      "bytes": 31457,
+      "sha256": "101753624e55ee7ead08a575db3bf03d10abd43235e6d7166dfcd1f873e9825d"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_jmeter_engine.py",
+      "bytes": 8816,
+      "sha256": "a2f3d53495814b654ff30d426f682c15eb477c8f9bd6a82a1959a006d405d65c"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_jmx_builder.py",
+      "bytes": 6459,
+      "sha256": "736b1e08d405f0fc735eceaa7cf0f62ca2d2f7fbd93fc7d781f4707d1214f073"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_jmx_inspect.py",
+      "bytes": 12099,
+      "sha256": "9bc86101005a16a7e215718ef250cb3b7f4d5f9e9f930dafc9df616e66d4dee6"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_k6_auth_refresh.py",
+      "bytes": 49289,
+      "sha256": "5a1fc24afdf4123b714a75c60a3f0a46cecada65b960f413c7d4306cbcb63ba4"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_k6_capabilities.py",
+      "bytes": 19544,
+      "sha256": "f18534d6b2854f90a51ba353fdd153f5216060c63a24348fcf56c94433ff5df7"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_k6_debug.py",
+      "bytes": 13326,
+      "sha256": "3b23a83ccdc733a0cc7b0bae035027ba575e32b642cd46fa53d5229b112f83b4"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_k6_debug_details.py",
+      "bytes": 19484,
+      "sha256": "25f8d10610cdf3b9fd9ad6dc6ebba927b073efb72c63dc95494f2e81dcbeb11a"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_k6_docker.py",
+      "bytes": 22095,
+      "sha256": "5e79d2ab2f4e93aa5c4f1054befc945942ae7a65fca65907c467f509c4dbc527"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_k6_engine.py",
+      "bytes": 36086,
+      "sha256": "f188afea43d5edb85f03a8edea3659fbbd1308bc7ebf6a1549e329cbc3dba3ea"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_k6_integration.py",
+      "bytes": 19061,
+      "sha256": "a93bc4fb8cded16183b69696ca19934a3ac7790fc33b8a9fb4d13302fe3721f5"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_k6_native_vu.py",
+      "bytes": 20292,
+      "sha256": "6a406fd6c6bb71a22cb71651c95cdb6761b5b2b31280e7cb82f0858510c6155f"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_k6_native_vu_persistence.py",
+      "bytes": 5232,
+      "sha256": "05469aa017b80ba3599b1e0f6c07d7a0b73dea6ee61e6f42967447290b00dc9d"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_k6_profile.py",
+      "bytes": 1110,
+      "sha256": "cdc1889092a9f72621602657169c8992dac69048d71e367c006f150560eeb996"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_k6_report.py",
+      "bytes": 19860,
+      "sha256": "276861052940515120112cbc26a56c08d312c6784ecb66fb331e3cfe3c263041"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_k6_request_id.py",
+      "bytes": 9091,
+      "sha256": "55390dc1046f97d8637478d28cb74cb0d124cdfd323d960666604c8b961d9bb9"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_k6_samples.py",
+      "bytes": 23219,
+      "sha256": "21c9b7a8890012afa45c2a21d19339d2ed15c84e3ecce5e58e1918bc2d97c6dd"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_k6_setup_dependencies.py",
+      "bytes": 9654,
+      "sha256": "c84121d3db55aae4151fd0754a030ae93c09350a5b250595b48812a227205c01"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_k6_sse_contract.mjs",
+      "bytes": 9703,
+      "sha256": "e4816d4d1f0998ab6c378d951257fdf9666d233a5e95d4e4a65af0e3d3f9c955"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_k6_sse_integration.py",
+      "bytes": 5353,
+      "sha256": "f46f518cd9d76d89471bc2e2df6ade967c7204cee8741dbf0272d997a18c3c58"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_k6_start_wait.py",
+      "bytes": 12175,
+      "sha256": "60112c9f5a8aeda7bfd48655c0d86b4b6765304298d16cb30a449702711b1baa"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_k6_stop_race.py",
+      "bytes": 6577,
+      "sha256": "07a8b4583cc7c8a5e582ae10826a6fe14270d56447f93c06fb629f2893147b34"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_k6_thresholds.py",
+      "bytes": 17469,
+      "sha256": "af2c83f9766ad671c10d44716a68750899f994b61f0bf827bcac559d36a9d84e"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_k6_throughput.py",
+      "bytes": 6765,
+      "sha256": "9be032948bd5940b03cf236d0d56f8ba8dac401014f6e0166710d4520cb055ad"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_k6_timed_drain.py",
+      "bytes": 7432,
+      "sha256": "03a947fde8bef68eebf812ef2a958cc194b61d9a99701a45432443cc01d1ef0c"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_k6_uploads.py",
+      "bytes": 16173,
+      "sha256": "7ba6caf757e1dcdf8ba61e1d569ca554a762bd1f813f6b821b9d7522d41d3f8a"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_k6_websocket_integration.py",
+      "bytes": 22006,
+      "sha256": "e2cd69d225463b8e21831eb22f366fb8c761310d43f08bba23852ef56b38ceab"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_k6_websocket_metrics.py",
+      "bytes": 4962,
+      "sha256": "be584eb5f3663c67064b682dc698a42f2c93b1625b46da89c964fd449500bf27"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_k6_worker.py",
+      "bytes": 8228,
+      "sha256": "51c586af942457cc2ea42b700d92b8859afa8c641b0800c933145e035a72752d"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_locust_engine.py",
+      "bytes": 22380,
+      "sha256": "b6b360a2a6649889144d1dbb6b6948c424dc21cad14e74997dc11e24f3e56aeb"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_perf_environments.py",
+      "bytes": 31351,
+      "sha256": "00b29fabc0e64986117393bd9312e47ba6044966346d3dfa324314c421bb327e"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_pool_dependency_launch.py",
+      "bytes": 8105,
+      "sha256": "f355aecb62d90968dd02c4e186351642b75c65df08ce2a69a91355e052816c64"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_pool_setup_verification.py",
+      "bytes": 12859,
+      "sha256": "26903e6e4fb1f052b980b94687aae7a4a1ac4c054945d3b986c151519057a0b0"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_pool_verification.py",
+      "bytes": 31695,
+      "sha256": "b9ba94665df5213e876d552418dcdb4127a66bf627c44ce351ba48992f99a0fc"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_preflight_compat.py",
+      "bytes": 5977,
+      "sha256": "a41cb979031f852286d409b03c4c15e7244a47114ffa8cd7812413f645450376"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_prepared_dependencies.py",
+      "bytes": 25082,
+      "sha256": "4400ffad2baa44d31693218622f7a3e387661331216abf65dfc4685a7f6325f3"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_prepared_recovery.py",
+      "bytes": 23806,
+      "sha256": "5874cb7359a8303ef2cebf2b8fb68632bbf9d3538c472326656480144025c1c3"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_prepared_requests.py",
+      "bytes": 42203,
+      "sha256": "78573852f7858df90beae3aeacaa0ee3ce9bb016d682ace76c6aba5c5face88f"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_prepared_websocket.py",
+      "bytes": 14411,
+      "sha256": "fba33b501bc212a3ad71158d86540d1c64e634f0c58b678e97548b668564df9c"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_reminder_recovery.py",
+      "bytes": 32092,
+      "sha256": "fb31cd969855fb719f0dc032f00382cec99fcab5db19a649bea36365be983d24"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_reminder_recovery_contract.mjs",
+      "bytes": 4198,
+      "sha256": "2ac21092cfbd00b8632118764ddd0bb6d9c6dd1be82ba080d33936304b9b5da1"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_reminder_recovery_db.py",
+      "bytes": 12257,
+      "sha256": "56ee78017bb2dbdb8dc2c841679d1a58fa8e1f4123369cdd44ef3a8753078e9f"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_reminder_recovery_native.py",
+      "bytes": 9099,
+      "sha256": "e73eeb6d4e0a924d6d0945886171cd2e12531eed54cafb6a2b0d9193017be441"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_report_contract.py",
+      "bytes": 38712,
+      "sha256": "84f2a3ed07bcce7c2a77a1bae9223158d88ec509e5ee0c7ec85601ca978826c5"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_scenario_defaults.py",
+      "bytes": 17247,
+      "sha256": "383a3d8ad8f5f93ada143f3d210553e607b26a27cb309bd8319e5aadaef545dc"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_script_ref_resolution.py",
+      "bytes": 10930,
+      "sha256": "84607389484c3d2da4571748111b37a12d4e885eab4f1efc4eb1a8e752055582"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_sse_diagnostics.py",
+      "bytes": 4077,
+      "sha256": "2281353c362122034a28b278970feccc827d79c4181c9049a0e2f042d7557c92"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_sse_steps.py",
+      "bytes": 12572,
+      "sha256": "cff4b78562f29b0fb98b21c78df358a13923bdc5fa5e2ab27335261c4346f857"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_targets_eval.py",
+      "bytes": 3214,
+      "sha256": "dd8a9a8fe3641a92f90c208b4eb3859ad22619a5b22259c8d9b5de3c5f737066"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_token_sharing.py",
+      "bytes": 4990,
+      "sha256": "21f8eb5b36ed9d2b20f84ea1f21ba9c75db6f2eade5f236cc6b0be93a2fbf816"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_url_rewrite.py",
+      "bytes": 5774,
+      "sha256": "1ab6f5d7773dfe23ca77e20f5bb15f8e93eea19352311b237371d5bcadb4597e"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_variables.py",
+      "bytes": 3441,
+      "sha256": "d0cdf4ca7285c6ff0d8c066816ca44f2d677db819b4b5b2c6c4e78d7eee27417"
+    },
+    {
+      "path": "testhub/apps/perf_testing/tests/test_websocket_steps.py",
+      "bytes": 22658,
+      "sha256": "459819762bac3f622bcf35546270d742bf364ced8be1fd540bc230b9d100a71a"
+    },
+    {
+      "path": "testhub/apps/perf_testing/urls.py",
+      "bytes": 1338,
+      "sha256": "2f43065ded843550606e3c37e58787e7682c553af0f72ffb5c72debd8e974d0c"
+    },
+    {
+      "path": "testhub/apps/perf_testing/views.py",
+      "bytes": 101663,
+      "sha256": "68beb8b136920d2087f9c87140c5da0f324208048abb083b749d95d66cd6ce0e"
+    },
+    {
+      "path": "testhub/apps/projects/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/projects/admin.py",
+      "bytes": 64,
+      "sha256": "2f7423eb2ed480443b7066ea82c798801f60ced72598dc84b4d13d4d5935cb0a"
+    },
+    {
+      "path": "testhub/apps/projects/apps.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/projects/migrations/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/projects/models.py",
+      "bytes": 2788,
+      "sha256": "79f10dfef12efd6ec5957259271960bc056c38b134e73045cdc75a92f1abb636"
+    },
+    {
+      "path": "testhub/apps/projects/project_list_views.py",
+      "bytes": 656,
+      "sha256": "34f61b6cdc6f0886c975a08938403bb354a09d6bac261564d14e1152cb8d0e11"
+    },
+    {
+      "path": "testhub/apps/projects/serializers.py",
+      "bytes": 1558,
+      "sha256": "fb6efe8471ce5570e91bb861c87895131e5ce5bcd97d348b188f7a4712980248"
+    },
+    {
+      "path": "testhub/apps/projects/urls.py",
+      "bytes": 809,
+      "sha256": "20cda20a6f4919d58d0cc9d3b3bff8a1d8532c82e8bfccdde48157017d41806a"
+    },
+    {
+      "path": "testhub/apps/projects/views.py",
+      "bytes": 5318,
+      "sha256": "6c97789059c97a830d90f520d09e08f6ea3a66013ba03d28918cbed3663970f4"
+    },
+    {
+      "path": "testhub/apps/reports/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/reports/admin.py",
+      "bytes": 64,
+      "sha256": "2f7423eb2ed480443b7066ea82c798801f60ced72598dc84b4d13d4d5935cb0a"
+    },
+    {
+      "path": "testhub/apps/reports/apps.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/reports/migrations/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/reports/models.py",
+      "bytes": 2055,
+      "sha256": "5dc4a3e4bb39831f98298f0d8d513c815b12f99fd7c79386fa4bf35b0d494999"
+    },
+    {
+      "path": "testhub/apps/reports/urls.py",
+      "bytes": 280,
+      "sha256": "8ab8e0c8371e4f6f53cf81e4751247456ed81f25f93961ef60dd13c25a4838ea"
+    },
+    {
+      "path": "testhub/apps/reports/views.py",
+      "bytes": 10732,
+      "sha256": "9d32a6c8758aa430e770fe3b55b7d2902918f0e21625c243307aa740a432b7aa"
+    },
+    {
+      "path": "testhub/apps/requirement_analysis/__init__.py",
+      "bytes": 57,
+      "sha256": "e6a46b704f64192804f9c918cd020653bd12c220a0774cc5c58a0df1fc340b52"
+    },
+    {
+      "path": "testhub/apps/requirement_analysis/admin.py",
+      "bytes": 4022,
+      "sha256": "181920ceb21823008f460a65cdf1b418cdeb22cb39a25e085ae9f400a74239c6"
+    },
+    {
+      "path": "testhub/apps/requirement_analysis/advanced_analyzer.py",
+      "bytes": 46126,
+      "sha256": "8e55225e2a9d6b0a2bde76b8e33e58414f3acf01769a93a012a56bec2d036ef8"
+    },
+    {
+      "path": "testhub/apps/requirement_analysis/ai_models.py",
+      "bytes": 11329,
+      "sha256": "270507b29bc25abd2b255b69ae3bf02c0453b6acb25e4866d8f090e27ee2b05d"
+    },
+    {
+      "path": "testhub/apps/requirement_analysis/apps.py",
+      "bytes": 215,
+      "sha256": "41f6a1705686fd39a365d47497f5d470b5f48b61ab56109f26e8f4a8e16b4f14"
+    },
+    {
+      "path": "testhub/apps/requirement_analysis/migrations/__init__.py",
+      "bytes": 57,
+      "sha256": "e6a46b704f64192804f9c918cd020653bd12c220a0774cc5c58a0df1fc340b52"
+    },
+    {
+      "path": "testhub/apps/requirement_analysis/models.py",
+      "bytes": 58265,
+      "sha256": "2e89fb143af0f2e60c527b6daa3ca99ff0b67a1a000a9a9c23672db04dc47afb"
+    },
+    {
+      "path": "testhub/apps/requirement_analysis/serializers.py",
+      "bytes": 14657,
+      "sha256": "a1f6d8f0eae48793f68076d83f33316dc2ced7a3cf19d24ab8a9373ac02c319d"
+    },
+    {
+      "path": "testhub/apps/requirement_analysis/services.py",
+      "bytes": 20206,
+      "sha256": "bd8fbb263a72a089cf00add1dc71d84b1d4694f4efae5c7caf0c8a172fa694f1"
+    },
+    {
+      "path": "testhub/apps/requirement_analysis/urls.py",
+      "bytes": 1652,
+      "sha256": "1c5a474e90574c8236734b2d7417678bccdeac9b7d5db244db966c9c8bd8f7e4"
+    },
+    {
+      "path": "testhub/apps/requirement_analysis/views.py",
+      "bytes": 161421,
+      "sha256": "7a2b75ef18ca7e3eb96fb49f325d6a9b3c337a1dd5fabba7deebe56be9eb6c9b"
+    },
+    {
+      "path": "testhub/apps/reviews/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/reviews/admin.py",
+      "bytes": 1598,
+      "sha256": "0f232cf4eb54d07ea228c93d5723e92ca1832e072dbd9cf921e0177023330518"
+    },
+    {
+      "path": "testhub/apps/reviews/apps.py",
+      "bytes": 196,
+      "sha256": "3d6087a2ff9b8b71f0bc4b538151810acfef1b757ddfcc173c1888fbf97b207c"
+    },
+    {
+      "path": "testhub/apps/reviews/migrations/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/reviews/models.py",
+      "bytes": 5762,
+      "sha256": "2573ce0d710c3f4cb979d6d380f78aceeb9072578c86dcfaa9d5bb9ca18067c3"
+    },
+    {
+      "path": "testhub/apps/reviews/serializers.py",
+      "bytes": 8165,
+      "sha256": "8a8b5f121a8c3f6a4b439b5e7f4259668054a37a91eaa709d274a79bcb6552c9"
+    },
+    {
+      "path": "testhub/apps/reviews/urls.py",
+      "bytes": 526,
+      "sha256": "814edf58a0185e5ce7f5c7d1d4e5a9436a9caf4178444e4d0f05e1a3478c7f97"
+    },
+    {
+      "path": "testhub/apps/reviews/views.py",
+      "bytes": 6570,
+      "sha256": "64c49fc8b173aa82fa55881d50f3faf0ce3fecfafa7106ab05ed639497d7318b"
+    },
+    {
+      "path": "testhub/apps/testcases/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/testcases/admin.py",
+      "bytes": 64,
+      "sha256": "2f7423eb2ed480443b7066ea82c798801f60ced72598dc84b4d13d4d5935cb0a"
+    },
+    {
+      "path": "testhub/apps/testcases/apps.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/testcases/migrations/__init__.py",
+      "bytes": 85,
+      "sha256": "d38c643e246fe96c87167d46b022dcc85b25178d8282fc60312ab8658db7f04f"
+    },
+    {
+      "path": "testhub/apps/testcases/models.py",
+      "bytes": 6798,
+      "sha256": "729a72f898760b6494d0612cad99f2021e27c2770cab80482d26949b9579a9f4"
+    },
+    {
+      "path": "testhub/apps/testcases/serializers.py",
+      "bytes": 5889,
+      "sha256": "41a106b402e8eb1c85b85d194b54cdc785eb9c437e11f08d5d161a4081a3d2b5"
+    },
+    {
+      "path": "testhub/apps/testcases/services.py",
+      "bytes": 12290,
+      "sha256": "3e89d5daea6ba34e21e7f4a8601ed8ff15043f037ad73534e39d7515a3292399"
+    },
+    {
+      "path": "testhub/apps/testcases/tasks.py",
+      "bytes": 1993,
+      "sha256": "3fa30993e2a27da90d76d7ff4b84352f0c8bf31c043b0d8a93b5c1c998dfce23"
+    },
+    {
+      "path": "testhub/apps/testcases/tests.py",
+      "bytes": 6171,
+      "sha256": "52225110b7fb436a4c222f58685c9927875de43b3ed01ff2d988999395f37513"
+    },
+    {
+      "path": "testhub/apps/testcases/urls.py",
+      "bytes": 776,
+      "sha256": "9fac550cb9633b155f9b0f2efab899630da0e0ea9727560e21340b70f8133c78"
+    },
+    {
+      "path": "testhub/apps/testcases/views.py",
+      "bytes": 9838,
+      "sha256": "c8e0ca90b780200084bd7f2ff07574a27eda7c9c9fc73e861e032a56950a6daa"
+    },
+    {
+      "path": "testhub/apps/testsuites/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/testsuites/admin.py",
+      "bytes": 64,
+      "sha256": "2f7423eb2ed480443b7066ea82c798801f60ced72598dc84b4d13d4d5935cb0a"
+    },
+    {
+      "path": "testhub/apps/testsuites/apps.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/testsuites/migrations/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/testsuites/models.py",
+      "bytes": 1571,
+      "sha256": "5f51b991fe36702f304f33db8dff45823caeb4ad148dd197c084890c4da0cd5c"
+    },
+    {
+      "path": "testhub/apps/testsuites/urls.py",
+      "bytes": 110,
+      "sha256": "c0017aeb37864dd6f0ecadf83661b1088c9bda29d32d949408dc591f95a1f116"
+    },
+    {
+      "path": "testhub/apps/testsuites/views.py",
+      "bytes": 101,
+      "sha256": "258d1a4bc51ab77e42f632d83d324de85a7e8c13ff2041c7bc07390b80d339af"
+    },
+    {
+      "path": "testhub/apps/ui_automation/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/ui_automation/ai_agent.py",
+      "bytes": 1865,
+      "sha256": "24cf052f54c0f732b23f0470789b508dcfb8323726e80260501c26a7ef94596d"
+    },
+    {
+      "path": "testhub/apps/ui_automation/ai_base.py",
+      "bytes": 100506,
+      "sha256": "a6ccef7248a93dc1659bcaa9bb904de3b4a29fc6d7dd07afeb16ed58922b5799"
+    },
+    {
+      "path": "testhub/apps/ui_automation/apps.py",
+      "bytes": 206,
+      "sha256": "f9b2dad9b2b910129421b63a1ebade424e95b04c57193200c34178801c9d4004"
+    },
+    {
+      "path": "testhub/apps/ui_automation/mcp_runner.py",
+      "bytes": 11001,
+      "sha256": "50d1367ceeb25b100af1005590ec9b64ad03cb2dc9de3a8e9b759c0b8920882e"
+    },
+    {
+      "path": "testhub/apps/ui_automation/migrations/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/ui_automation/models.py",
+      "bytes": 48660,
+      "sha256": "2370c8f1d4d0efd6a93d06fab7776d0d28d9f7337f6f7966238d1140774626ba"
+    },
+    {
+      "path": "testhub/apps/ui_automation/operation_logger.py",
+      "bytes": 1438,
+      "sha256": "0dd1ff141225b7abef103f2c39c6b171aaafbc2390481c0103e3d2250235dcd1"
+    },
+    {
+      "path": "testhub/apps/ui_automation/pdf_generator.py",
+      "bytes": 21036,
+      "sha256": "50303929cf9f94565ed354b0e1680b70a2440181415e1778732fe510863f8ad5"
+    },
+    {
+      "path": "testhub/apps/ui_automation/playwright_engine.py",
+      "bytes": 46592,
+      "sha256": "4e094bb7404e5779c5c824934824a116fe7f16b586aa41e0a2d3408490fdc6ce"
+    },
+    {
+      "path": "testhub/apps/ui_automation/reports.py",
+      "bytes": 23247,
+      "sha256": "204dd23829eec696921ed37b2f75350aa9be4eb652d2303a3d072d755e3c9f82"
+    },
+    {
+      "path": "testhub/apps/ui_automation/selenium_engine.py",
+      "bytes": 57902,
+      "sha256": "f135dd90cbf286fe535f26533e41323e2097ef408e4f68d85ee80008e192a295"
+    },
+    {
+      "path": "testhub/apps/ui_automation/serializers.py",
+      "bytes": 38931,
+      "sha256": "cbecbc632c5b1d04631d59ac17352f7b50dddbb6d4b0c85338a4d1c37ff50dc6"
+    },
+    {
+      "path": "testhub/apps/ui_automation/test_executor.py",
+      "bytes": 129351,
+      "sha256": "5391cd70c667aff0defdfb4e3ed850e9bd1bc5057766f86fb91fe35b3659a2f0"
+    },
+    {
+      "path": "testhub/apps/ui_automation/urls.py",
+      "bytes": 2453,
+      "sha256": "1f34ab82d210e4e73eedf4464fa26720f5980d8e6c53015d23c0df9df6288244"
+    },
+    {
+      "path": "testhub/apps/ui_automation/variable_resolver.py",
+      "bytes": 266,
+      "sha256": "33d603e4700ae7df54800ab3cf92e4914688de6bb710b01849e2110b55121732"
+    },
+    {
+      "path": "testhub/apps/ui_automation/views.py",
+      "bytes": 187781,
+      "sha256": "f72cfaed1885981a0f2244175fc062cb0c1d42426cef2d4af9df1193bdeac9eb"
+    },
+    {
+      "path": "testhub/apps/ui_automation/views_config.py",
+      "bytes": 21240,
+      "sha256": "c388c206df39200b1352fe7f7989d4c4a19a6c973d881bb9dafbb20ed1456615"
+    },
+    {
+      "path": "testhub/apps/users/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/users/admin.py",
+      "bytes": 590,
+      "sha256": "73fbf5262620ad2e860baaa89c01b941a926313c803f2002d1fc51a27f3a2eab"
+    },
+    {
+      "path": "testhub/apps/users/apps.py",
+      "bytes": 193,
+      "sha256": "a9662d5ccfa90c8d49b7bcda7a38350e127aeb8f4b5e57cf9a90aeea9aa2f91b"
+    },
+    {
+      "path": "testhub/apps/users/captcha.py",
+      "bytes": 3246,
+      "sha256": "39369e38dd5125d309e04240ba0dccd1f315e182e4f8a3f9508935a6a7952f5d"
+    },
+    {
+      "path": "testhub/apps/users/migrations/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/users/models.py",
+      "bytes": 1818,
+      "sha256": "4971f594691b5b47fa2c62cf53d6a1672ce5835f9971e91631fdbd50a9f63314"
+    },
+    {
+      "path": "testhub/apps/users/redis_client.py",
+      "bytes": 373,
+      "sha256": "a130ee66fa66180c94af4f66297d634a9d69227106c5ca298d0c7e8c21160c20"
+    },
+    {
+      "path": "testhub/apps/users/serializers.py",
+      "bytes": 2283,
+      "sha256": "ba5d70570028d38be39249645aa42b86b516552586f8d8fa2dcab460afee0b52"
+    },
+    {
+      "path": "testhub/apps/users/sms.py",
+      "bytes": 6110,
+      "sha256": "767bb30004b0a15e85cb8536959a6ea3267b56ee97900830eb46f045d144c09d"
+    },
+    {
+      "path": "testhub/apps/users/test_views.py",
+      "bytes": 3150,
+      "sha256": "d186d0562595083cc8c026c77920e75c1d8b21030711aa68569020987ac82be3"
+    },
+    {
+      "path": "testhub/apps/users/urls.py",
+      "bytes": 1473,
+      "sha256": "3c87b63b00b6f29c107beac9a06bda79ff46229644b7bd9b8fb479f4344db2f2"
+    },
+    {
+      "path": "testhub/apps/users/views.py",
+      "bytes": 10084,
+      "sha256": "98244ec1cb05db5edf24dfc6d751e69bb689498ad8a93ceed2a7d6f348f4ac33"
+    },
+    {
+      "path": "testhub/apps/versions/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/versions/migrations/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/apps/versions/models.py",
+      "bytes": 1030,
+      "sha256": "d46654c8d0e71f79404fc97933801e3f88ecabd7d710e43b615a1bfb7ed2dc1d"
+    },
+    {
+      "path": "testhub/apps/versions/serializers.py",
+      "bytes": 2275,
+      "sha256": "f4f364fb4c6f0e6aac77a03d454e756435d565aad30c069f8449694ad451b5a9"
+    },
+    {
+      "path": "testhub/apps/versions/urls.py",
+      "bytes": 333,
+      "sha256": "dff017984b3ad5a5331ac4380d03e1c7e58ad98060185af8550f75713aae0033"
+    },
+    {
+      "path": "testhub/apps/versions/views.py",
+      "bytes": 3926,
+      "sha256": "fa33a50e06c277c09b4045b79c6c0798707cc5f1f15fef3ef1aaacaca585ea9e"
+    },
+    {
+      "path": "testhub/backend/__init__.py",
+      "bytes": 311,
+      "sha256": "e1b2656a0a1b357139946a94947b9dde3d8bf0965ddf4969c0fc2b20cc75b8cf"
+    },
+    {
+      "path": "testhub/backend/asgi.py",
+      "bytes": 2487,
+      "sha256": "78a82e377f141f98d54f6b8e61330a73babee08df4064b5676880b8ba74ab1d2"
+    },
+    {
+      "path": "testhub/backend/celery.py",
+      "bytes": 470,
+      "sha256": "22e7e48e5ac6baf9d160b2b9dbddc20a49d4efc72e914d455cdd227b27fc37c7"
+    },
+    {
+      "path": "testhub/backend/middleware.py",
+      "bytes": 299,
+      "sha256": "7c2590aa42cbb748d63d41f7e8ae3c40196e70272f05cd099a46b180c19c56b9"
+    },
+    {
+      "path": "testhub/backend/pressure_api_urls.py",
+      "bytes": 3359,
+      "sha256": "3262837ca39c54155f1f362079dd17bf21e71ee58b138d96141e528a5b642403"
+    },
+    {
+      "path": "testhub/backend/pressure_intranet_settings.py",
+      "bytes": 2383,
+      "sha256": "cb22d721458cd8c72df203def0b94cb6fd25f46d6ed279f6bd289279c8265d96"
+    },
+    {
+      "path": "testhub/backend/pressure_migrations/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/backend/pressure_migrations/api_testing/0001_initial.py",
+      "bytes": 22094,
+      "sha256": "5d82acf5178be1990827017634f945d6ff29c90f8b9f7596163ead516fdda472"
+    },
+    {
+      "path": "testhub/backend/pressure_migrations/api_testing/0002_initial.py",
+      "bytes": 10319,
+      "sha256": "fb681cc617670aee06130130113015ed3d11283f5f473fc202418f9e43b2951a"
+    },
+    {
+      "path": "testhub/backend/pressure_migrations/api_testing/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/backend/pressure_migrations/core/0001_initial.py",
+      "bytes": 1712,
+      "sha256": "e8c8224e86382414b63b31830cee8c548a9d6e89d1fb1fea325ae3020e1c8681"
+    },
+    {
+      "path": "testhub/backend/pressure_migrations/core/0002_initial.py",
+      "bytes": 1415,
+      "sha256": "2d3b7d661352c0defae29599a71cfdf3c4471249f88201a8542896e4aa9b71ba"
+    },
+    {
+      "path": "testhub/backend/pressure_migrations/core/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/backend/pressure_migrations/perf_testing/0001_initial.py",
+      "bytes": 25710,
+      "sha256": "54bc2f045cf086483ef05f4b09d45788ab355d6135c9263ee8851225a9106725"
+    },
+    {
+      "path": "testhub/backend/pressure_migrations/perf_testing/0002_initial.py",
+      "bytes": 9643,
+      "sha256": "f59755491a4f03c7859249706b225b1d7222c8be168936c5631ee4fba4a9b365"
+    },
+    {
+      "path": "testhub/backend/pressure_migrations/perf_testing/0003_persistent_environments.py",
+      "bytes": 3008,
+      "sha256": "d954cbde7327ca3c466e1218209042c85769d09c183e8166ac89bf04e05fa91f"
+    },
+    {
+      "path": "testhub/backend/pressure_migrations/perf_testing/0004_account_pools.py",
+      "bytes": 3201,
+      "sha256": "7b7b969085692c23236361e26a01e23e844fadc160752a6aa2a9a15e8d14a3b8"
+    },
+    {
+      "path": "testhub/backend/pressure_migrations/perf_testing/0005_api_catalog.py",
+      "bytes": 2069,
+      "sha256": "3ccaa78652b86279d08147783c47e2dbedc6fe926284acb681f282fe1dc414d0"
+    },
+    {
+      "path": "testhub/backend/pressure_migrations/perf_testing/0006_metric_sample_payload.py",
+      "bytes": 342,
+      "sha256": "1109c1d86ca3fb1d6e67684fcda31a843af46214c1e59c28133eaf847f82a386"
+    },
+    {
+      "path": "testhub/backend/pressure_migrations/perf_testing/0007_project_catalog_source.py",
+      "bytes": 341,
+      "sha256": "d12071c277d3faa7093bc3841fd2969dc6dd5840ff23e93d64e2e51db1764320"
+    },
+    {
+      "path": "testhub/backend/pressure_migrations/perf_testing/0008_prepared_request_pool.py",
+      "bytes": 4157,
+      "sha256": "0cdff0b0111603239c30d693731951dd75174ab53b642d84f44883abe6e07c96"
+    },
+    {
+      "path": "testhub/backend/pressure_migrations/perf_testing/0009_perfscenariostep_websocket.py",
+      "bytes": 549,
+      "sha256": "82ff5cee24c888b20126fe4d46a92ca7197f16bbaa5d0d6564c7b83ef46eff05"
+    },
+    {
+      "path": "testhub/backend/pressure_migrations/perf_testing/0010_perfscenariostep_execution_policy.py",
+      "bytes": 336,
+      "sha256": "df9f54091e399fa1bef239e2ade93af780ee95633e1a0c8477b4e311b64bcbaf"
+    },
+    {
+      "path": "testhub/backend/pressure_migrations/perf_testing/0011_perfscenariostep_binary_body.py",
+      "bytes": 548,
+      "sha256": "947a18e16c604ca217fad2be21684acf0bf2fd54637fe9e1ded559477bf473ad"
+    },
+    {
+      "path": "testhub/backend/pressure_migrations/perf_testing/0012_perfscenariostep_sse.py",
+      "bytes": 530,
+      "sha256": "1f90027ebb549eec5132d610d607a1f8ded9b8cca339d98e467cd29e48c63e6d"
+    },
+    {
+      "path": "testhub/backend/pressure_migrations/perf_testing/0013_perfexecution_resource_recovery.py",
+      "bytes": 445,
+      "sha256": "d32b0da43757dee020ceae850e0428935c700c5b3479b078a71027020fffc673"
+    },
+    {
+      "path": "testhub/backend/pressure_migrations/perf_testing/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/backend/pressure_migrations/projects/0001_initial.py",
+      "bytes": 3256,
+      "sha256": "1567757184af1682175a30f2a6203fc2548fad08d39fcc0cb53bdf3ba9fe9a20"
+    },
+    {
+      "path": "testhub/backend/pressure_migrations/projects/0002_initial.py",
+      "bytes": 1547,
+      "sha256": "f575a576ed0b7f57e29651c95faca09cc053b2483de54e267a856288a238252e"
+    },
+    {
+      "path": "testhub/backend/pressure_migrations/projects/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/backend/pressure_migrations/users/0001_initial.py",
+      "bytes": 5059,
+      "sha256": "729abfda4c44f4b058198ca18b68411db8798111c0cd9147391fdbdf395673a9"
+    },
+    {
+      "path": "testhub/backend/pressure_migrations/users/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/backend/pressure_settings.py",
+      "bytes": 1913,
+      "sha256": "01f1d0a1c86d77032d5ca0cc651b627a955a16924208451039ff46fd8849fcad"
+    },
+    {
+      "path": "testhub/backend/pressure_urls.py",
+      "bytes": 832,
+      "sha256": "65f21e5d1b34bc66771b285f8473efe3377e707d89393ba335995726f59fd16f"
+    },
+    {
+      "path": "testhub/backend/settings.py",
+      "bytes": 20482,
+      "sha256": "eddcf78aa65988b1bfb38dd269257800f5996eab4a9abd1d5c4af29b85e43f93"
+    },
+    {
+      "path": "testhub/backend/test_settings.py",
+      "bytes": 885,
+      "sha256": "186e08034b1bef76ae7b6f766d67ffef9b56ec57d303138df7e92a2f4657298c"
+    },
+    {
+      "path": "testhub/backend/urls.py",
+      "bytes": 2873,
+      "sha256": "4d1db33348a8e24539d80a15518bb4279dfc371e080a8c17e7fd8ebe8f31ac45"
+    },
+    {
+      "path": "testhub/backend/wsgi.py",
+      "bytes": 219,
+      "sha256": "5a89af2544d47bb0eaef8edd480236b66d7151814fb3ba161f2128db2bbccf4a"
+    },
+    {
+      "path": "testhub/docs/APP/APP自动化完整集成报告.md",
+      "bytes": 16388,
+      "sha256": "16323641d9c5da8d4acf473697d59b424c1dd3df60d40791a38a13dfb01e2e02"
+    },
+    {
+      "path": "testhub/docs/APP/APP自动化快速开始.md",
+      "bytes": 11524,
+      "sha256": "ad8e576bbfd68eafe7979f7f796521f86ea0018f62c34ad39f9ec64a69460d22"
+    },
+    {
+      "path": "testhub/docs/APP/APP自动化集成完成报告.md",
+      "bytes": 17557,
+      "sha256": "2447bf1eb42ad50db90f7811b0ac0178c2e6ca5e75cd506ac62201705e0311c2"
+    },
+    {
+      "path": "testhub/docs/APP/APP自动化集成说明.md",
+      "bytes": 16009,
+      "sha256": "8494d2bc33d4fb3e60823158eab0c3677323bf4f3efdc24ad947dcaac3b51212"
+    },
+    {
+      "path": "testhub/docs/APP/PROD_DEPLOY_LINUX.md",
+      "bytes": 7142,
+      "sha256": "72cc71df7cc4fd70815ba6500694508519fba2148b023cbcdf7265ced15d997f"
+    },
+    {
+      "path": "testhub/docs/APP/前端页面开发完成报告.md",
+      "bytes": 14422,
+      "sha256": "8421c0ae333cd898770463725b55db76d0953b940aaff66fd2caefba47b463e6"
+    },
+    {
+      "path": "testhub/docs/APP/最终集成完成总结.md",
+      "bytes": 15932,
+      "sha256": "7fb1d82780432c56f0d5b3a4c30c6ef177099ec43d09cdb71721ce16807279ae"
+    },
+    {
+      "path": "testhub/docs/demo_pyzbar.py",
+      "bytes": 837,
+      "sha256": "5c556c5eaca5e68ac5d0a7d4a5be7cdfd759056c57dd6bf87189408fa53db947"
+    },
+    {
+      "path": "testhub/docs/docs-center/I18N国际化使用说明.md",
+      "bytes": 9946,
+      "sha256": "ea32dd34ad893bbbfac2c071d42e8cf75c5803436e4483215353714e9641d2aa"
+    },
+    {
+      "path": "testhub/docs/docs-center/UI 自动化测试用户使用手册.md",
+      "bytes": 41047,
+      "sha256": "83e25c023358e686d82598275e03d6965b034a78e3dafe03520f5d34ce7928ea"
+    },
+    {
+      "path": "testhub/docs/docs-center/UI自动化元素order字段迁移说明.md",
+      "bytes": 3346,
+      "sha256": "b5f5f0ed31c4d2e2cc4a7261ac2bb5681324bbc23ccebb36f0693c98978c731f"
+    },
+    {
+      "path": "testhub/docs/docs-center/UI自动化测试执行说明.md",
+      "bytes": 7180,
+      "sha256": "870faff14d43b125d4ad3a81543a93ffe442f647a37c79bd04b495845b189e07"
+    },
+    {
+      "path": "testhub/docs/docs-center/WebDriver驱动管理优化说明.md",
+      "bytes": 12398,
+      "sha256": "04d41869ed7f45aa827eb67a553573ba7cb946de58363f8da4af664bc913101c"
+    },
+    {
+      "path": "testhub/docs/docs-center/数据工厂API接口文档.md",
+      "bytes": 22439,
+      "sha256": "30099cece5dd8d82b9220637c49585c06fa5d5f614e3ccc678f5b0ba41c01817"
+    },
+    {
+      "path": "testhub/docs/docs-center/数据工厂使用说明.md",
+      "bytes": 29576,
+      "sha256": "3e846801f760d92ddde54b0a32d4e3cb7b57746656363c1514eb37c00bf65362"
+    },
+    {
+      "path": "testhub/docs/docs-center/数据工厂功能说明.md",
+      "bytes": 13166,
+      "sha256": "7c08332a8ac5e4bb698de37d3cc87ca0faa27c343c19e69392828c7d0af5982f"
+    },
+    {
+      "path": "testhub/docs/docs-center/数据工厂快速开始.md",
+      "bytes": 11045,
+      "sha256": "83076d8197a8412e3ebbfbbe3845c131e7e66d28d6435d3e621dbe02c70e0140"
+    },
+    {
+      "path": "testhub/docs/docs-center/用例评审管理功能说明.md",
+      "bytes": 8965,
+      "sha256": "5829d84981dc6b83d9d0115cb76da0afb3dd3a149eefe35aad52c7c934ca0c04"
+    },
+    {
+      "path": "testhub/docs/docs-center/问题排查指南.md",
+      "bytes": 2774,
+      "sha256": "809bb18e3e6c8ec4830bd13888e29862fb1ac107584c0d9e98bdf43a5aa36910"
+    },
+    {
+      "path": "testhub/docs/k6-adapter.md",
+      "bytes": 13078,
+      "sha256": "20856e37add13d9e4d9117f019061e194a31fb08daf1970a44477cdf3b931faf"
+    },
+    {
+      "path": "testhub/docs/k6-capability-matrix.md",
+      "bytes": 87378,
+      "sha256": "36d1c32e07b40fbc9caae4fcc1e671f445303135243e5302ca1b3d79d8254a77"
+    },
+    {
+      "path": "testhub/docs/key.py",
+      "bytes": 108,
+      "sha256": "d0341b7fca86ba4af21d54664d6943bf225788e19b9a860eb43238f074d52815"
+    },
+    {
+      "path": "testhub/docs/tester.md",
+      "bytes": 1839,
+      "sha256": "a5d62eead6ae9bddcecfac876b6c3c87da53aca9892ba05b4246cb3881bdfe2b"
+    },
+    {
+      "path": "testhub/docs/tester_pro.md",
+      "bytes": 1377,
+      "sha256": "12fcfc4def7adc434b6ccaa687bf0229b1b5dba3c189b7e142fcaf5c4e6c79ae"
+    },
+    {
+      "path": "testhub/frontend/.dockerignore",
+      "bytes": 380,
+      "sha256": "f72859f9c437821d92bbd3f9924e94fdb5869b7f4b16d65e475126ebb2530393"
+    },
+    {
+      "path": "testhub/frontend/.gitignore",
+      "bytes": 94,
+      "sha256": "5e4c5ff3025daf4ac5c6347f5024d04f84e9569b566d300c090b301a6839c39e"
+    },
+    {
+      "path": "testhub/frontend/Dockerfile",
+      "bytes": 632,
+      "sha256": "d97f86863a8e4954e85fdcc03ad3b5bc1b38a99417e3c5d394be8d448c89a8c7"
+    },
+    {
+      "path": "testhub/frontend/Dockerfile.dev",
+      "bytes": 310,
+      "sha256": "ddf82700fd4eb35458e073ce81e05ff8a09dadfdb6b9bd453f5f82777428fdd1"
+    },
+    {
+      "path": "testhub/frontend/PAGE_I18N_GUIDE.md",
+      "bytes": 9513,
+      "sha256": "c54462042d1e357400f7dc6e8b01291d3e65c40debac75386fed28eb12c7cbaa"
+    },
+    {
+      "path": "testhub/frontend/QUICK_START.md",
+      "bytes": 3275,
+      "sha256": "ac00349fc0b775f65cd56af0674a24b97cf63d8e44734f3697b7963a0b11bc4b"
+    },
+    {
+      "path": "testhub/frontend/README.Docker.md",
+      "bytes": 8773,
+      "sha256": "55d2b2ebd4a82ac03efa49b44559346fe5a3bf63447dcb76939486a4ebeab1c3"
+    },
+    {
+      "path": "testhub/frontend/deploy.sh",
+      "bytes": 4538,
+      "sha256": "d5c803c69e4df02fc17f4e0766b04a314297db47f90c967f279feef62ad15038"
+    },
+    {
+      "path": "testhub/frontend/docker-compose.dev.yml",
+      "bytes": 436,
+      "sha256": "4905b280179fed358d5b1dae7c9800acdc0fe0aa93f675f76f4e29d561acf0c7"
+    },
+    {
+      "path": "testhub/frontend/docker-compose.yml",
+      "bytes": 348,
+      "sha256": "70270610ccc1dc38addee0bc294c81ba4271a34546f5301e2614cd3109c49004"
+    },
+    {
+      "path": "testhub/frontend/index.html",
+      "bytes": 788,
+      "sha256": "620ee2f0a41b2d96df622dd8092d89dbd6e37a7875e422ade41a38954a9a113f"
+    },
+    {
+      "path": "testhub/frontend/jsconfig.json",
+      "bytes": 319,
+      "sha256": "6d33556d475a9368b04ae19554c7caecad2bd27d499b50035b84f258fb84f958"
+    },
+    {
+      "path": "testhub/frontend/nginx.conf",
+      "bytes": 1945,
+      "sha256": "d6d0c59ba6dcece11b96289bce5273a8f3e6330ed7802591f6fce9539061edfd"
+    },
+    {
+      "path": "testhub/frontend/package-lock.json",
+      "bytes": 162274,
+      "sha256": "446a618ae06c6029634f798856fc73a1c7e54cb595fb07bbcc9e15c023f23e63"
+    },
+    {
+      "path": "testhub/frontend/package.json",
+      "bytes": 1078,
+      "sha256": "c35a975fff5ee518f520f24dcd0db82484eb209298633d34a44c822863bf46e6"
+    },
+    {
+      "path": "testhub/frontend/public/tree-sitter-bash.wasm",
+      "bytes": 1364304,
+      "sha256": "f88a7aa88a0fe55e02784c400675527ac320712617b65b49ddae207b69779f1a"
+    },
+    {
+      "path": "testhub/frontend/public/tree-sitter.wasm",
+      "bytes": 190779,
+      "sha256": "70aa2b222e10a91306a85f5b9c8e028e3dc09943854aa63640c643fc7e051c2f"
+    },
+    {
+      "path": "testhub/frontend/src/App.vue",
+      "bytes": 998,
+      "sha256": "5493f9bd7ab094f4ac4403441124cbc1a1c8e6ff6cc54e6d6809fd103a32720c"
+    },
+    {
+      "path": "testhub/frontend/src/api/api-testing.js",
+      "bytes": 3507,
+      "sha256": "d36a974cd0db0bf46845b8d40e47eff7735837aee00d43829c8a3dde316cd480"
+    },
+    {
+      "path": "testhub/frontend/src/api/app-automation.js",
+      "bytes": 13743,
+      "sha256": "a51c8adaa43f490efaa06f8204bc9706f1bcef0460fc315860fef4f2744e6667"
+    },
+    {
+      "path": "testhub/frontend/src/api/core.js",
+      "bytes": 1448,
+      "sha256": "63949931e8093a538c37a5541e0b475db007939f313be6bfc5e70925326b47df"
+    },
+    {
+      "path": "testhub/frontend/src/api/data-factory.js",
+      "bytes": 1118,
+      "sha256": "78467fa42462d2b1dea8a29a3bd7fe145d167393067140bc6f0cbb88955477ce"
+    },
+    {
+      "path": "testhub/frontend/src/api/defects.js",
+      "bytes": 2819,
+      "sha256": "190fded6c5880737cd1c7f5d49640d71ebbe785da1647ae14886ddad8ff19719"
+    },
+    {
+      "path": "testhub/frontend/src/api/llm-judge.js",
+      "bytes": 7732,
+      "sha256": "34f65c8f36134b94e9ba41e0991a8398372e0f68d7f098c3517a36bc823906dd"
+    },
+    {
+      "path": "testhub/frontend/src/api/mcp.js",
+      "bytes": 1181,
+      "sha256": "fda9efa737ab6f09a74448c544a845bba8f4593bbeb5afebfc9f3dc221a3d3a4"
+    },
+    {
+      "path": "testhub/frontend/src/api/monitor.js",
+      "bytes": 2324,
+      "sha256": "5e59a1a68fb28bf465a6a8e178d3840b81539bbe29ee09bbbaec8b801bc05bb1"
+    },
+    {
+      "path": "testhub/frontend/src/api/performance-testing.js",
+      "bytes": 15432,
+      "sha256": "d7c160a45ac3efe5b40f8de1ae85622374aa97e4b38864dd51907b14659fdd0f"
+    },
+    {
+      "path": "testhub/frontend/src/api/requirement-analysis.js",
+      "bytes": 3367,
+      "sha256": "7c8c8d3e1b0cf6468beb50cf981d0807a3223ba4926bbe40fca96d093cfc1fde"
+    },
+    {
+      "path": "testhub/frontend/src/api/ui_automation.js",
+      "bytes": 22327,
+      "sha256": "09e405c86d7a94c8deafd482197fdaff03b6f7583a49e21e9eed2214e59c7603"
+    },
+    {
+      "path": "testhub/frontend/src/assets/css/global.scss",
+      "bytes": 2943,
+      "sha256": "1294419802ecd961d8f9a40279f972a540f9d43bd11a1ddb732dde4a3564e681"
+    },
+    {
+      "path": "testhub/frontend/src/assets/images/logo.svg",
+      "bytes": 191313,
+      "sha256": "df5942d7b7d4e0079f7fcb8705a7711f55ea3e8f43d0e60172c4feebedb00580"
+    },
+    {
+      "path": "testhub/frontend/src/assets/images/logo_home.png",
+      "bytes": 5918,
+      "sha256": "fe5157817260e3d736dd31cd60d0b4f7704a8d5ff32ebebc4c6c61dc47229d0a"
+    },
+    {
+      "path": "testhub/frontend/src/components/DataFactorySelector.vue",
+      "bytes": 16834,
+      "sha256": "31fd1c50b6b050e9565e2399892a4e04d2be7f91c5687bf986d131fce68ff666"
+    },
+    {
+      "path": "testhub/frontend/src/layout/index.vue",
+      "bytes": 34848,
+      "sha256": "1194f6ccd37d6cd0805ac2230244d31531b12772d1f26ca7fc32f7f5125e3000"
+    },
+    {
+      "path": "testhub/frontend/src/locales/datetimeFormats.js",
+      "bytes": 1207,
+      "sha256": "f997381c3e5e2d79f6b7b14709778c6ccb4d5dbf58171dd067f5416510de3425"
+    },
+    {
+      "path": "testhub/frontend/src/locales/index.js",
+      "bytes": 1431,
+      "sha256": "f2de4d38c489ebd13f8e61b4d94ece2778fd387df6a166f1c67acfa1aae87198"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/en/api-testing.js",
+      "bytes": 32341,
+      "sha256": "f124a1226b1473f7d79e33e473445eaaec3e6ae2ef61a191a8d1052398d1618f"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/en/app-automation.js",
+      "bytes": 38941,
+      "sha256": "1dd154bb2d3697b04a112f14f822ead42a3a65f0f71df62429abaf71fafba8dc"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/en/assistant.js",
+      "bytes": 1516,
+      "sha256": "941eaa7da896ad94c97a53959f727425c14052b58661be9eb144511921b3356a"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/en/auth.js",
+      "bytes": 2120,
+      "sha256": "90e03ce1a2f5a066909606ed6778dacbadf4666e8707ef7b529e85774b368161"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/en/common.js",
+      "bytes": 533,
+      "sha256": "5f0ae6b196a6b8f1bf7bf7c383a3d1f6a5e2a4d63a92fa20b1607b25731d76e0"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/en/configuration.js",
+      "bytes": 10268,
+      "sha256": "e73d2feed5742f82198b2ec20fc317d4cfc2e3fc0551070da023a8f5d9d67fd6"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/en/data-factory.js",
+      "bytes": 18816,
+      "sha256": "d6c4df7955785fb8d014d43e1bd9ef087816cd3de69a3235fbe9ca46cd09602f"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/en/docs.js",
+      "bytes": 250,
+      "sha256": "0bd5060444f7a9277bd89e5e116d120110257073bf7be8055b30e5e5c83b73ec"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/en/execution.js",
+      "bytes": 4929,
+      "sha256": "a47d418da080baa8abaf0d834dc8c12e0a0896bfc9d2799cbe7b0fe0f98b866c"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/en/index.js",
+      "bytes": 2768,
+      "sha256": "d95c6a1961d4c1fe1627e33669887c22559f11ddb9697a3a45cf28ebbc254ac2"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/en/llm-judge.js",
+      "bytes": 5402,
+      "sha256": "82b08f77a3f3a9209d098183db1301bda41211c62b97d2fb7ff0af29dd5f897f"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/en/mcp.js",
+      "bytes": 3466,
+      "sha256": "488a858bf7bd3a6db230b75e2162b50b506903360d81d45e140f67fa5db727ec"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/en/monitor.js",
+      "bytes": 8483,
+      "sha256": "c707a8ea8de347e5d79b30456925f98eff322e3c683188918a1d5299dfc4d719"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/en/nav.js",
+      "bytes": 3423,
+      "sha256": "d8a5e7887e4ae6fe2ba9bf2aeadbf177d712e748a519a0c47aeb9b798efb5fbd"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/en/notification.js",
+      "bytes": 3564,
+      "sha256": "e4e0bbafe8cd63df74556a3ea6d14515d33fa0b7428f9b2ba9dd7c21ae8311bc"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/en/performance-testing.js",
+      "bytes": 67518,
+      "sha256": "a943c7bd2346a9167377862ecb4f84d5e45788ea3c90df4e9d304dd4ca74e64f"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/en/project.js",
+      "bytes": 5025,
+      "sha256": "4ad00bc0ed0af73f7c82f83ab333f88eaf3dfce2332adca57022fe0da5ea77ce"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/en/report.js",
+      "bytes": 1825,
+      "sha256": "e368f1d0590e3ff054dd90e2a9d512e93668a1a6554396eba25c23c70d9f38cb"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/en/requirement.js",
+      "bytes": 23850,
+      "sha256": "5f12615fb0aee94c3718fc19bcbf97e660493433eeea06feb3549b12d1087873"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/en/review.js",
+      "bytes": 9302,
+      "sha256": "75f01ce69340a9aa18e285338972f3bc6ef4c71991e26c3b648a7d8c2d891ed4"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/en/testcase.js",
+      "bytes": 6378,
+      "sha256": "c3927add016abd17342e168dbeab2d14e9eb67c7d220593442e154b24369c212"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/en/ui-automation.js",
+      "bytes": 48239,
+      "sha256": "ec400ee081786695e905ba45756462576e0a2360d7cd02f1404e0983f26ba588"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/en/version.js",
+      "bytes": 1712,
+      "sha256": "b64ceab3917bedaca642c808621c8cea63278c3cce22336f0e791926e7cc6462"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/zh-cn/api-testing.js",
+      "bytes": 31369,
+      "sha256": "06de2156e0d16904d7e9e06cdb4d0b877d09843808079d11af162fbf487da83d"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/zh-cn/app-automation.js",
+      "bytes": 37331,
+      "sha256": "6ef4d3e7a254ddc15c15c4bb24baac0a9d3a29f01aefe5bbffc7ab8ccdbbd92b"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/zh-cn/assistant.js",
+      "bytes": 1448,
+      "sha256": "35c68098c1f5d9fdd05ce782988923437f610cffbae85416d322f39a9c3e377a"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/zh-cn/auth.js",
+      "bytes": 1951,
+      "sha256": "4aad2a6d68ff00e98e4fb496b4609fe0ec85a2c65ec734681068a2d628fa58f7"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/zh-cn/common.js",
+      "bytes": 573,
+      "sha256": "bef0751a6c7109cb1a0fb855a5763f9f36368379746664ed52844ceb379f0183"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/zh-cn/configuration.js",
+      "bytes": 9640,
+      "sha256": "0b142387c8eb7479e8c9cc565021ea410438d47a9f8cb58d49219ad07de1d82d"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/zh-cn/data-factory.js",
+      "bytes": 18635,
+      "sha256": "c388f1fd6bef84b0397d88b4d6a35544412eb799cd68e965ef849133a6530718"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/zh-cn/docs.js",
+      "bytes": 245,
+      "sha256": "22ca73514ea225ad4e5796fcd162ad12f4a3fd73565259142c0d3af7d6823425"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/zh-cn/execution.js",
+      "bytes": 4867,
+      "sha256": "670760be194ca269036cb2903ec886aff1437c4be1fcc755f13ca8177433964c"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/zh-cn/index.js",
+      "bytes": 2766,
+      "sha256": "deeae3b646b14082fe7ca7d1c7ae94790fe14437ee0fec9d1c150f407576ad8f"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/zh-cn/llm-judge.js",
+      "bytes": 9810,
+      "sha256": "386336ed62fe0dc74f5b97983cf5db498865af48f3c7028e15b0b7a94a2a9eef"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/zh-cn/mcp.js",
+      "bytes": 3617,
+      "sha256": "7b5fe56e8bccfca021a61622a6433d5f351ad477bd999ac0279afdb99c2065b9"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/zh-cn/monitor.js",
+      "bytes": 8662,
+      "sha256": "1dafc551dbb847a6d55ccf07c8d4142c498ef701e82e602c8074775e91ecf61c"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/zh-cn/nav.js",
+      "bytes": 3269,
+      "sha256": "8edc6e7a43f6f2542969ec2c139d9c64bc83e49a7acce841270def81a3a3100f"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/zh-cn/notification.js",
+      "bytes": 3545,
+      "sha256": "c706829b5f25ff8cc5a053fbb60d5facfe60ba4b3e5928eb91e841ae7e30ffad"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/zh-cn/performance-testing.js",
+      "bytes": 65481,
+      "sha256": "7422c981994d02a0f8b5020063f4515e399c0068170f127015b4a3065f29dce3"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/zh-cn/project.js",
+      "bytes": 4732,
+      "sha256": "c2a63622a84f4f159805f8531614898d726bc4e823604d48dacd83be64942d95"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/zh-cn/report.js",
+      "bytes": 1723,
+      "sha256": "23ec77f2801821b5c0be953bb77fc477652d1a98c84c55169d86e616efa564f7"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/zh-cn/requirement.js",
+      "bytes": 23270,
+      "sha256": "013d86cedc8f175d7d7c48abbcf535c50351bd51d95e4b8b8b9afdf219fc304e"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/zh-cn/review.js",
+      "bytes": 9067,
+      "sha256": "52014d8319d5e668cd38d1d78c24d301db4506a51017b259c2b31ba120746050"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/zh-cn/testcase.js",
+      "bytes": 6212,
+      "sha256": "db1983e9db908788bd4fa0f05fca2d3be6e71ec3f9b0c092423dc8080f6bdf54"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/zh-cn/ui-automation.js",
+      "bytes": 46715,
+      "sha256": "04495955be7391e74eb896ae3414c20a7eb8df28d5afee0d20270673c19c2596"
+    },
+    {
+      "path": "testhub/frontend/src/locales/lang/zh-cn/version.js",
+      "bytes": 1609,
+      "sha256": "78241955e7f00823749851f8c50be8b0bfee4f5d686504678d63df3aeece2923"
+    },
+    {
+      "path": "testhub/frontend/src/locales/numberFormats.js",
+      "bytes": 992,
+      "sha256": "f52dbdb23115b035358f80fec40fc07da82326ef420a35b6454e42e82afbe9e1"
+    },
+    {
+      "path": "testhub/frontend/src/locales/pluralRules.js",
+      "bytes": 415,
+      "sha256": "8458d96a4e673efecb6ff709b0caeaefb56eedf1e1b9d456f89961f412d5da65"
+    },
+    {
+      "path": "testhub/frontend/src/main.js",
+      "bytes": 1187,
+      "sha256": "e7556b2e69aed6eb08ebdf76f99522eabb46aad62ade25b4d79f155bd63570c3"
+    },
+    {
+      "path": "testhub/frontend/src/router/index.js",
+      "bytes": 27252,
+      "sha256": "5f10e9d63397c2b4a63f758ce108d60dd34a07fa3833198f754fa2743618c6ac"
+    },
+    {
+      "path": "testhub/frontend/src/stores/app.js",
+      "bytes": 663,
+      "sha256": "93f5f880b528723622983c1e072c8d299b0996ca75c30ed1d500cf1c20138b4c"
+    },
+    {
+      "path": "testhub/frontend/src/stores/user.js",
+      "bytes": 9219,
+      "sha256": "3bf5e02a76d8c792a9d574b28d1f3b5833f4aac4726728e6604147621b5d0457"
+    },
+    {
+      "path": "testhub/frontend/src/stores/userSession.test.mjs",
+      "bytes": 14400,
+      "sha256": "0a2dc92336360d358c056e9f5a030221276b4c918ae9e09a0821c79a92e1dc79"
+    },
+    {
+      "path": "testhub/frontend/src/utils/api.js",
+      "bytes": 1902,
+      "sha256": "8ec8e936a96248dfee7d84a5a8ce87080c18fffc22add72a9ae852528d32ddff"
+    },
+    {
+      "path": "testhub/frontend/src/utils/app-automation-helpers.js",
+      "bytes": 5337,
+      "sha256": "c2a3442ef7a33d235d423c4f7b4e37216afd0c19886d9db0748bc5fc857495b2"
+    },
+    {
+      "path": "testhub/frontend/src/utils/codeGenerator.ts",
+      "bytes": 7307,
+      "sha256": "d58eb672105ae55018b7519d13317cde632028127e02388b126f19ac281df1b0"
+    },
+    {
+      "path": "testhub/frontend/src/utils/requestModel.ts",
+      "bytes": 7526,
+      "sha256": "f82913a7efe4f1838f2ca0ae0db120e6da1837b0b7be248df3c27cfe11753cbc"
+    },
+    {
+      "path": "testhub/frontend/src/utils/tracker.js",
+      "bytes": 3461,
+      "sha256": "0421ebf97f6645123b0f82cddfa5347b9a6075ac629f58132baaa342d0a2c8c4"
+    },
+    {
+      "path": "testhub/frontend/src/utils/treeCount.js",
+      "bytes": 1042,
+      "sha256": "3c5cc4fac39f3771d63090ac922d0c34cff6083610097dff18a2679b7de6227c"
+    },
+    {
+      "path": "testhub/frontend/src/utils/urlParams.js",
+      "bytes": 2397,
+      "sha256": "aaf703682a8d354721b3a52cfd22f4af4c41d5a1dbdf6e5fbf7b2a1f25fd7340"
+    },
+    {
+      "path": "testhub/frontend/src/views/Home.vue",
+      "bytes": 25068,
+      "sha256": "67f37ae5b4382b1e0e3784858f1819e62749c225f341f3787e9e49d26e10ab60"
+    },
+    {
+      "path": "testhub/frontend/src/views/api-testing/AIServiceConfig.vue",
+      "bytes": 11337,
+      "sha256": "7f07b4b8491cff5e8a8d1886e549ba964bc8df3ba0b08b9f76447be542e0a205"
+    },
+    {
+      "path": "testhub/frontend/src/views/api-testing/AutomationTesting.vue",
+      "bytes": 35576,
+      "sha256": "9e1915c1ec3ebdb1950a416c5e9a6ff4c905849646ccf307a681bbc4c10e3d5b"
+    },
+    {
+      "path": "testhub/frontend/src/views/api-testing/Dashboard.vue",
+      "bytes": 22646,
+      "sha256": "614454f92622b1d4221aa28342d8e03e0caa405e5300ed55b648a6aa0b5ffeb5"
+    },
+    {
+      "path": "testhub/frontend/src/views/api-testing/EnvironmentManagement.vue",
+      "bytes": 16632,
+      "sha256": "4d86d7acdae918ce18745358832f56cf638508b423945f8990fdc0a8a0d800bc"
+    },
+    {
+      "path": "testhub/frontend/src/views/api-testing/InterfaceManagement.vue",
+      "bytes": 138977,
+      "sha256": "bfa73ef31877fb7b53a3174d65f5ef718006fecaffee9603fadf3d160acbbecb"
+    },
+    {
+      "path": "testhub/frontend/src/views/api-testing/NotificationManagement.vue",
+      "bytes": 22693,
+      "sha256": "6c69e3b34b13085d54d69d960b8daa535cccbc9cde35b5cb3d3c8805645aa868"
+    },
+    {
+      "path": "testhub/frontend/src/views/api-testing/ProjectManagement.vue",
+      "bytes": 14858,
+      "sha256": "db58f8c4e645a62b76fac76d7d7c3937489b6f0c14e76aba78b80c936386e22d"
+    },
+    {
+      "path": "testhub/frontend/src/views/api-testing/ReportView.vue",
+      "bytes": 4966,
+      "sha256": "396c33fcb18ca85b81a763e17efdc42be308837b2e83fb7b44f356279f7b0c52"
+    },
+    {
+      "path": "testhub/frontend/src/views/api-testing/RequestHistory.vue",
+      "bytes": 14459,
+      "sha256": "d8906edde0724dfa843bbe63e8eb026085241ee7cb9aec785f3fdfb6765ac335"
+    },
+    {
+      "path": "testhub/frontend/src/views/api-testing/ScheduledTasks.vue",
+      "bytes": 26696,
+      "sha256": "0a2a684fc6086679972625a52dbcbddcb10ea889c0b6ddbbe097c03148658f10"
+    },
+    {
+      "path": "testhub/frontend/src/views/api-testing/components/EnvironmentTable.vue",
+      "bytes": 7370,
+      "sha256": "ddb20578b29636a7672f650e669de33cf15be0229b645d0e6049d68e496a2a5a"
+    },
+    {
+      "path": "testhub/frontend/src/views/api-testing/components/HistoryTable.vue",
+      "bytes": 4018,
+      "sha256": "c09f0fe48939f37779092fc7b757757271db3dd65b6596c54bfabad8e679da96"
+    },
+    {
+      "path": "testhub/frontend/src/views/api-testing/components/KeyValueEditor.vue",
+      "bytes": 21251,
+      "sha256": "2748acab924eaaac9dfa1ea6af273765021c0990eca2dbd48be230ba8ef6edd1"
+    },
+    {
+      "path": "testhub/frontend/src/views/api-testing/index.vue",
+      "bytes": 2725,
+      "sha256": "990cf22a7f028a28120f55f34b56832c787e78856a49b39afe7300e1f669c3ab"
+    },
+    {
+      "path": "testhub/frontend/src/views/app-automation/Index.vue",
+      "bytes": 4132,
+      "sha256": "0210706cd5649c369b004dbd31035b90e658128bd98215bc5c5723cd50ad7103"
+    },
+    {
+      "path": "testhub/frontend/src/views/app-automation/dashboard/Dashboard.vue",
+      "bytes": 13990,
+      "sha256": "b3259689d4263c69601f4e03f2a78abeed3909ed2e88ed1d404f433116afb613"
+    },
+    {
+      "path": "testhub/frontend/src/views/app-automation/devices/DeviceList.vue",
+      "bytes": 20198,
+      "sha256": "a034ba1df5c97c24a9dd515a7a236230bba487f8e00f21325bdc8a56148e0871"
+    },
+    {
+      "path": "testhub/frontend/src/views/app-automation/elements/ElementList.vue",
+      "bytes": 18014,
+      "sha256": "9b5181f16a8fe67e5d1b717a2561962970840b6d691faa8d1ea0f9cab0aa5ed8"
+    },
+    {
+      "path": "testhub/frontend/src/views/app-automation/elements/components/CaptureElementDialog.vue",
+      "bytes": 34325,
+      "sha256": "1e6909b424a398d61e18f776e77d5bfd3d42fb149686a165209aeac16b61fa9e"
+    },
+    {
+      "path": "testhub/frontend/src/views/app-automation/elements/components/ManualElementDialog.vue",
+      "bytes": 25031,
+      "sha256": "c7217bf39a2b9da7c4df22b2828312d8df9a70c7c683db9ac16fa3aa1662a644"
+    },
+    {
+      "path": "testhub/frontend/src/views/app-automation/executions/ExecutionList.vue",
+      "bytes": 11112,
+      "sha256": "16cdf677ef5a1006817f98b50aaa5f9dd68a23dca58f7055d58e04abcaa5de5d"
+    },
+    {
+      "path": "testhub/frontend/src/views/app-automation/notification/NotificationLogs.vue",
+      "bytes": 11327,
+      "sha256": "6a02ac7a5e29844486fc3ff62d1fd92db9521ed463075843bf41b1efc0870311"
+    },
+    {
+      "path": "testhub/frontend/src/views/app-automation/packages/PackageList.vue",
+      "bytes": 7492,
+      "sha256": "88f3a45055671717097a0e5062c1173bc9fba4e85cc2f1bae2680066766fc737"
+    },
+    {
+      "path": "testhub/frontend/src/views/app-automation/projects/ProjectList.vue",
+      "bytes": 13844,
+      "sha256": "02819470a638379c2424df9fa27e04694b32147aa8f2e77f47283a7cf01b00f8"
+    },
+    {
+      "path": "testhub/frontend/src/views/app-automation/reports/ReportList.vue",
+      "bytes": 31776,
+      "sha256": "0830f1d53b62b0b1527e6f6afea2273ed26655133baf86392d4eab7ac912363f"
+    },
+    {
+      "path": "testhub/frontend/src/views/app-automation/scheduled-tasks/ScheduledTasks.vue",
+      "bytes": 22213,
+      "sha256": "4ff4d707d2e11f58b062b8be4cd4ed5e4694774dae32f83797ad64fd4c5daf67"
+    },
+    {
+      "path": "testhub/frontend/src/views/app-automation/settings/AppSettings.vue",
+      "bytes": 4612,
+      "sha256": "11ca6747e20fdd82e7dcde3f1d2e5f8b720b1c1d8e7f50e09f871fa03e76faf8"
+    },
+    {
+      "path": "testhub/frontend/src/views/app-automation/suites/SuiteList.vue",
+      "bytes": 27167,
+      "sha256": "e1b286200418c890a04bca26dcc283c0a7817148fd7674e51b788fe74c6b9fcf"
+    },
+    {
+      "path": "testhub/frontend/src/views/app-automation/test-cases/SceneBuilder.vue",
+      "bytes": 141466,
+      "sha256": "5fc1f97634174f0cbecebc736576110da1ea6f8f593983ead62406bd43e96b8f"
+    },
+    {
+      "path": "testhub/frontend/src/views/app-automation/test-cases/TestCaseList.vue",
+      "bytes": 28385,
+      "sha256": "3a2376f40380cb4839d801bc7fa2ea78ed4a79b8369641ee367366376583315d"
+    },
+    {
+      "path": "testhub/frontend/src/views/assistant/AssistantView.vue",
+      "bytes": 22953,
+      "sha256": "49d671b87090136da17b312b7e049f4dc5b03ceecdda219996fcfe565fd58b16"
+    },
+    {
+      "path": "testhub/frontend/src/views/auth/Login.vue",
+      "bytes": 24471,
+      "sha256": "679d63ccebf839644216b2a62371436bfbb98f54ff1ba0babc58cb75e1f18921"
+    },
+    {
+      "path": "testhub/frontend/src/views/auth/Register.vue",
+      "bytes": 10364,
+      "sha256": "37ddf4e4f444b00086afbd2900b8484049ffdba16feaaa8fce2f4ac288a60e0f"
+    },
+    {
+      "path": "testhub/frontend/src/views/configuration/AIIntelligentModeConfig.vue",
+      "bytes": 27895,
+      "sha256": "aba842ead908ff8e785d0e2c80ed32f689f98d3de7ac90a6ae54671bab0e7e5f"
+    },
+    {
+      "path": "testhub/frontend/src/views/configuration/ConfigurationCenter.vue",
+      "bytes": 665,
+      "sha256": "1f620cbe0e458ae4cc8c38a8eb46ef88dcd0c70c272e1e7a4057baf17d2aeb00"
+    },
+    {
+      "path": "testhub/frontend/src/views/configuration/DifyConfig.vue",
+      "bytes": 9133,
+      "sha256": "c4532757e25e29a198d6f00a65f759c4ebe9817ba8c3b0fc97db0ab022f52bc3"
+    },
+    {
+      "path": "testhub/frontend/src/views/configuration/UIEnvironmentConfig.vue",
+      "bytes": 7552,
+      "sha256": "3f436e45428da5395648e6fe7a5d11cf848ceac5c1bce36a4785e2fd0bcfae69"
+    },
+    {
+      "path": "testhub/frontend/src/views/data-factory/DataFactory.vue",
+      "bytes": 116975,
+      "sha256": "284adf54e3566b73a8ac34506d927ade0dfbcc8b42c1783ad597332c39cce022"
+    },
+    {
+      "path": "testhub/frontend/src/views/defects/DefectDashboard.vue",
+      "bytes": 14097,
+      "sha256": "3fc9e95710a9efe3a7b9fd1c642a5423f1d2fca5171639379e90570a199e5c66"
+    },
+    {
+      "path": "testhub/frontend/src/views/defects/DefectDetail.vue",
+      "bytes": 15329,
+      "sha256": "c895d0df75a00f6d5d1d9f9d823360c080f63f7f2890acd8ff4c43674a32dd56"
+    },
+    {
+      "path": "testhub/frontend/src/views/defects/DefectForm.vue",
+      "bytes": 15504,
+      "sha256": "01eeb5482ccfe8e16d9be53f127883fb8dce59eff503640bcc9a18c910233ef5"
+    },
+    {
+      "path": "testhub/frontend/src/views/defects/DefectList.vue",
+      "bytes": 13333,
+      "sha256": "a69b03172f628c9d1456c266973366f55840b41ca120f9dd1ad8e18e96181a7a"
+    },
+    {
+      "path": "testhub/frontend/src/views/defects/DefectReport.vue",
+      "bytes": 14919,
+      "sha256": "2863781294e1a6ec53fc4c226560f582be2eaf1ea8d0798a8017ecdfcfe9e900"
+    },
+    {
+      "path": "testhub/frontend/src/views/defects/options.js",
+      "bytes": 2088,
+      "sha256": "2cedd290b4ea8107663065c28f18a2b6fab335f72256627706116b667061bbb8"
+    },
+    {
+      "path": "testhub/frontend/src/views/docs-center/DocsCenter.vue",
+      "bytes": 5582,
+      "sha256": "8fe1385f525774e5a63faeded0406abd944c1803fe37cd1dbd9d7c4eaa6e777d"
+    },
+    {
+      "path": "testhub/frontend/src/views/executions/ExecutionDetailView.vue",
+      "bytes": 26073,
+      "sha256": "65aeecfd155b2ad82d0b87d20bf2c6eefd7a2fb7248ee211cd0a1c34dce4a531"
+    },
+    {
+      "path": "testhub/frontend/src/views/executions/ExecutionList.vue",
+      "bytes": 393,
+      "sha256": "958fdea7e440d9dbd45838772e68a152a6bcd848d972f57b413cf4df59fafcd7"
+    },
+    {
+      "path": "testhub/frontend/src/views/executions/ExecutionListView.vue",
+      "bytes": 32920,
+      "sha256": "9eddc5a29d8aeff468d27e922e3e73697d1938f9b250afd91ad530e85709b3da"
+    },
+    {
+      "path": "testhub/frontend/src/views/llm-judge/BatchJudge.vue",
+      "bytes": 36253,
+      "sha256": "5824853ed16256e9c004ae75e104c2c87681eaa64fa80fe9f76422d12f06f2dd"
+    },
+    {
+      "path": "testhub/frontend/src/views/llm-judge/Dashboard.vue",
+      "bytes": 11511,
+      "sha256": "72a9b3dcd03cc775968e2678cb6a9f05c32bd9b1d13ed19cf47f85f7aa44dc7e"
+    },
+    {
+      "path": "testhub/frontend/src/views/llm-judge/HistoryList.vue",
+      "bytes": 12251,
+      "sha256": "07ff3d83afeeeb48d163a682c187e2660b15fe853eca5b28185032070fa1f421"
+    },
+    {
+      "path": "testhub/frontend/src/views/llm-judge/KnowledgeBase.vue",
+      "bytes": 40744,
+      "sha256": "9d90d91c427d90f264aebd91a200b4a2801c70a00b79970b55b2fcfe7e22a8a7"
+    },
+    {
+      "path": "testhub/frontend/src/views/llm-judge/RubricList.vue",
+      "bytes": 11874,
+      "sha256": "9c0da99d99750ab1801a17a6ec86e321ffc6f4f19eff841b2b184c4d9da5b332"
+    },
+    {
+      "path": "testhub/frontend/src/views/llm-judge/SingleJudge.vue",
+      "bytes": 15496,
+      "sha256": "a8471756d2c3e31633725f574cc13e5e9e9c2ea911ed29de1f3db49663776441"
+    },
+    {
+      "path": "testhub/frontend/src/views/mcp/McpConsole.vue",
+      "bytes": 26816,
+      "sha256": "10e5bd9c82f61d0678f2a15a9fcb1e0e0daee68e7cd62b6852bef7604672f64f"
+    },
+    {
+      "path": "testhub/frontend/src/views/monitor/Alerts.vue",
+      "bytes": 10635,
+      "sha256": "97da0f19e996bec489673181d681f9945e604ca5a7a4bf66206996d962cdd3d2"
+    },
+    {
+      "path": "testhub/frontend/src/views/monitor/CheckLogs.vue",
+      "bytes": 9264,
+      "sha256": "66bcf3a30ced12f28ecafad2cf14e079f3e811f3c4f33c1d92b742237ac3902c"
+    },
+    {
+      "path": "testhub/frontend/src/views/monitor/Dashboard.vue",
+      "bytes": 14350,
+      "sha256": "26fd1d4e1f3e802150472a90c8fc237800cc4c516c081eb3728778c84f735bd9"
+    },
+    {
+      "path": "testhub/frontend/src/views/monitor/MonitorTargetConfigForm.vue",
+      "bytes": 33754,
+      "sha256": "605e69bf86468496f877e2f42ebd10fd01d0ba9b4e86efe4529116a63844e088"
+    },
+    {
+      "path": "testhub/frontend/src/views/monitor/MonitorTargets.vue",
+      "bytes": 19331,
+      "sha256": "3ddcdc11c00f6958edbb45f72aa27c3defadd48daeae98b9a273356dad8ac601"
+    },
+    {
+      "path": "testhub/frontend/src/views/monitor/NotificationChannels.vue",
+      "bytes": 12936,
+      "sha256": "1879c456296056b1b8807e377b709aaf9a21dd5442450a30ffde514b7178d2ea"
+    },
+    {
+      "path": "testhub/frontend/src/views/monitor/channelForm.mjs",
+      "bytes": 3516,
+      "sha256": "6f2f8850d880a9bc1911b6d04d97650fcc65420ba9c50130de0dd8a6f7e49358"
+    },
+    {
+      "path": "testhub/frontend/src/views/monitor/channelForm.test.mjs",
+      "bytes": 4537,
+      "sha256": "40cee8ee3b445758737b3f50811d0fd751391cdef0b5847c7a0bc0b550ebfcf8"
+    },
+    {
+      "path": "testhub/frontend/src/views/notification/NotificationConfigs.vue",
+      "bytes": 18757,
+      "sha256": "c7d0ced1155d04a4520baaa71f23c8f90a8f3e1c236715f11a4f36c4c709ea31"
+    },
+    {
+      "path": "testhub/frontend/src/views/notification/NotificationLogs.vue",
+      "bytes": 21929,
+      "sha256": "7d9a46c58f2727ea2b191e0fe0e08c034565bcb032bbf68976f3a0ebf08edb50"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/AccountPoolManagement.vue",
+      "bytes": 19282,
+      "sha256": "d85c94988158aa4ca1e418ba101b2bfef9ba1713e53ac81410114e54ae235fed"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/Comparison.vue",
+      "bytes": 24978,
+      "sha256": "43f946ed352bda321f914e644ee34eeb41c2195a257e966cc16c4df1c9d3d896"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/ComparisonReports.vue",
+      "bytes": 11602,
+      "sha256": "99a15de363b68bb3bb2bded8a553a8cb88bb9793fa26f09cdadd5396a39743f1"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/Dashboard.vue",
+      "bytes": 12009,
+      "sha256": "c955bb5a255ffac70be4adf9635a6db4ae26d573efe69f4b8e4d09d5c12beb0e"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/EnvironmentManagement.vue",
+      "bytes": 16509,
+      "sha256": "e56f5e146d9c44f670655e4d24bbddea484b4d88dd13f0c3270deb902d0c2434"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/ExecutionList.vue",
+      "bytes": 16183,
+      "sha256": "473f003a13c3f75623f4f8237f9b7edb729025ecad4f121dd8b5e769f972a496"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/ExecutionMonitor.vue",
+      "bytes": 44016,
+      "sha256": "1a0ac543bca4cfdf6780f50a1757396de1745a3981546eace010527270e6fad4"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/ExecutionReport.vue",
+      "bytes": 72552,
+      "sha256": "e5283ada97bb04d00c4a310a120776190b16d106d4b14d7d25db6f57c5ac9461"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/ProjectManagement.vue",
+      "bytes": 11039,
+      "sha256": "8fbd7d15a9b6c087384fb09ab5c7b6436b77c7bd96298ec02772d77560bca26f"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/ScenarioEditor.vue",
+      "bytes": 109079,
+      "sha256": "c9176ffa1f312f0ff57084fa05e19118367ceb6604834241200958db0685ae6a"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/ScenarioList.vue",
+      "bytes": 16517,
+      "sha256": "6ce5bde8bd7f07239de626cb389959b30a93cd70c6aa45f83e937fefa9edac42"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/ScheduledTasks.vue",
+      "bytes": 27918,
+      "sha256": "bc78ddf0562b58bdffbac96b3a9bd3e9adae4e29c085a5687386d8ce3b72ef15"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/accountPoolForm.mjs",
+      "bytes": 4051,
+      "sha256": "fe712bde26e5a891cd037e0b36bd9c55c147b67e27adf26eb23a3662ca84c07d"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/accountPoolForm.test.mjs",
+      "bytes": 22153,
+      "sha256": "5cc93c30078719c3dda5f29174c54a497dd48f8660a613e4a9113d7112568599"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/apiCatalogForm.mjs",
+      "bytes": 3082,
+      "sha256": "2aac4e66fb15bc94c2031189fe14ce5974e7c439da5a21635042306c863c7a45"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/apiCatalogForm.test.mjs",
+      "bytes": 2847,
+      "sha256": "aba6dd8c5bc337e9b65f64716c640664a969d9d4393f244f83342b89082dde6d"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/apiPoolComponents.test.mjs",
+      "bytes": 29363,
+      "sha256": "b8dfd5b9e56e4e1785bfeefb8b6a7a1f1f5ae06368684281b777e7fb82eb102a"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/authProfileForm.mjs",
+      "bytes": 3727,
+      "sha256": "d64280902af25330ce6bf7d28189524ee5fcde94f45de7ac5eceeef4f37b5ae9"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/authProfileForm.test.mjs",
+      "bytes": 1946,
+      "sha256": "87b5f1090e70b14df58c1902c2121dda222fdda67c4efc172b796e145083e45b"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/c04EnvironmentComponents.test.mjs",
+      "bytes": 16173,
+      "sha256": "36d58a26bdc73737ee4f12dec93b40a013c9b36a638ed3c6076d7e39c740431f"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/c08CatalogComponents.test.mjs",
+      "bytes": 31344,
+      "sha256": "6b569f37ade9e3e9ebce9b63d7afcdcc1bf1f216593fa7b008322635362a57b5"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/c10AuthComponents.test.mjs",
+      "bytes": 16495,
+      "sha256": "b23625c500d7584f09fea9ac0e0349b7e7ef9c646e8f0edb580de51dd84ffb81"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/c13Workflow.test.mjs",
+      "bytes": 25612,
+      "sha256": "d90dfa3011f7b8d1007b1ae2601163f7458616478225e3c037c78dcbd0bde329"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/catalogUrlImport.test.mjs",
+      "bytes": 15782,
+      "sha256": "96fac0a162da67deeabd8a21cc4a3c598ba8f0a63d4a1481fc56dd2acd4f9fcc"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/components/AccountPoolSelector.vue",
+      "bytes": 8752,
+      "sha256": "85c0195b5fb7162e2b8cfac17d5803eba194db86b865d0fba24b73e979b7308f"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/components/ApiPoolPreparation.vue",
+      "bytes": 19669,
+      "sha256": "4cffb03d30bd74977cfd694e1ad1d7c5ca240261cb626bbf1ea0abffaf155d23"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/components/AuthProfileEditor.vue",
+      "bytes": 16442,
+      "sha256": "1d5a80e21107c9b4196829686c91cdddfaf8fa15470337a4d1c8e1c13cce0fdd"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/components/EnvironmentFields.vue",
+      "bytes": 10315,
+      "sha256": "baf28f94a4e0ebc738e8f9233a1ded2d1aec2389e94f273a7e90365819114422"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/components/ExecutionEvidence.vue",
+      "bytes": 5564,
+      "sha256": "d53081cf9bac7f4df99ca7833739d50d53840e20f23ffc209b4830f8fea5fa43"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/components/ExecutionPolicyEditor.vue",
+      "bytes": 2901,
+      "sha256": "f31264c198f40622a82339c750317fbf9d0258843dcb4d5a0a03e24b91139935"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/components/ExecutionPolicyMetrics.vue",
+      "bytes": 2866,
+      "sha256": "ab115c5c6bd5da91f8ed8dd78cc9cfbb3ea65ec6ad8619a6c1c435c4b9c21275"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/components/ImportFromApiDrawer.vue",
+      "bytes": 4419,
+      "sha256": "7dce7cb0ccff29221ccd1bc61254cef362b6c98cfb5380102bf0c4b5c40197bf"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/components/LoadProfileEditor.vue",
+      "bytes": 13940,
+      "sha256": "ea6c86b4ad42af216707709948ab85e96e6be6b429fc149250ce4cbb085371fa"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/components/MetricCards.vue",
+      "bytes": 2485,
+      "sha256": "ff28be8dea49545c83360e03f442b6745f479080a10ba516c6df79ddbd13d28d"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/components/NativeVUObservations.vue",
+      "bytes": 6411,
+      "sha256": "1fb36787dd1c505c2bbe1bd3802a0ece780a1cf8b4888b6a31a05e9d8366c593"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/components/PreparedRequestEditor.vue",
+      "bytes": 19355,
+      "sha256": "4ab047f75aeaee39e450f82ef659cff2d00b9b4300b13c6e15d4b7273081633d"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/components/ProjectApiCatalog.vue",
+      "bytes": 32193,
+      "sha256": "4ef7455d4464e95d5a6dbfa7711e65f3ddd52d201fda08b1493d4a206b89fc41"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/components/RealtimeChart.vue",
+      "bytes": 4398,
+      "sha256": "7e9fe31096e16f423ec11c72032fe8407cfe99ce002daf39362323d158d37223"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/components/ReminderRecoveryEditor.vue",
+      "bytes": 3730,
+      "sha256": "4226830b0dedf4a9458d438d61a91b52a1801465c6c15bbebf3476f4b2839706"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/components/ReminderRecoveryStatus.vue",
+      "bytes": 2069,
+      "sha256": "c5c5e5c7bf10134beb3e1b7cc5d4551cd45af9a6562af211d4eb220786e87063"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/components/RequestReadinessPanel.vue",
+      "bytes": 4603,
+      "sha256": "6e2f13f17d365629c0017d79c854ef9ddd020a8d1dfdf8d78ce5aac8b430278d"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/components/SlaRuleEditor.vue",
+      "bytes": 3563,
+      "sha256": "60b0b41f54dc0f8d272af50e72612cddb3883a406c8d57c5907111a3ec3e7488"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/components/SseMetrics.vue",
+      "bytes": 4715,
+      "sha256": "d358f8115b56f4c6c158129e2b6f24bc0a60c1b565bc978241e184f5e5d83897"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/components/SseStepEditor.vue",
+      "bytes": 3428,
+      "sha256": "dbb8f7f6fcb23e918731db3bec4b301850c75d6504a749ec910e29bc012a0317"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/components/StepEditor.vue",
+      "bytes": 20933,
+      "sha256": "f61aca7e9963dd6cc2187457241b06a12d41046714c8ac4cf3aaf8c9130ec57a"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/components/UploadFileFields.vue",
+      "bytes": 4118,
+      "sha256": "fcd7de85356dbdfb9e2f9712cc477a33f9ed9f892dd8eb6510eaf96529e0d63b"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/components/WebSocketMetrics.vue",
+      "bytes": 3997,
+      "sha256": "2dec2c41ec3a0cd71170da0c55fa729779e20fedf7058061e40dd781a1097220"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/components/WebSocketStepEditor.vue",
+      "bytes": 6089,
+      "sha256": "368459d0c93fa01f6b068b85dba137c1387b5eceb72a9706618e795115d7d85e"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/components/loadProfile.js",
+      "bytes": 2763,
+      "sha256": "1f1179e60685246668f3e5c4997a1e9d49b13a8b5eaf129208b0e11b969ae0e2"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/environmentForm.mjs",
+      "bytes": 3364,
+      "sha256": "3aacd5032c949e52803463910db0e1c66d0541fdf9aa18054c9b7d0921d77a59"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/environmentForm.test.mjs",
+      "bytes": 4465,
+      "sha256": "8d715a606e55b969452751668550e091c6cbf4ed771d719dd55298464484569a"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/executeResult.mjs",
+      "bytes": 881,
+      "sha256": "5dafebb8a24469021d75f33d566298295e6e3268c8b8d4bd73f2a5af84dda67c"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/executionPolicy.test.mjs",
+      "bytes": 4084,
+      "sha256": "b14d92b119921197cf5a246475dc4a69c7c10472889cee607d2f4e76f644ff7a"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/index.vue",
+      "bytes": 343,
+      "sha256": "ea887833f5314b188ff9fd0a608256e9e7b789ca74b4c6118296ddd477d891ce"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/k6InterfaceStats.mjs",
+      "bytes": 8033,
+      "sha256": "fb5b88992c50cb03301937a93eb5126263c62faccc34f6cbf9b2eea46cbf73c5"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/k6InterfaceStats.test.mjs",
+      "bytes": 5340,
+      "sha256": "a5f077634de84c82e71148b623883395680f46d46ec7d302916f490cd2ae66c3"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/k6RequestId.test.mjs",
+      "bytes": 6588,
+      "sha256": "8b3d596943a8ba4fe5f42c87083a9f04b658a9eea55fceb3ecbb34361a825d74"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/monitorRouteOwnership.test.mjs",
+      "bytes": 19429,
+      "sha256": "bc99b5292cdf2e4fde3a616c22c01592111dbc6782654a5d1b29eca66c2ea99e"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/nativeVuObservations.mjs",
+      "bytes": 6321,
+      "sha256": "97d7e90005ed58c9421ef08676b4a36f78c0f484495a0153e99ad0b50b98bced"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/nativeVuObservations.test.mjs",
+      "bytes": 16198,
+      "sha256": "73fb0c2f1f0a4ed5342eba32289e8b80e353e0e7d79dec9a00e26d6942aa03fa"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/nullableLine.mjs",
+      "bytes": 407,
+      "sha256": "ff4e15ece490b8a1106d1e1014208609416a88356eb48651c2d7074f2d870b3b"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/nullableLine.test.mjs",
+      "bytes": 10151,
+      "sha256": "4f0d802337f488ccd3f4f3a04fd75c3197f1abe8295d974a24f10f3f76ff67f9"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/preparedRequestEditor.test.mjs",
+      "bytes": 31586,
+      "sha256": "f2b172c739e08bce8429783e4efa9e9262281c2a5457afbbee28f927d6174661"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/preparedRequestForm.mjs",
+      "bytes": 6827,
+      "sha256": "e9fd7191b915043b6283e80d6d361a775a808535696de23675644ef027a5a127"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/reminderRecovery.mjs",
+      "bytes": 4724,
+      "sha256": "ccbc837ca41a61b7c5682770c0af633a4d60b4e089f9ad985a18d0dfb202356d"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/reminderRecovery.test.mjs",
+      "bytes": 4342,
+      "sha256": "2fd20b9f3b229e153998e547d6c3505a4ce1c3d151b49f3fc92d9d6881ec70e6"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/reminderRecoveryComponents.test.mjs",
+      "bytes": 8472,
+      "sha256": "66cbdb918d3ed413ce8e78728614df4ca26f19236739c79ece7878eeeea1b794"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/reportRouteOwnership.test.mjs",
+      "bytes": 28157,
+      "sha256": "9a4291c0aff4a67f4a6398f16b1504cd90fe9ed9ded7dba324211e4b75cceb91"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/sampleCursor.mjs",
+      "bytes": 988,
+      "sha256": "727db51f448df5264dd99180031bc53e050c9fba7c234f3e69d5684a09b56532"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/sampleCursor.test.mjs",
+      "bytes": 5870,
+      "sha256": "d4e0165762c3692e9fc231e59c0370231f36b1a379893684d9cfa04adad5cd75"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/scenarioActionState.mjs",
+      "bytes": 561,
+      "sha256": "5df6c27268a7240e0e4ac971f177763b9d9c289b987d94cdc3e2fd26136bdd51"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/scenarioActionState.test.mjs",
+      "bytes": 2154,
+      "sha256": "e74a2bc17732f25a8d5f532b9a4365a7469c978352ca59afca1097e764f34b28"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/scenarioDefaults.mjs",
+      "bytes": 2927,
+      "sha256": "2c8e481ff87d2929f5bcfb65896e541477cee21630c95e6167b40898830f6d9c"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/scenarioDefaults.test.mjs",
+      "bytes": 9583,
+      "sha256": "90e9b817e7e7951bc23fd1d6f013cb3f6fbbcb292d88b50c9cbdb80867579470"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/scenarioDefaultsComponents.test.mjs",
+      "bytes": 11788,
+      "sha256": "c562aa006a35559a5ee051567041e67da9c7436af89683cd15ac3f824926b06f"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/shared.js",
+      "bytes": 2732,
+      "sha256": "e6ea7b33136664427329cc51cda7372899144cb572f5d032f4f7d08774d3f98f"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/slaReport.mjs",
+      "bytes": 1322,
+      "sha256": "c94ef82c1b3f9860b4bdd34290efba567b54e6e85b831cf1d31650b9739065f9"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/slaReport.test.mjs",
+      "bytes": 6734,
+      "sha256": "a71aa191305554d05ca254888704ae123e43ae510d75ae6a3c7eaf965e060f53"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/sseMetrics.mjs",
+      "bytes": 4088,
+      "sha256": "d6eb0b2b7b892d0946057b26120cabe85537ed14b414bc4f9eee1ff24f9cc0ef"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/sseStepForm.mjs",
+      "bytes": 11623,
+      "sha256": "89dcac2c490c485ea3fcedbdfe6d1ed22fd66d5ded19886eac19bc22be06d1fb"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/sseStepForm.test.mjs",
+      "bytes": 6664,
+      "sha256": "adbb713d843bbcc0cb41817d481e963a3f111bf15caa289cf216e6f177315a6e"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/websocketComponents.test.mjs",
+      "bytes": 14794,
+      "sha256": "550160ae4ff800ab26eae01b8a76156bf026f483acd1a9a198d74ad4fea511ad"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/websocketMetrics.mjs",
+      "bytes": 2190,
+      "sha256": "b369f156b3e28fcae2edf25b7a12737289a2e4ab33951b7a5919d868fb026351"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/websocketMetrics.test.mjs",
+      "bytes": 2530,
+      "sha256": "081678175ede82528f67350fcdb090a393540b4dbff63e2be740f8769fa67ade"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/websocketStepForm.mjs",
+      "bytes": 11100,
+      "sha256": "bec58066af6767d7cfe6e874b5962be768461799826a7b25625d15e130fd2b39"
+    },
+    {
+      "path": "testhub/frontend/src/views/performance-testing/websocketStepForm.test.mjs",
+      "bytes": 5233,
+      "sha256": "2a4454f1808342dea6692a98c65f88b9ac9b01fa704ce636be93569776adda7b"
+    },
+    {
+      "path": "testhub/frontend/src/views/profile/UserProfile.vue",
+      "bytes": 2271,
+      "sha256": "2f55857584e1e6401bab03fe40afb7923ff447530ef8430c4e5887c82ad8aa53"
+    },
+    {
+      "path": "testhub/frontend/src/views/projects/ProjectDetail.vue",
+      "bytes": 5276,
+      "sha256": "afdd1a6c97db1c3b0c37cb16f276366570114853f2caf81bec861bd04eb8904f"
+    },
+    {
+      "path": "testhub/frontend/src/views/projects/ProjectList.vue",
+      "bytes": 11534,
+      "sha256": "255734918c3e64cbd0b5382d33efbced62f383bea705a8ad9e0ccf1d954e2e6d"
+    },
+    {
+      "path": "testhub/frontend/src/views/reports/AiTestReport.vue",
+      "bytes": 16576,
+      "sha256": "3215398483e4f533b9c1968a078db22518f7a41a38016597f759e71451ef20f8"
+    },
+    {
+      "path": "testhub/frontend/src/views/reports/ReportList.vue",
+      "bytes": 387,
+      "sha256": "5fdc5596b9f3649180989ddb144be75987749e080f4b83cc50263f8aafd54821"
+    },
+    {
+      "path": "testhub/frontend/src/views/requirement-analysis/AIModelConfig.vue",
+      "bytes": 46764,
+      "sha256": "e634422cabdc5f46e2e8152c8ae40afa4a5cda68eefb305cb23d3f9543917a68"
+    },
+    {
+      "path": "testhub/frontend/src/views/requirement-analysis/GeneratedTestCaseList.vue",
+      "bytes": 52897,
+      "sha256": "1ad7aaddf233ececc630a442bc304d377cf653b00829b16b00953036e32818a8"
+    },
+    {
+      "path": "testhub/frontend/src/views/requirement-analysis/GenerationConfigView.vue",
+      "bytes": 20188,
+      "sha256": "ddb5c489359c55517fd0c13d56f826eef2f604a1a57a46920493f8c2170754ff"
+    },
+    {
+      "path": "testhub/frontend/src/views/requirement-analysis/PromptConfig.vue",
+      "bytes": 29098,
+      "sha256": "1f06b09495bc995ecd00a993345d5318e26b16396511f58f2a7351aeb83b5cd0"
+    },
+    {
+      "path": "testhub/frontend/src/views/requirement-analysis/RequirementAnalysisView.vue",
+      "bytes": 82427,
+      "sha256": "c36fe37e6db05a1fa5db006c27c569c3125bd23d094d82bf528e5a3c41e1f4c8"
+    },
+    {
+      "path": "testhub/frontend/src/views/requirement-analysis/TaskDetail.vue",
+      "bytes": 47580,
+      "sha256": "e8bc1fcf19e82440ac14485bca20be4c52105a738e9a66fa23114fee959083a6"
+    },
+    {
+      "path": "testhub/frontend/src/views/reviews/ReviewDetail.vue",
+      "bytes": 24800,
+      "sha256": "149d54a8ef8b9a6ad0554589583612bdb3835ae6203b716359e22aeb2060b96f"
+    },
+    {
+      "path": "testhub/frontend/src/views/reviews/ReviewForm.vue",
+      "bytes": 20668,
+      "sha256": "968be89fd25c66d2e904b66ad39bdb8f62605c10ef72c1ce0d82aefe32ee8d12"
+    },
+    {
+      "path": "testhub/frontend/src/views/reviews/ReviewList.vue",
+      "bytes": 12011,
+      "sha256": "79b3cb3978bd46ab17b29cf54e1cfd6f16210c7bf65d5ee7d10113b19bfe0b65"
+    },
+    {
+      "path": "testhub/frontend/src/views/reviews/ReviewTemplateList.vue",
+      "bytes": 15543,
+      "sha256": "ca94cce4d3dcda30b4e858d61cca54b3dd1a70d4fbcdd5ff253ec9f5700d7a38"
+    },
+    {
+      "path": "testhub/frontend/src/views/testcases/TestCaseDetail.vue",
+      "bytes": 4642,
+      "sha256": "b276c0edc224d3e35f650696088b8a1bdc3eee19f750c5091e26ff28846cb9a7"
+    },
+    {
+      "path": "testhub/frontend/src/views/testcases/TestCaseEdit.vue",
+      "bytes": 9474,
+      "sha256": "5c77e910cb1959425b4078c880cdb67c3b46124700dea1faed6f85503fa234f5"
+    },
+    {
+      "path": "testhub/frontend/src/views/testcases/TestCaseForm.vue",
+      "bytes": 7446,
+      "sha256": "819002e2a0957c36ed5367f35333ec28f53f745f01c8ec1212e6d9f1a7abfcc2"
+    },
+    {
+      "path": "testhub/frontend/src/views/testcases/TestCaseImportRecordList.vue",
+      "bytes": 9843,
+      "sha256": "f900c69a9ce5829417f081f7b688fea9710ffa20a55d3593cca02aa55e4fc283"
+    },
+    {
+      "path": "testhub/frontend/src/views/testcases/TestCaseList.vue",
+      "bytes": 23588,
+      "sha256": "8b30d1d2ddae58ec66c9742806da33223221b2683491e706a413f84367e63194"
+    },
+    {
+      "path": "testhub/frontend/src/views/testsuites/TestSuiteList.vue",
+      "bytes": 522,
+      "sha256": "01631900eb2b8a1ede725e02e56aeab2d318b3f76c544bf0c7ab76f9fec755e3"
+    },
+    {
+      "path": "testhub/frontend/src/views/ui-automation/Index.vue",
+      "bytes": 3862,
+      "sha256": "430e1316a83fdfb350d75d7a49373e6d4649015fdeaa599c7ff89ab9282372e4"
+    },
+    {
+      "path": "testhub/frontend/src/views/ui-automation/ai/AICaseList.vue",
+      "bytes": 8570,
+      "sha256": "8f454547ea7cc1eec0773747aa3853db70c78641c946c4516027c22d6a23ad8e"
+    },
+    {
+      "path": "testhub/frontend/src/views/ui-automation/ai/AIExecutionRecords.vue",
+      "bytes": 12282,
+      "sha256": "3c7c3d52c306ffa03455202732341867e4000e2535fad861bccd0e96514559e8"
+    },
+    {
+      "path": "testhub/frontend/src/views/ui-automation/ai/AIExecutionReport.vue",
+      "bytes": 24747,
+      "sha256": "1febaff3deda8e4e20af7f51e081fc95c6adaa939d690028c5d9b77959195af2"
+    },
+    {
+      "path": "testhub/frontend/src/views/ui-automation/ai/AITesting.vue",
+      "bytes": 12882,
+      "sha256": "f54c167f8cdd6e3b5d93dc05a2f79fbb5504c6fb96d682ae3c1965a3c9c03792"
+    },
+    {
+      "path": "testhub/frontend/src/views/ui-automation/dashboard/Dashboard.vue",
+      "bytes": 24076,
+      "sha256": "1104c0b054beb27804c1bfdfafafc2ca274269f64affc7f8fc02a8737387c1e1"
+    },
+    {
+      "path": "testhub/frontend/src/views/ui-automation/elements/ElementList.vue",
+      "bytes": 24161,
+      "sha256": "3a5033f0ef70cb1d70691effaed0a728a87da1774a524c3c9b2338715f7d176b"
+    },
+    {
+      "path": "testhub/frontend/src/views/ui-automation/elements/ElementManagerEnhanced.vue",
+      "bytes": 49655,
+      "sha256": "078be390c1e12277bc19a11fcc2267e1716a099812cc5adc45e010dc75aacb8e"
+    },
+    {
+      "path": "testhub/frontend/src/views/ui-automation/executions/ExecutionList.vue",
+      "bytes": 29201,
+      "sha256": "5aab23b0f4b8e6c3036612456249d588738ce199ce35a27bebe27df285279146"
+    },
+    {
+      "path": "testhub/frontend/src/views/ui-automation/notification/NotificationConfigs.vue",
+      "bytes": 20073,
+      "sha256": "c1213632d6c5e7b3b79f0476b250e52cb99ad9c6fa3a4691d9af80b4aada1da3"
+    },
+    {
+      "path": "testhub/frontend/src/views/ui-automation/notification/NotificationLogs.vue",
+      "bytes": 20428,
+      "sha256": "346f811680f116154d718e9eb0ec83b50263d4a67237f7471e1541d99595f993"
+    },
+    {
+      "path": "testhub/frontend/src/views/ui-automation/page-objects/PageObjectManager.vue",
+      "bytes": 32359,
+      "sha256": "7ec020e0d226da97be3dd4520cb075976c444f164313f14541a87096e95972cc"
+    },
+    {
+      "path": "testhub/frontend/src/views/ui-automation/projects/ProjectList.vue",
+      "bytes": 21179,
+      "sha256": "0590b2408b190ba36c8251f5660a55104ac6dbd3cbb3a369684fc48594542981"
+    },
+    {
+      "path": "testhub/frontend/src/views/ui-automation/reports/ReportList.vue",
+      "bytes": 25239,
+      "sha256": "d77c19f0247e7ea0f934369c446af378a016353f12aad0104141c298055302a4"
+    },
+    {
+      "path": "testhub/frontend/src/views/ui-automation/scheduled-tasks/ScheduledTasks.vue",
+      "bytes": 27954,
+      "sha256": "548ecf3e7d11578ca194177c3e7ae7c8d43364063a7b5836e2a7df41c6c2c7b9"
+    },
+    {
+      "path": "testhub/frontend/src/views/ui-automation/scripts/ScriptEditorEnhanced.vue",
+      "bytes": 23071,
+      "sha256": "af30032c553e02d91b9a3d22407400bc328d0c303f576c60d59caef31ba95531"
+    },
+    {
+      "path": "testhub/frontend/src/views/ui-automation/scripts/ScriptList.vue",
+      "bytes": 15333,
+      "sha256": "571505d3a61df48f1b0a01621745197c5cb345746c02a664c4902de1751d5277"
+    },
+    {
+      "path": "testhub/frontend/src/views/ui-automation/suites/SuiteList.vue",
+      "bytes": 27520,
+      "sha256": "9f9ea9d0fdd7101e807dc77b95dbd07ed1d98cc6c826fb328263c3c05a6c6e3f"
+    },
+    {
+      "path": "testhub/frontend/src/views/ui-automation/test-cases/TestCaseManager.vue",
+      "bytes": 61176,
+      "sha256": "b3ac57dc92b6e4541688257122d7ec786a15204a7cd8dce0a5bd3fffd7b6e50b"
+    },
+    {
+      "path": "testhub/frontend/src/views/versions/VersionList.vue",
+      "bytes": 13572,
+      "sha256": "f640c9b20cdb6edf9622af4584badadf91b09149f79f02fc0c7b8efc43517a06"
+    },
+    {
+      "path": "testhub/frontend/src/vite-env.d.ts",
+      "bytes": 39,
+      "sha256": "424faf9241dd699dda995b367ed36665732da1e6ec1f33b2fd40394488ecac92"
+    },
+    {
+      "path": "testhub/frontend/vite.config.js",
+      "bytes": 1780,
+      "sha256": "0a7153ea99e8fc93ae4af13adcc7900276c7122621dd6106eda04ebbf5e02df9"
+    },
+    {
+      "path": "testhub/manage.py",
+      "bytes": 683,
+      "sha256": "6a7d14e0e41e3af70ca016661635fb14cec2a164421970d689abf77c46c5d993"
+    },
+    {
+      "path": "testhub/pytest.ini",
+      "bytes": 187,
+      "sha256": "d1a83312eb2f0ba7b96c15e91e34a0c5e986dd22eeb18f6e91495e6d2a3bccdf"
+    },
+    {
+      "path": "testhub/requirements.txt",
+      "bytes": 3656,
+      "sha256": "49706ab916eebdb2446ef2bedfa2775560977a792b22ae4793eddf4ee2329d5f"
+    },
+    {
+      "path": "testhub/requirements_full.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "testhub/templates/admin/analytics/analyticsevent/change_list.html",
+      "bytes": 6626,
+      "sha256": "38741151311abfeba8229868b148898e11d93c964cad0b27ee12650aaee0b2fc"
+    },
+    {
+      "path": "testhub/templates/admin/users/registrationstatsproxy/change_list.html",
+      "bytes": 7196,
+      "sha256": "7c1bb644afe89503ff310f4cae746f82c2c2ab65791543bdcb4da8691176c0a7"
+    }
+  ],
+  "submodules": [
+    {
+      "path": "vendor/k6",
+      "url": "https://github.com/grafana/k6.git",
+      "revision": "0ae3c2989e5b7d24e5d18080aa72aa968ad5015f"
+    }
+  ],
+  "note": "The manifest does not hash itself. Runtime state and private history are excluded."
+}

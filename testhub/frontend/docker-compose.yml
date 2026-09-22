@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  # 前端应用
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: testhub_frontend
+    restart: always
+    ports:
+      - "80:80"
+    environment:
+      - NODE_ENV=production
+    networks:
+      - testhub_network
+
+networks:
+  testhub_network:
+    driver: bridge

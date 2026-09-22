@@ -1,0 +1,24 @@
+ARG NODE_IMAGE
+ARG NGINX_IMAGE
+FROM ${NODE_IMAGE} AS frontend
+WORKDIR /frontend
+COPY testhub/frontend/package.json testhub/frontend/package-lock.json ./
+RUN npm ci
+COPY testhub/frontend/ ./
+RUN npm run build
+FROM ${NGINX_IMAGE}
+COPY --chmod=0644 deployment/linux-docker/nginx.conf /etc/nginx/nginx.conf
+COPY --from=frontend /frontend/dist/ /usr/share/nginx/html/
+RUN find /usr/share/nginx/html -type d -exec chmod 0755 {} + \
+    && find /usr/share/nginx/html -type f -exec chmod 0644 {} +
+USER 101:101
+RUN test "$(id -u)" = 101 \
+    && test -r /etc/nginx/nginx.conf \
+    && test -r /usr/share/nginx/html/index.html \
+    && test -d /usr/share/nginx/html/assets \
+    && find /usr/share/nginx/html -type f > /tmp/web-public-files \
+    && while IFS= read -r file; do test -r "$file" || exit 1; done < /tmp/web-public-files \
+    && rm /tmp/web-public-files
+EXPOSE 8080
+ENTRYPOINT ["nginx"]
+CMD ["-g", "daemon off;"]
