@@ -1,93 +1,154 @@
-# Pressure Platform
+<div align="center">
 
-基于 **TestHub、Django、Vue 3 和 k6** 的中文性能测试管理平台，支持从接口配置、账号绑定到运行分析和报告导出的完整流程。
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/hero-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="docs/assets/hero-light.svg">
+  <img src="docs/assets/hero-light.svg" alt="Pressure Platform — 从接口准备到有界执行，再到延迟、错误与完整性分析的工作流示意" width="100%">
+</picture>
 
-这是由 [chasen2041maker](https://github.com/chasen2041maker) 维护的个人项目。项目基于开源 TestHub 扩展，保留上游来源和许可证，详见 [UPSTREAM.md](UPSTREAM.md) 与 [LICENSE](LICENSE)。
+<h1>Pressure Platform</h1>
 
-## 主要功能
+<strong>从接口准备到结果复盘，让每一次压测都有据可查。</strong>
 
-- 项目、OpenAPI / Swagger 接口库导入与更新。
-- 持久环境、独立账号池、变量提取与前置依赖。
-- 接口配置准备、单轮验证及已验证配置复用。
-- k6 固定并发、固定轮数和按时长运行，支持停止及有界收尾。
-- HTTP、有限 JSON WebSocket 会话和有界 SSE 场景。
-- 逐接口统计、错误分析、原生 VU 观测及 HTML / JSON / CSV 报告。
-- 执行完整性与数据恢复记录；失败、未完成和未采集分别展示。
+<p>基于 TestHub 扩展的中文性能测试管理平台。<br>用 Django、Vue 3 与 k6，串起配置准备、负载执行和报告分析。</p>
 
-原 TestHub 的其他测试管理模块源码也保留在 `testhub/` 中。
+[![Python](https://img.shields.io/badge/Python-3.12%2B-3776AB?style=flat-square)](docs/getting-started.md)
+[![Vue](https://img.shields.io/badge/Vue-3-087D70?style=flat-square)](testhub/frontend/)
+[![Engine](https://img.shields.io/badge/Engine-k6-6C5CE7?style=flat-square)](testhub/docs/k6-capability-matrix.md)
+[![License](https://img.shields.io/badge/License-GPL--3.0-526780?style=flat-square)](LICENSE)
 
-## 获取完整源码
+<p>
+  <a href="#quick-start">快速开始</a> ·
+  <a href="docs/README.md">文档中心</a> ·
+  <a href="docs/architecture.md">架构说明</a> ·
+  <a href="testhub/docs/k6-capability-matrix.md">能力矩阵</a> ·
+  <a href="CONTRIBUTING.md">参与贡献</a>
+</p>
+
+<strong>简体中文</strong> · <a href="README.en.md">English</a>
+
+</div>
+
+---
+
+## 不只是发出请求，更要解释结果
+
+一次压测的难点，往往不在于点下“运行”，而在于：接口是否准备正确、账号是否独立、请求是否真正完成，以及报告能否解释失败与缺失。
+
+Pressure Platform 把这些环节放进同一条工作流：**先准备、再验证、按边界执行，最后核对证据。** 它是 k6 之上的管理与分析层，不是另一个自研发压引擎，也不把上游引擎的全部能力视为平台已支持。
+
+<table>
+<tr>
+<td width="50%" valign="top">
+<h3>01 / 可复用的接口准备</h3>
+<p>导入与更新 OpenAPI / Swagger，组织项目、持久环境和前置依赖。配置经过单轮验证后，再用于后续执行。</p>
+</td>
+<td width="50%" valign="top">
+<h3>02 / 独立的账号与变量</h3>
+<p>通过账号池、CSV 身份和变量提取组织请求。将每个虚拟用户的身份与前置登录纳入配置，而不是藏在临时脚本里。</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<h3>03 / 有边界的负载执行</h3>
+<p>固定并发、每用户固定轮数或按时长运行。区分到期收尾、主动停止和未完成执行，不把结束进程等同于测试成功。</p>
+</td>
+<td valign="top">
+<h3>04 / 明确的协议子集</h3>
+<p>覆盖已接入的 HTTP 请求、有限 JSON WebSocket 会话和有界 SSE 场景。协议支持、依赖与未交付能力分别说明。</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<h3>05 / 可以继续分析的报告</h3>
+<p>查看逐接口统计、错误分类及适用运行模式下的原生 VU 观测，导出 HTML、JSON、CSV，保留复盘入口。</p>
+</td>
+<td valign="top">
+<h3>06 / 不掩盖缺失的执行记录</h3>
+<p>分别展示失败、未完成、未采集与恢复记录。让结果保留上下文，而不是用一个绿色状态替代执行完整性。</p>
+</td>
+</tr>
+</table>
+
+## 一条完整工作流
+
+```mermaid
+flowchart LR
+    A["接口 · 环境 · 账号"] --> B["配置准备与单轮验证"]
+    B --> C["k6 有界执行"]
+    C --> D["逐接口统计与错误分析"]
+    D --> E["报告导出与完整性核对"]
+```
+
+**准备接口 → 验证配置 → 执行负载 → 分析结果。** 首页插图与上图均为工作流示意，不是产品截图或性能实测数据。实现分层见 [架构说明](docs/architecture.md)。
+
+<a id="quick-start"></a>
+
+## 快速开始
+
+本地开发需要 **Python 3.12+、Node.js 22.12+、npm 和 Git**。真实发压还需要匹配的 k6 运行器；仓库不附带预编译引擎或业务账号。
 
 ```sh
 git clone --recurse-submodules https://github.com/chasen2041maker/Pressure_Platform.git
 cd Pressure_Platform
 ```
 
-已有克隆可运行 `git submodule update --init --recursive`。`vendor/k6` 是官方引擎的固定版本；自定义有界 SSE 扩展在 `deployment/runtime/bounded-sse/`，不包含预编译引擎。
+已有克隆先运行 `git submodule update --init --recursive`。`vendor/k6` 是固定源码版本，不是自动安装好的可执行程序。
 
-## 目录
-
-| 目录 | 内容 |
+| 你现在要做什么 | 从这里开始 |
 | --- | --- |
-| `testhub/frontend/` | Vue 3 管理页面 |
-| `testhub/apps/perf_testing/` | 压测 API、配置、执行引擎适配、统计和测试 |
-| `testhub/backend/` | Django 设置与轻量压测运行配置 |
-| `deployment/linux-docker/` | 独立 Linux Docker 部署工具和配置模板 |
-| `deployment/runtime/bounded-sse/` | 固定版本 k6 的有界 SSE 扩展及构建工具 |
-| `vendor/k6/` | 官方 k6 源码子模块 |
+| 在自己的电脑启动管理页面 | [本地启动指南](docs/getting-started.md)：虚拟环境、密钥、数据库、管理员与前端 |
+| 配置真正执行请求的运行器 | [k6 适配说明](testhub/docs/k6-adapter.md)与[固定 SSE 运行时](deployment/runtime/bounded-sse/README.md) |
+| 了解 Linux 单机部署方案 | [Linux Docker 部署草稿](deployment/linux-docker/README.md)：**公开版镜像与部署尚未验收** |
 
-## 本地开发
+本地默认页面为 `http://127.0.0.1:58101`，后端为 `http://127.0.0.1:8000`。先按启动指南初始化，再使用自己创建的管理员登录。**管理页面能打开，不等于运行器已就绪。**
 
-运行环境：Python 3.12+、Node.js 22.12+。下列命令使用独立 SQLite 开发配置，不需要导入任何已有账号或数据库。
+## 能力有边界，结果才有意义
 
-```sh
-python -m venv .venv
-# Linux/macOS: source .venv/bin/activate
-# Windows PowerShell: .venv\Scripts\Activate.ps1
-python -m pip install -r deployment/requirements-local.txt
-```
+| 范围 | 当前平台入口 | 需要知道的边界 |
+| --- | --- | --- |
+| HTTP | 已接入顺序请求与基础断言、提取 | 不等同于完整 `k6/http` API |
+| WebSocket | 有限 JSON 会话 | 不包含任意二进制、自动重连或完整协议脚本 |
+| SSE | 自定义有界扩展 | 依赖固定运行时，不是任意 k6 二进制即装即用 |
+| 负载模型 | 固定并发；按轮数或时长结束 | 爬坡、到达率、分布式调度未交付；当前实例任务串行 |
+| 指标 | 逐接口统计、错误与报告 | 原生 VU 是离散观测；页面 P95/P99 是累计直方图估算 |
 
-在仓库根目录初始化本地密钥文件；已有有效密钥会保留，不会重新生成：
+以上是阅读导航，不替代带版本和测试证据的 [完整能力矩阵](testhub/docs/k6-capability-matrix.md)。功能验证、报告核对和目标服务容量验收是三种不同结论。
 
-```sh
-python -c "import sys; from pathlib import Path; sys.path.insert(0, 'deployment/linux-docker'); from runtime_tools import ensure_secret; ensure_secret(Path('runtime/private').resolve())"
-```
+## 验证记录，而不是宣传数字
 
-然后在 `testhub/` 中执行：
+<details>
+<summary><strong>查看 2026-09-22 公开源码副本的验证摘要</strong></summary>
 
-```sh
-python manage.py migrate --settings=backend.pressure_settings
-python manage.py createsuperuser --settings=backend.pressure_settings
-python manage.py runserver 127.0.0.1:8000 --settings=backend.pressure_settings
-```
+以下引用已有 [VALIDATION.md](VALIDATION.md)，不是此次文档改版新执行的测试，也不是当前提交的 CI 状态。
 
-密钥位于 `runtime/private/django-secret.txt`，不要提交到 Git。运行数据默认写入仓库根 `runtime/`；使用 `PRESSURE_PLATFORM_ROOT` 指向其他独立目录时，也须在该目录的 `runtime/private/` 初始化密钥。开发配置仅供本机使用；部署请使用下方独立部署工具。
+| 检查范围 | 当时记录 |
+| --- | --- |
+| 后端维护套件 | 430 通过、40 跳过、0 失败 |
+| 前端性能测试组件与逻辑 | 317 通过 |
+| k6 脚本合同 | 55 通过 |
+| 独立部署工具 | 33 项静态测试通过；未连接 Docker |
+| 前端生产构建 | 通过，保留大体积 chunk 警告 |
 
-另开终端：
+完整旧套件仍有已知问题，**不能概括为“全量通过”**；跳过项不计为通过。公开版 Linux 镜像、Docker 部署与目标业务容量尚未重新验收。复现入口与历史问题见原始验证记录。
 
-```sh
-cd testhub/frontend
-npm ci
-npm run dev -- --host 127.0.0.1 --port 58101
-```
+</details>
 
-浏览器打开 `http://127.0.0.1:58101`，使用自己创建的管理员账号。首次使用需要创建项目、环境及测试账号，仓库不预置业务账号或目标地址。
+## 继续阅读
 
-真正发压前还需配置 k6 运行器。SSE 扩展的固定 Go / k6 版本与构建方法见 [引擎说明](deployment/runtime/bounded-sse/README.md)；HTTP / WebSocket / SSE 的实际支持边界见 [能力矩阵](testhub/docs/k6-capability-matrix.md)。
+| 文档 | 内容 |
+| --- | --- |
+| [文档中心](docs/README.md) | 按首次使用、场景配置、运行机制和维护组织的入口 |
+| [架构说明](docs/architecture.md) | 前端、API、worker、runner 与运行数据的职责 |
+| [接口准备池](deployment/interface-pool.md) | 准备、单轮验证与配置复用 |
+| [有界专项执行](deployment/bounded-execution.md) | 执行策略、尝试上限与策略跳过 |
+| [恢复机制](deployment/reminder-recovery.md) | 执行恢复的记录与边界 |
+| [贡献指南](CONTRIBUTING.md) | 开发检查、问题反馈与文档维护约定 |
 
-## 独立部署
+## 贡献与来源
 
-参见 [Linux Docker 部署说明](deployment/linux-docker/README.md)，从 `.env.example` 填写自己的镜像、地址、资源限制和数据目录。该流程需要 Docker，并明确配置能够到达测试目标的独立网络。仓库不包含任何公司的 GitLab CI、Kubernetes 配置、内网账号或部署数据。
+欢迎通过 [Issues](https://github.com/chasen2041maker/Pressure_Platform/issues) 提供可复现问题，或提交聚焦的改进。开始前请阅读 [贡献指南](CONTRIBUTING.md)。仅对自己拥有或已获授权的系统执行压测，公开材料不要包含真实账号、Token、内网地址或业务报告。
 
-## 验证
+由 [chasen2041maker](https://github.com/chasen2041maker) 维护，基于 [TestHub](https://github.com/chenjigang4167/testhub_platform) 扩展，并使用 [Grafana k6](https://github.com/grafana/k6)。本项目不是全部从零原创的实现。根目录保留 **GPL-3.0** 许可证；k6 子模块及其他依赖保留各自许可证与版权声明。详见 [UPSTREAM.md](UPSTREAM.md) 和 [LICENSE](LICENSE)。
 
-```sh
-# 从 testhub/ 运行维护套件；此入口自动创建并清理独立测试目录
-python ../deployment/test-runner/run_catalog_tests.py
-
-# 从 testhub/frontend/ 运行
-node --test src/views/performance-testing/*.test.mjs
-npm run build
-```
-
-本次公开副本的验证结果及完整套件中的已知问题见 [VALIDATION.md](VALIDATION.md)。协议集成测试可能需要本机 k6、Docker或其他依赖；未满足条件的跳过项不算通过。仓库中的 OpenAPI 大样本由程序合成，不包含真实公司接口规范。原生 VU 是离散观测，P95/P99是累计直方图估算；功能验证、报告核对和目标服务容量验收是不同结论。
+<p align="center"><sub>Prepare deliberately. Run within bounds. Inspect the evidence.</sub></p>
